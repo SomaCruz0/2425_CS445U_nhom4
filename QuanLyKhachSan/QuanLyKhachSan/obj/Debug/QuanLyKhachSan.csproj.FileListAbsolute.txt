@@ -1,0 +1,12 @@
+D:\study\DoAnChuyenNganh\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe.config
+D:\study\DoAnChuyenNganh\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe
+D:\study\DoAnChuyenNganh\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.pdb
+D:\study\DoAnChuyenNganh\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\Guna.UI2.dll
+D:\study\DoAnChuyenNganh\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.AssemblyReference.cache
+D:\study\DoAnChuyenNganh\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.Form1.resources
+D:\study\DoAnChuyenNganh\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.Properties.Resources.resources
+D:\study\DoAnChuyenNganh\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.GenerateResource.cache
+D:\study\DoAnChuyenNganh\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.CoreCompileInputs.cache
+D:\study\DoAnChuyenNganh\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKh.7BBD220C.Up2Date
+D:\study\DoAnChuyenNganh\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
+D:\study\DoAnChuyenNganh\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
