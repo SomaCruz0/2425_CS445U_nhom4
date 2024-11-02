@@ -8,18 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyKhachSan
+namespace QuanLyKhachSan.UserControls
 {
-    public partial class Form1 : Form
+    public partial class UC_AddRoom : UserControl
     {
-        public Form1()
+        public UC_AddRoom()
         {
             InitializeComponent();
         }
 
-        private void btn_Exit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
     }
 }
