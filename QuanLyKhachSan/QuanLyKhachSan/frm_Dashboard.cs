@@ -18,6 +18,12 @@ namespace QuanLyKhachSan
             InitializeComponent();
         }
 
+        private void frm_Dashboard_Load(object sender, EventArgs e)
+        {
+            uC_AddRoom1.Visible = false;
+            uC_CustomerRes1.Visible = false;
+            btn_Room.PerformClick();
+        }
         private void btn_Exit_Click(object sender, EventArgs e)
         {
             DialogResult dt = MessageBox.Show("Bạn có thực sự muốn thoát", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -29,15 +35,15 @@ namespace QuanLyKhachSan
 
         private void btn_Room_Click(object sender, EventArgs e)
         {
-            Panel_Moving.Left = btn_Room.Right + 20;
             uC_AddRoom1.Visible = true;
             uC_AddRoom1.BringToFront();
         }
 
-        private void frm_Dashboard_Load(object sender, EventArgs e)
+
+        private void btn_CustomerReg_Click(object sender, EventArgs e)
         {
-            uC_AddRoom1.Visible = false;
-            btn_Room.PerformClick();
+            uC_CustomerRes1.Visible = true;
+            uC_CustomerRes1.BringToFront();
         }
     }
 }

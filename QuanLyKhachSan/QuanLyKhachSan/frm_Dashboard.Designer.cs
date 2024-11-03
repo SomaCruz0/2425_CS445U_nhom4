@@ -39,11 +39,14 @@
             this.btn_CustomerReg = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Room = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.Panel_Moving = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.uC_CustomerRes1 = new QuanLyKhachSan.UserControls.UC_CustomerRes();
             this.uC_AddRoom1 = new QuanLyKhachSan.UserControls.UC_AddRoom();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Exit
@@ -171,6 +174,7 @@
             this.btn_CustomerReg.Size = new System.Drawing.Size(224, 97);
             this.btn_CustomerReg.TabIndex = 1;
             this.btn_CustomerReg.Text = "Đăng ký khách hàng";
+            this.btn_CustomerReg.Click += new System.EventHandler(this.btn_CustomerReg_Click);
             // 
             // btn_Room
             // 
@@ -195,31 +199,47 @@
             // 
             // panel2
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.uC_CustomerRes1);
             this.panel2.Controls.Add(this.uC_AddRoom1);
             this.panel2.Location = new System.Drawing.Point(267, 60);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1663, 1015);
             this.panel2.TabIndex = 4;
             // 
-            // Panel_Moving
-            // 
-            this.Panel_Moving.BackColor = System.Drawing.Color.Tomato;
-            this.Panel_Moving.Location = new System.Drawing.Point(254, 66);
-            this.Panel_Moving.Name = "Panel_Moving";
-            this.Panel_Moving.Size = new System.Drawing.Size(7, 100);
-            this.Panel_Moving.TabIndex = 0;
-            // 
             // guna2Elipse1
             // 
             this.guna2Elipse1.TargetControl = this;
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 2);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(47, 45);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 5;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.TargetControl = this;
+            // 
+            // uC_CustomerRes1
+            // 
+            this.uC_CustomerRes1.BackColor = System.Drawing.Color.White;
+            this.uC_CustomerRes1.Location = new System.Drawing.Point(-1, -2);
+            this.uC_CustomerRes1.Name = "uC_CustomerRes1";
+            this.uC_CustomerRes1.Size = new System.Drawing.Size(1650, 1010);
+            this.uC_CustomerRes1.TabIndex = 1;
+            // 
             // uC_AddRoom1
             // 
             this.uC_AddRoom1.BackColor = System.Drawing.Color.White;
-            this.uC_AddRoom1.Location = new System.Drawing.Point(-2, -2);
+            this.uC_AddRoom1.Location = new System.Drawing.Point(3, 5);
             this.uC_AddRoom1.Name = "uC_AddRoom1";
-            this.uC_AddRoom1.Size = new System.Drawing.Size(1658, 1010);
+            this.uC_AddRoom1.Size = new System.Drawing.Size(1653, 1003);
             this.uC_AddRoom1.TabIndex = 0;
             // 
             // frm_Dashboard
@@ -228,7 +248,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1942, 1102);
-            this.Controls.Add(this.Panel_Moving);
+            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_Minisize);
@@ -241,6 +261,7 @@
             this.Load += new System.EventHandler(this.frm_Dashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -256,8 +277,10 @@
         private Guna.UI2.WinForms.Guna2Button btn_Checkout;
         private Guna.UI2.WinForms.Guna2Button btn_CustomerReg;
         private Guna.UI2.WinForms.Guna2Button btn_Employee;
-        private Guna.UI2.WinForms.Guna2Panel Panel_Moving;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private UserControls.UC_AddRoom uC_AddRoom1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private UserControls.UC_CustomerRes uC_CustomerRes1;
     }
 }

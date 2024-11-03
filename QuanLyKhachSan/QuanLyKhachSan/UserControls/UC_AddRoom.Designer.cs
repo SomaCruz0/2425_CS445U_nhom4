@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgv_Room = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_RoomID = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_RoomNo = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cb_RoomType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txt_Price = new Guna.UI2.WinForms.Guna2TextBox();
@@ -43,30 +45,19 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btn_Delete = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Edit = new Guna.UI2.WinForms.Guna2Button();
+            this.dgv_Room = new Guna.UI2.WinForms.Guna2DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Room)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MTO  Astro City", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(30, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(274, 42);
+            this.label1.Size = new System.Drawing.Size(298, 40);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Quản lý phòng";
-            // 
-            // dgv_Room
-            // 
-            this.dgv_Room.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_Room.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgv_Room.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Room.Location = new System.Drawing.Point(37, 112);
-            this.dgv_Room.Name = "dgv_Room";
-            this.dgv_Room.RowHeadersWidth = 51;
-            this.dgv_Room.RowTemplate.Height = 24;
-            this.dgv_Room.Size = new System.Drawing.Size(838, 675);
-            this.dgv_Room.TabIndex = 1;
+            this.label1.Text = "QUẢN LÝ PHÒNG";
             // 
             // label2
             // 
@@ -79,26 +70,26 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Số phòng";
             // 
-            // txt_RoomID
+            // txt_RoomNo
             // 
-            this.txt_RoomID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_RoomID.DefaultText = "";
-            this.txt_RoomID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_RoomID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_RoomID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_RoomID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_RoomID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_RoomID.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_RoomID.ForeColor = System.Drawing.Color.Black;
-            this.txt_RoomID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_RoomID.Location = new System.Drawing.Point(1044, 155);
-            this.txt_RoomID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txt_RoomID.Name = "txt_RoomID";
-            this.txt_RoomID.PasswordChar = '\0';
-            this.txt_RoomID.PlaceholderText = "";
-            this.txt_RoomID.SelectedText = "";
-            this.txt_RoomID.Size = new System.Drawing.Size(500, 73);
-            this.txt_RoomID.TabIndex = 4;
+            this.txt_RoomNo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_RoomNo.DefaultText = "";
+            this.txt_RoomNo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_RoomNo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_RoomNo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_RoomNo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_RoomNo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_RoomNo.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_RoomNo.ForeColor = System.Drawing.Color.Black;
+            this.txt_RoomNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_RoomNo.Location = new System.Drawing.Point(1044, 155);
+            this.txt_RoomNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_RoomNo.Name = "txt_RoomNo";
+            this.txt_RoomNo.PasswordChar = '\0';
+            this.txt_RoomNo.PlaceholderText = "";
+            this.txt_RoomNo.SelectedText = "";
+            this.txt_RoomNo.Size = new System.Drawing.Size(500, 73);
+            this.txt_RoomNo.TabIndex = 4;
             // 
             // label3
             // 
@@ -202,6 +193,7 @@
             this.btn_AddRoom.Size = new System.Drawing.Size(131, 62);
             this.btn_AddRoom.TabIndex = 11;
             this.btn_AddRoom.Text = "Thêm";
+            this.btn_AddRoom.Click += new System.EventHandler(this.btn_AddRoom_Click);
             // 
             // guna2Elipse1
             // 
@@ -246,10 +238,64 @@
             this.btn_Edit.TabIndex = 13;
             this.btn_Edit.Text = "Sửa";
             // 
+            // dgv_Room
+            // 
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.dgv_Room.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgv_Room.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Room.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.dgv_Room.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Room.DefaultCellStyle = dataGridViewCellStyle12;
+            this.dgv_Room.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv_Room.Location = new System.Drawing.Point(37, 130);
+            this.dgv_Room.Name = "dgv_Room";
+            this.dgv_Room.RowHeadersVisible = false;
+            this.dgv_Room.RowHeadersWidth = 51;
+            this.dgv_Room.RowTemplate.Height = 24;
+            this.dgv_Room.Size = new System.Drawing.Size(838, 675);
+            this.dgv_Room.TabIndex = 14;
+            this.dgv_Room.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_Room.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgv_Room.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgv_Room.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgv_Room.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgv_Room.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_Room.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv_Room.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgv_Room.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_Room.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.dgv_Room.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgv_Room.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Room.ThemeStyle.HeaderStyle.Height = 18;
+            this.dgv_Room.ThemeStyle.ReadOnly = false;
+            this.dgv_Room.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_Room.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_Room.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.dgv_Room.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgv_Room.ThemeStyle.RowsStyle.Height = 24;
+            this.dgv_Room.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv_Room.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgv_Room.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Room_CellClick);
+            // 
             // UC_AddRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dgv_Room);
             this.Controls.Add(this.btn_Edit);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.btn_AddRoom);
@@ -259,12 +305,12 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cb_RoomType);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txt_RoomID);
+            this.Controls.Add(this.txt_RoomNo);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dgv_Room);
             this.Controls.Add(this.label1);
             this.Name = "UC_AddRoom";
             this.Size = new System.Drawing.Size(1650, 1010);
+            this.Load += new System.EventHandler(this.UC_AddRoom_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Room)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -274,9 +320,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgv_Room;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox txt_RoomID;
+        private Guna.UI2.WinForms.Guna2TextBox txt_RoomNo;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2ComboBox cb_RoomType;
         private Guna.UI2.WinForms.Guna2TextBox txt_Price;
@@ -287,5 +332,6 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Button btn_Edit;
         private Guna.UI2.WinForms.Guna2Button btn_Delete;
+        private Guna.UI2.WinForms.Guna2DataGridView dgv_Room;
     }
 }

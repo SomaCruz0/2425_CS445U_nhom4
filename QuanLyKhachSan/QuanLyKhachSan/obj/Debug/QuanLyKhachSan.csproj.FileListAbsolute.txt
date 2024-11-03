@@ -24,3 +24,6 @@ D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyK
 D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
 D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.frm_Dashboard.resources
 D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.UserControls.UC_AddRoom.resources
+D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QLKS.mdf
+D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QLKS_log.ldf
+D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.UserControls.UC_CustomerRes.resources
