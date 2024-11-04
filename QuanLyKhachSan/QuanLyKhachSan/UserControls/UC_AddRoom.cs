@@ -21,28 +21,29 @@ namespace QuanLyKhachSan.UserControls
 
         private void UC_AddRoom_Load(object sender, EventArgs e)
         {
-            query = "select roomid, roomNo as N'Số phòng', RTName as N'Loại phòng', BedName as N'Loại giường', price as 'Giá', booked from BedType b, RoomType rt, Rooms r where b.Bid = r.bedtype and rt.RTid = r.roomType";
+            query = "select IDPhong, SoPhong as N'Số phòng', rt.Ten as N'Loại phòng', b.Ten as N'Loại giường', Gia as 'Giá', TinhTrang from LoaiGiuong b, LoaiPhong rt, Phong r where b.IDLoaiGiuong = r.LoaiGiuong and rt.IDLoaiPhong = r.LoaiPhong";
+         
             DataSet ds = fn.getData(query);
             dgv_Room.DataSource = ds.Tables[0];
 
-            query = "select * from BedType";
+            query = "select * from LoaiGiuong";
             DataSet bt = fn.getData(query);
             cb_BedType.DataSource = bt.Tables[0];
-            cb_BedType.ValueMember = "Bid";
-            cb_BedType.DisplayMember = "BedName";
+            cb_BedType.ValueMember = "IDLoaiGiuong";
+            cb_BedType.DisplayMember = "Ten";
 
-            query = "select * from RoomType";
+            query = "select * from LoaiPhong";
             DataSet rt = fn.getData(query);
             cb_RoomType.DataSource = rt.Tables[0];
-            cb_RoomType.ValueMember = "RTid";
-            cb_RoomType.DisplayMember = "RTName";
+            cb_RoomType.ValueMember = "IDLoaiPhong";
+            cb_RoomType.DisplayMember = "Ten";
         }
 
         private void btn_AddRoom_Click(object sender, EventArgs e)
         {
             if (txt_RoomNo.Text != "" || txt_Price.Text != "")
             {
-                query = "insert into rooms (roomNo, roomType, bedType, price) values ('" + txt_RoomNo.Text + "','" + cb_RoomType.SelectedValue + "','" + cb_BedType.SelectedValue + "','" + txt_Price.Text + "')";
+                query = "insert into Phong (SoPhong, LoaiPhong, LoaiGiuong, Gia) values ('" + txt_RoomNo.Text + "','" + cb_RoomType.SelectedValue + "','" + cb_BedType.SelectedValue + "','" + txt_Price.Text + "')";
                 fn.setData(query, "Đã thêm phòng");
                 UC_AddRoom_Load(this, null);
             }

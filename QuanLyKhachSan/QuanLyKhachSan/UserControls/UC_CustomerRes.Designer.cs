@@ -395,6 +395,7 @@
             this.txt_Price.Name = "txt_Price";
             this.txt_Price.PasswordChar = '\0';
             this.txt_Price.PlaceholderText = "";
+            this.txt_Price.ReadOnly = true;
             this.txt_Price.SelectedText = "";
             this.txt_Price.Size = new System.Drawing.Size(388, 51);
             this.txt_Price.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
@@ -426,7 +427,7 @@
             this.btn_AllotRoom.Name = "btn_AllotRoom";
             this.btn_AllotRoom.Size = new System.Drawing.Size(223, 64);
             this.btn_AllotRoom.TabIndex = 26;
-            this.btn_AllotRoom.Text = "Thêm khách hàng";
+            this.btn_AllotRoom.Text = "Đặt phòng";
             // 
             // guna2Elipse1
             // 

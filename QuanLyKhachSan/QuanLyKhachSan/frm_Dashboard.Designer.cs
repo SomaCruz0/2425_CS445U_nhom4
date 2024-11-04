@@ -33,17 +33,23 @@
             this.btn_Exit = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btn_Minisize = new Guna.UI2.WinForms.Guna2CircleButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_Employee = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_CustomerDetail = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Service = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_BookingDetail = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Category = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Checkout = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_CustomerReg = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Access = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Dashboard = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Employee = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Booking = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Customer = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Room = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.uC_Booking1 = new QuanLyKhachSan.UserControls.UC_Booking();
+            this.uC_CustomerRes1 = new QuanLyKhachSan.UserControls.UC_CustomerRes();
+            this.uC_AddRoom1 = new QuanLyKhachSan.UserControls.UC_AddRoom();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.uC_CustomerRes1 = new QuanLyKhachSan.UserControls.UC_CustomerRes();
-            this.uC_AddRoom1 = new QuanLyKhachSan.UserControls.UC_AddRoom();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -89,53 +95,77 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.btn_Employee);
-            this.panel1.Controls.Add(this.btn_CustomerDetail);
+            this.panel1.Controls.Add(this.btn_Service);
+            this.panel1.Controls.Add(this.btn_BookingDetail);
+            this.panel1.Controls.Add(this.btn_Category);
             this.panel1.Controls.Add(this.btn_Checkout);
-            this.panel1.Controls.Add(this.btn_CustomerReg);
+            this.panel1.Controls.Add(this.btn_Access);
+            this.panel1.Controls.Add(this.btn_Dashboard);
+            this.panel1.Controls.Add(this.btn_Employee);
+            this.panel1.Controls.Add(this.btn_Booking);
+            this.panel1.Controls.Add(this.btn_Customer);
             this.panel1.Controls.Add(this.btn_Room);
             this.panel1.Location = new System.Drawing.Point(13, 60);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(235, 1030);
             this.panel1.TabIndex = 3;
             // 
-            // btn_Employee
+            // btn_Service
             // 
-            this.btn_Employee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btn_Employee.BorderRadius = 20;
-            this.btn_Employee.BorderThickness = 1;
-            this.btn_Employee.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btn_Employee.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Employee.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Employee.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Employee.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Employee.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btn_Employee.Font = new System.Drawing.Font("000 Captain Comic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Employee.ForeColor = System.Drawing.Color.White;
-            this.btn_Employee.Location = new System.Drawing.Point(4, 416);
-            this.btn_Employee.Name = "btn_Employee";
-            this.btn_Employee.Size = new System.Drawing.Size(224, 97);
-            this.btn_Employee.TabIndex = 4;
-            this.btn_Employee.Text = "Nhân viên";
+            this.btn_Service.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_Service.BorderRadius = 20;
+            this.btn_Service.BorderThickness = 1;
+            this.btn_Service.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btn_Service.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Service.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Service.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Service.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Service.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_Service.Font = new System.Drawing.Font("000 Captain Comic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Service.ForeColor = System.Drawing.Color.White;
+            this.btn_Service.Location = new System.Drawing.Point(4, 232);
+            this.btn_Service.Name = "btn_Service";
+            this.btn_Service.Size = new System.Drawing.Size(224, 72);
+            this.btn_Service.TabIndex = 9;
+            this.btn_Service.Text = "Dịch vụ";
             // 
-            // btn_CustomerDetail
+            // btn_BookingDetail
             // 
-            this.btn_CustomerDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btn_CustomerDetail.BorderRadius = 20;
-            this.btn_CustomerDetail.BorderThickness = 1;
-            this.btn_CustomerDetail.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btn_CustomerDetail.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_CustomerDetail.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_CustomerDetail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_CustomerDetail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_CustomerDetail.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btn_CustomerDetail.Font = new System.Drawing.Font("000 Captain Comic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_CustomerDetail.ForeColor = System.Drawing.Color.White;
-            this.btn_CustomerDetail.Location = new System.Drawing.Point(4, 313);
-            this.btn_CustomerDetail.Name = "btn_CustomerDetail";
-            this.btn_CustomerDetail.Size = new System.Drawing.Size(224, 97);
-            this.btn_CustomerDetail.TabIndex = 3;
-            this.btn_CustomerDetail.Text = "Chi tiết khách hàng";
+            this.btn_BookingDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_BookingDetail.BorderRadius = 20;
+            this.btn_BookingDetail.BorderThickness = 1;
+            this.btn_BookingDetail.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btn_BookingDetail.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_BookingDetail.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_BookingDetail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_BookingDetail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_BookingDetail.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_BookingDetail.Font = new System.Drawing.Font("000 Captain Comic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_BookingDetail.ForeColor = System.Drawing.Color.White;
+            this.btn_BookingDetail.Location = new System.Drawing.Point(4, 466);
+            this.btn_BookingDetail.Name = "btn_BookingDetail";
+            this.btn_BookingDetail.Size = new System.Drawing.Size(224, 72);
+            this.btn_BookingDetail.TabIndex = 8;
+            this.btn_BookingDetail.Text = "Hóa đơn";
+            // 
+            // btn_Category
+            // 
+            this.btn_Category.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_Category.BorderRadius = 20;
+            this.btn_Category.BorderThickness = 1;
+            this.btn_Category.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btn_Category.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Category.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Category.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Category.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Category.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_Category.Font = new System.Drawing.Font("000 Captain Comic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Category.ForeColor = System.Drawing.Color.White;
+            this.btn_Category.Location = new System.Drawing.Point(4, 310);
+            this.btn_Category.Name = "btn_Category";
+            this.btn_Category.Size = new System.Drawing.Size(224, 72);
+            this.btn_Category.TabIndex = 7;
+            this.btn_Category.Text = "Danh mục";
             // 
             // btn_Checkout
             // 
@@ -148,33 +178,112 @@
             this.btn_Checkout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_Checkout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_Checkout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btn_Checkout.Font = new System.Drawing.Font("000 Captain Comic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Checkout.Font = new System.Drawing.Font("000 Captain Comic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Checkout.ForeColor = System.Drawing.Color.White;
-            this.btn_Checkout.Location = new System.Drawing.Point(4, 210);
+            this.btn_Checkout.Location = new System.Drawing.Point(4, 388);
             this.btn_Checkout.Name = "btn_Checkout";
-            this.btn_Checkout.Size = new System.Drawing.Size(224, 97);
-            this.btn_Checkout.TabIndex = 2;
+            this.btn_Checkout.Size = new System.Drawing.Size(224, 72);
+            this.btn_Checkout.TabIndex = 3;
             this.btn_Checkout.Text = "Thanh toán";
             // 
-            // btn_CustomerReg
+            // btn_Access
             // 
-            this.btn_CustomerReg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btn_CustomerReg.BorderRadius = 20;
-            this.btn_CustomerReg.BorderThickness = 1;
-            this.btn_CustomerReg.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btn_CustomerReg.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_CustomerReg.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_CustomerReg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_CustomerReg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_CustomerReg.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btn_CustomerReg.Font = new System.Drawing.Font("000 Captain Comic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_CustomerReg.ForeColor = System.Drawing.Color.White;
-            this.btn_CustomerReg.Location = new System.Drawing.Point(4, 107);
-            this.btn_CustomerReg.Name = "btn_CustomerReg";
-            this.btn_CustomerReg.Size = new System.Drawing.Size(224, 97);
-            this.btn_CustomerReg.TabIndex = 1;
-            this.btn_CustomerReg.Text = "Đăng ký khách hàng";
-            this.btn_CustomerReg.Click += new System.EventHandler(this.btn_CustomerReg_Click);
+            this.btn_Access.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_Access.BorderRadius = 20;
+            this.btn_Access.BorderThickness = 1;
+            this.btn_Access.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btn_Access.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Access.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Access.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Access.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Access.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btn_Access.Font = new System.Drawing.Font("000 Captain Comic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Access.ForeColor = System.Drawing.Color.White;
+            this.btn_Access.Location = new System.Drawing.Point(2, 702);
+            this.btn_Access.Name = "btn_Access";
+            this.btn_Access.Size = new System.Drawing.Size(224, 72);
+            this.btn_Access.TabIndex = 6;
+            this.btn_Access.Text = "Phân quyền";
+            // 
+            // btn_Dashboard
+            // 
+            this.btn_Dashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_Dashboard.BorderRadius = 20;
+            this.btn_Dashboard.BorderThickness = 1;
+            this.btn_Dashboard.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btn_Dashboard.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Dashboard.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Dashboard.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Dashboard.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Dashboard.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btn_Dashboard.Font = new System.Drawing.Font("000 Captain Comic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Dashboard.ForeColor = System.Drawing.Color.White;
+            this.btn_Dashboard.Location = new System.Drawing.Point(2, 624);
+            this.btn_Dashboard.Name = "btn_Dashboard";
+            this.btn_Dashboard.Size = new System.Drawing.Size(224, 72);
+            this.btn_Dashboard.TabIndex = 5;
+            this.btn_Dashboard.Text = "Thống kê";
+            // 
+            // btn_Employee
+            // 
+            this.btn_Employee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_Employee.BorderRadius = 20;
+            this.btn_Employee.BorderThickness = 1;
+            this.btn_Employee.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btn_Employee.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Employee.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Employee.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Employee.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Employee.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btn_Employee.Font = new System.Drawing.Font("000 Captain Comic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Employee.ForeColor = System.Drawing.Color.White;
+            this.btn_Employee.Location = new System.Drawing.Point(3, 546);
+            this.btn_Employee.Name = "btn_Employee";
+            this.btn_Employee.Size = new System.Drawing.Size(224, 72);
+            this.btn_Employee.TabIndex = 4;
+            this.btn_Employee.Text = "Người dùng";
+            // 
+            // btn_Booking
+            // 
+            this.btn_Booking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_Booking.BorderRadius = 20;
+            this.btn_Booking.BorderThickness = 1;
+            this.btn_Booking.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btn_Booking.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Booking.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Booking.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Booking.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Booking.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_Booking.Font = new System.Drawing.Font("000 Captain Comic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Booking.ForeColor = System.Drawing.Color.White;
+            this.btn_Booking.Location = new System.Drawing.Point(4, 154);
+            this.btn_Booking.Name = "btn_Booking";
+            this.btn_Booking.Size = new System.Drawing.Size(224, 72);
+            this.btn_Booking.TabIndex = 2;
+            this.btn_Booking.Text = "Đặt phòng";
+            this.btn_Booking.Click += new System.EventHandler(this.btn_Booking_Click);
+            // 
+            // btn_Customer
+            // 
+            this.btn_Customer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_Customer.BorderRadius = 20;
+            this.btn_Customer.BorderThickness = 1;
+            this.btn_Customer.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btn_Customer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Customer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Customer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Customer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Customer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_Customer.Font = new System.Drawing.Font("000 Captain Comic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Customer.ForeColor = System.Drawing.Color.White;
+            this.btn_Customer.Image = ((System.Drawing.Image)(resources.GetObject("btn_Customer.Image")));
+            this.btn_Customer.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_Customer.Location = new System.Drawing.Point(4, 78);
+            this.btn_Customer.Name = "btn_Customer";
+            this.btn_Customer.Size = new System.Drawing.Size(224, 70);
+            this.btn_Customer.TabIndex = 1;
+            this.btn_Customer.Text = "Khách hàng";
+            this.btn_Customer.Click += new System.EventHandler(this.btn_CustomerReg_Click);
             // 
             // btn_Room
             // 
@@ -187,12 +296,13 @@
             this.btn_Room.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_Room.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_Room.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btn_Room.Font = new System.Drawing.Font("000 Captain Comic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Room.Font = new System.Drawing.Font("000 Captain Comic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Room.ForeColor = System.Drawing.Color.White;
+            this.btn_Room.Image = ((System.Drawing.Image)(resources.GetObject("btn_Room.Image")));
             this.btn_Room.ImageSize = new System.Drawing.Size(35, 35);
             this.btn_Room.Location = new System.Drawing.Point(4, 4);
             this.btn_Room.Name = "btn_Room";
-            this.btn_Room.Size = new System.Drawing.Size(224, 97);
+            this.btn_Room.Size = new System.Drawing.Size(224, 68);
             this.btn_Room.TabIndex = 0;
             this.btn_Room.Text = "Phòng";
             this.btn_Room.Click += new System.EventHandler(this.btn_Room_Click);
@@ -200,12 +310,37 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.uC_Booking1);
             this.panel2.Controls.Add(this.uC_CustomerRes1);
             this.panel2.Controls.Add(this.uC_AddRoom1);
             this.panel2.Location = new System.Drawing.Point(267, 60);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1663, 1015);
+            this.panel2.Size = new System.Drawing.Size(1663, 1002);
             this.panel2.TabIndex = 4;
+            // 
+            // uC_Booking1
+            // 
+            this.uC_Booking1.BackColor = System.Drawing.Color.White;
+            this.uC_Booking1.Location = new System.Drawing.Point(3, 3);
+            this.uC_Booking1.Name = "uC_Booking1";
+            this.uC_Booking1.Size = new System.Drawing.Size(1653, 991);
+            this.uC_Booking1.TabIndex = 2;
+            // 
+            // uC_CustomerRes1
+            // 
+            this.uC_CustomerRes1.BackColor = System.Drawing.Color.White;
+            this.uC_CustomerRes1.Location = new System.Drawing.Point(3, 3);
+            this.uC_CustomerRes1.Name = "uC_CustomerRes1";
+            this.uC_CustomerRes1.Size = new System.Drawing.Size(1653, 991);
+            this.uC_CustomerRes1.TabIndex = 1;
+            // 
+            // uC_AddRoom1
+            // 
+            this.uC_AddRoom1.BackColor = System.Drawing.Color.White;
+            this.uC_AddRoom1.Location = new System.Drawing.Point(3, 5);
+            this.uC_AddRoom1.Name = "uC_AddRoom1";
+            this.uC_AddRoom1.Size = new System.Drawing.Size(1653, 991);
+            this.uC_AddRoom1.TabIndex = 0;
             // 
             // guna2Elipse1
             // 
@@ -225,22 +360,6 @@
             // guna2Elipse2
             // 
             this.guna2Elipse2.TargetControl = this;
-            // 
-            // uC_CustomerRes1
-            // 
-            this.uC_CustomerRes1.BackColor = System.Drawing.Color.White;
-            this.uC_CustomerRes1.Location = new System.Drawing.Point(-1, -2);
-            this.uC_CustomerRes1.Name = "uC_CustomerRes1";
-            this.uC_CustomerRes1.Size = new System.Drawing.Size(1650, 1010);
-            this.uC_CustomerRes1.TabIndex = 1;
-            // 
-            // uC_AddRoom1
-            // 
-            this.uC_AddRoom1.BackColor = System.Drawing.Color.White;
-            this.uC_AddRoom1.Location = new System.Drawing.Point(3, 5);
-            this.uC_AddRoom1.Name = "uC_AddRoom1";
-            this.uC_AddRoom1.Size = new System.Drawing.Size(1653, 1003);
-            this.uC_AddRoom1.TabIndex = 0;
             // 
             // frm_Dashboard
             // 
@@ -273,14 +392,20 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Button btn_Room;
-        private Guna.UI2.WinForms.Guna2Button btn_CustomerDetail;
         private Guna.UI2.WinForms.Guna2Button btn_Checkout;
-        private Guna.UI2.WinForms.Guna2Button btn_CustomerReg;
+        private Guna.UI2.WinForms.Guna2Button btn_Booking;
+        private Guna.UI2.WinForms.Guna2Button btn_Customer;
         private Guna.UI2.WinForms.Guna2Button btn_Employee;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private UserControls.UC_AddRoom uC_AddRoom1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private Guna.UI2.WinForms.Guna2Button btn_Access;
+        private Guna.UI2.WinForms.Guna2Button btn_Dashboard;
+        private Guna.UI2.WinForms.Guna2Button btn_Category;
         private UserControls.UC_CustomerRes uC_CustomerRes1;
+        private UserControls.UC_Booking uC_Booking1;
+        private Guna.UI2.WinForms.Guna2Button btn_BookingDetail;
+        private Guna.UI2.WinForms.Guna2Button btn_Service;
     }
 }

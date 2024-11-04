@@ -45,5 +45,11 @@ namespace QuanLyKhachSan
             uC_CustomerRes1.Visible = true;
             uC_CustomerRes1.BringToFront();
         }
+
+        private void btn_Booking_Click(object sender, EventArgs e)
+        {
+            uC_Booking1.Visible = true;
+            uC_Booking1.BringToFront();
+        }
     }
 }
