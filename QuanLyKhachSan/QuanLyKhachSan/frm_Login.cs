@@ -17,7 +17,7 @@ namespace QuanLyKhachSan
             InitializeComponent();
         }
 
-
+        function fn = new function();
         private void btn_Exit_Click(object sender, EventArgs e)
         {
 
@@ -27,12 +27,14 @@ namespace QuanLyKhachSan
                 Application.Exit();
             }
         }
-
         private void btn_Login_Click_1(object sender, EventArgs e)
         {
-
-            if (txt_UserName.Text == "quang")
+            string sql = "Select * from TAIKHOAN WHERE UserName = '" + txt_UserName.Text + "'and Password ='" + txt_Password.Text + "'";
+            DataTable dt = new DataTable();
+            dt = fn.GetDataTable(sql);
+            if (dt.Rows.Count > 0)
             {
+                Const.Quyen = int.Parse(dt.Rows[0][4].ToString());
                 lbl_Error.Visible = false;
                 frm_Dashboard db = new frm_Dashboard();
                 this.Hide();

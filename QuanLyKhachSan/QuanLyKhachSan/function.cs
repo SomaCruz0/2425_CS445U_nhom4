@@ -60,5 +60,39 @@ namespace QuanLyKhachSan
 
             return sdr;
         }
+
+        public int login(string sql)
+        {
+            SqlConnection con = getConnection();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            con.Open();
+            int kq = (int)cmd.ExecuteScalar();
+            con.Close();
+            return kq;
+        }
+        public DataTable GetDataTable(string sql)
+        {
+            SqlConnection con = getConnection();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            DataTable dt = new DataTable();
+            cmd.CommandText = sql;
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con;
+
+            try
+            {
+                con.Open();
+                SqlDataAdapter sda  = new SqlDataAdapter(cmd);
+                sda.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                string mex = ex.Message;
+                cmd.Dispose();
+            }
+            con.Close();
+
+            return dt;
+        }
     }
 }

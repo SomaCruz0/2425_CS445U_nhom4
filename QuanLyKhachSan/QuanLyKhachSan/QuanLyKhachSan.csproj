@@ -67,6 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Const.cs" />
     <Compile Include="frm_Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>

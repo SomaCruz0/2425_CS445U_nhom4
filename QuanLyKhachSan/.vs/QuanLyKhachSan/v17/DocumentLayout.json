@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|d:\\study\\doanchuyennganh\\project\\quanlykhachsan\\quanlykhachsan\\usercontrols\\uc_customerres.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|solutionrelative:quanlykhachsan\\usercontrols\\uc_customerres.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|d:\\study\\doanchuyennganh\\project\\quanlykhachsan\\quanlykhachsan\\usercontrols\\uc_booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|solutionrelative:quanlykhachsan\\usercontrols\\uc_booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|d:\\study\\doanchuyennganh\\project\\quanlykhachsan\\quanlykhachsan\\frm_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|solutionrelative:quanlykhachsan\\frm_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|d:\\study\\doanchuyennganh\\project\\quanlykhachsan\\quanlykhachsan\\usercontrols\\uc_addroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|solutionrelative:quanlykhachsan\\usercontrols\\uc_addroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,6 +59,42 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "UC_CustomerRes.cs [Design]",
+              "DocumentMoniker": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\UserControls\\UC_CustomerRes.cs",
+              "RelativeDocumentMoniker": "QuanLyKhachSan\\UserControls\\UC_CustomerRes.cs",
+              "ToolTip": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\UserControls\\UC_CustomerRes.cs [Design]",
+              "RelativeToolTip": "QuanLyKhachSan\\UserControls\\UC_CustomerRes.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T09:46:46.595Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UC_Booking.cs [Design]",
+              "DocumentMoniker": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\UserControls\\UC_Booking.cs",
+              "RelativeDocumentMoniker": "QuanLyKhachSan\\UserControls\\UC_Booking.cs",
+              "ToolTip": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\UserControls\\UC_Booking.cs [Design]",
+              "RelativeToolTip": "QuanLyKhachSan\\UserControls\\UC_Booking.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T09:46:43.545Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UC_AddRoom.cs [Design]",
+              "DocumentMoniker": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\UserControls\\UC_AddRoom.cs",
+              "RelativeDocumentMoniker": "QuanLyKhachSan\\UserControls\\UC_AddRoom.cs",
+              "ToolTip": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\UserControls\\UC_AddRoom.cs [Design]",
+              "RelativeToolTip": "QuanLyKhachSan\\UserControls\\UC_AddRoom.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T08:13:12.637Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "frm_Dashboard.cs [Design]",
               "DocumentMoniker": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\frm_Dashboard.cs",
               "RelativeDocumentMoniker": "QuanLyKhachSan\\frm_Dashboard.cs",
