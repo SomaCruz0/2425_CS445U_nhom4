@@ -12,10 +12,18 @@ namespace QuanLyKhachSan.UserControls
 {
     public partial class UC_CustomerRes : UserControl
     {
+        function fn = new function();
+        String query;
         public UC_CustomerRes()
         {
             InitializeComponent();
         }
 
+        private void UC_CustomerRes_Load(object sender, EventArgs e)
+        {
+            query = "Select * from KhachHang";
+            DataSet ds = fn.getData(query);
+            dgv_Customer.DataSource = ds.Tables[0];
+        }
     }
 }
