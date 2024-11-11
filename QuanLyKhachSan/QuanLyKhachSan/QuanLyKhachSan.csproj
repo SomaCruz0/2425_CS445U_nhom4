@@ -95,11 +95,41 @@
     <Compile Include="UserControls\UC_Booking.Designer.cs">
       <DependentUpon>UC_Booking.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_BookingDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_BookingDetail.Designer.cs">
+      <DependentUpon>UC_BookingDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_Category.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Category.Designer.cs">
+      <DependentUpon>UC_Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_Checkout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Checkout.Designer.cs">
+      <DependentUpon>UC_Checkout.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_CustomerRes.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\UC_CustomerRes.Designer.cs">
       <DependentUpon>UC_CustomerRes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_DichVu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_DichVu.Designer.cs">
+      <DependentUpon>UC_DichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_User.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_User.Designer.cs">
+      <DependentUpon>UC_User.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frm_Dashboard.resx">
       <DependentUpon>frm_Dashboard.cs</DependentUpon>
@@ -122,8 +152,23 @@
     <EmbeddedResource Include="UserControls\UC_Booking.resx">
       <DependentUpon>UC_Booking.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_BookingDetail.resx">
+      <DependentUpon>UC_BookingDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Category.resx">
+      <DependentUpon>UC_Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Checkout.resx">
+      <DependentUpon>UC_Checkout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_CustomerRes.resx">
       <DependentUpon>UC_CustomerRes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_DichVu.resx">
+      <DependentUpon>UC_DichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_User.resx">
+      <DependentUpon>UC_User.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

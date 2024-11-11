@@ -21,9 +21,18 @@ namespace QuanLyKhachSan.UserControls
 
         private void UC_Booking_Load(object sender, EventArgs e)
         {
-            query = "Select * from DatPhong";
+            query = "Select * from Phong";
             DataSet ds = fn.getData(query);
-            dgv_Booking.DataSource = ds.Tables[0];
+            dgv_Room.DataSource = ds.Tables[0];
+
+            query = "Select * from KhachHang";
+            DataSet ds2 = fn.getData(query);
+            dgv_Customer.DataSource = ds2.Tables[0];
+        }
+
+        private void btn_AllotRoom_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

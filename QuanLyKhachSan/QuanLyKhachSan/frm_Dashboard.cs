@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,6 +14,7 @@ namespace QuanLyKhachSan
 {
     public partial class frm_Dashboard : Form
     {
+        function fn = new function();
         public frm_Dashboard()
         {
             InitializeComponent();
@@ -23,18 +25,29 @@ namespace QuanLyKhachSan
             KiemTraQuyen();
             uC_AddRoom1.Visible = false;
             uC_CustomerRes1.Visible = false;
+            uC_DichVu1.Visible = false;
+            uC_User1.Visible = false;
+            uC_Booking1.Visible = false;
+            uC_BookingDetail1.Visible = false;
+            uC_Category1.Visible = false;
+            uC_Checkout1.Visible = false;
             btn_Room.PerformClick();
         }
 
         void KiemTraQuyen()
         {
-            if (Const.Quyen == 1)
+            string sql = "Select * from TAIKHOAN WHERE Uid = '"+Const.ID+"'";
+            DataTable dt = new DataTable();
+            dt = fn.GetDataTable(sql);
+            int role = int.Parse(dt.Rows[0][4].ToString());
+            txt_Name.Text = dt.Rows[0][1].ToString();
+            if (role == 1)
             {
                 txt_Authority.Text = "Admin";
             }
             else
             {
-                txt_Authority.Text = "Employee";
+                txt_Authority.Text = "Nhân viên";
                 btn_Account.Visible = false;
                 btn_System.Visible = false;
                 btn_Dashboard.Visible = false;
@@ -66,6 +79,36 @@ namespace QuanLyKhachSan
         {
             uC_Booking1.Visible = true;
             uC_Booking1.BringToFront();
+        }
+
+        private void btn_Service_Click(object sender, EventArgs e)
+        {
+            uC_DichVu1.Visible = true;
+            uC_DichVu1.BringToFront();
+        }
+
+        private void btn_Category_Click(object sender, EventArgs e)
+        {
+            uC_Category1.Visible = true;
+            uC_Category1.BringToFront();
+        }
+
+        private void btn_Checkout_Click(object sender, EventArgs e)
+        {
+            uC_Checkout1.Visible = true;
+            uC_Checkout1.BringToFront();
+        }
+
+        private void btn_BookingDetail_Click(object sender, EventArgs e)
+        {
+            uC_BookingDetail1.Visible = true;
+            uC_BookingDetail1.BringToFront();
+        }
+
+        private void btn_User_Click(object sender, EventArgs e)
+        {
+            uC_User1.Visible = true;
+            uC_User1.BringToFront();
         }
     }
 }

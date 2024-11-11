@@ -34,7 +34,7 @@ namespace QuanLyKhachSan
             dt = fn.GetDataTable(sql);
             if (dt.Rows.Count > 0)
             {
-                Const.Quyen = int.Parse(dt.Rows[0][4].ToString());
+                Const.ID = int.Parse(dt.Rows[0][0].ToString());
                 lbl_Error.Visible = false;
                 frm_Dashboard db = new frm_Dashboard();
                 this.Hide();

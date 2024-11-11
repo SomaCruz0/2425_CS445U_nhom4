@@ -8,6 +8,6 @@ namespace QuanLyKhachSan
 {
     public class Const
     {
-        public static int Quyen;
+        public static int ID;
     }
 }

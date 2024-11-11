@@ -33,6 +33,7 @@
             this.btn_Exit = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btn_Minisize = new Guna.UI2.WinForms.Guna2CircleButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_Logout = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Account = new Guna.UI2.WinForms.Guna2Button();
             this.btn_System = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Service = new Guna.UI2.WinForms.Guna2Button();
@@ -45,14 +46,19 @@
             this.btn_Customer = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Room = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.uC_Booking1 = new QuanLyKhachSan.UserControls.UC_Booking();
-            this.uC_CustomerRes1 = new QuanLyKhachSan.UserControls.UC_CustomerRes();
-            this.uC_AddRoom1 = new QuanLyKhachSan.UserControls.UC_AddRoom();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.txt_Authority = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btn_Logout = new Guna.UI2.WinForms.Guna2Button();
+            this.txt_Name = new Guna.UI2.WinForms.Guna2TextBox();
+            this.uC_BookingDetail1 = new QuanLyKhachSan.UserControls.UC_BookingDetail();
+            this.uC_Checkout1 = new QuanLyKhachSan.UserControls.UC_Checkout();
+            this.uC_Category1 = new QuanLyKhachSan.UserControls.UC_Category();
+            this.uC_DichVu1 = new QuanLyKhachSan.UserControls.UC_DichVu();
+            this.uC_Booking1 = new QuanLyKhachSan.UserControls.UC_Booking();
+            this.uC_CustomerRes1 = new QuanLyKhachSan.UserControls.UC_CustomerRes();
+            this.uC_AddRoom1 = new QuanLyKhachSan.UserControls.UC_AddRoom();
+            this.uC_User1 = new QuanLyKhachSan.UserControls.UC_User();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -112,8 +118,29 @@
             this.panel1.Controls.Add(this.btn_Room);
             this.panel1.Location = new System.Drawing.Point(13, 60);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(235, 1002);
+            this.panel1.Size = new System.Drawing.Size(235, 969);
             this.panel1.TabIndex = 3;
+            // 
+            // btn_Logout
+            // 
+            this.btn_Logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_Logout.BorderRadius = 20;
+            this.btn_Logout.BorderThickness = 1;
+            this.btn_Logout.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btn_Logout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Logout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Logout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Logout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Logout.FillColor = System.Drawing.Color.IndianRed;
+            this.btn_Logout.Font = new System.Drawing.Font("MTO Canun", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Logout.ForeColor = System.Drawing.Color.White;
+            this.btn_Logout.Image = ((System.Drawing.Image)(resources.GetObject("btn_Logout.Image")));
+            this.btn_Logout.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_Logout.Location = new System.Drawing.Point(4, 858);
+            this.btn_Logout.Name = "btn_Logout";
+            this.btn_Logout.Size = new System.Drawing.Size(224, 72);
+            this.btn_Logout.TabIndex = 12;
+            this.btn_Logout.Text = "Đăng xuất";
             // 
             // btn_Account
             // 
@@ -177,6 +204,7 @@
             this.btn_Service.Size = new System.Drawing.Size(224, 72);
             this.btn_Service.TabIndex = 9;
             this.btn_Service.Text = "Dịch vụ";
+            this.btn_Service.Click += new System.EventHandler(this.btn_Service_Click);
             // 
             // btn_BookingDetail
             // 
@@ -198,6 +226,7 @@
             this.btn_BookingDetail.Size = new System.Drawing.Size(224, 72);
             this.btn_BookingDetail.TabIndex = 8;
             this.btn_BookingDetail.Text = "Hóa đơn";
+            this.btn_BookingDetail.Click += new System.EventHandler(this.btn_BookingDetail_Click);
             // 
             // btn_Category
             // 
@@ -219,6 +248,7 @@
             this.btn_Category.Size = new System.Drawing.Size(224, 72);
             this.btn_Category.TabIndex = 7;
             this.btn_Category.Text = "Danh mục";
+            this.btn_Category.Click += new System.EventHandler(this.btn_Category_Click);
             // 
             // btn_Checkout
             // 
@@ -240,6 +270,7 @@
             this.btn_Checkout.Size = new System.Drawing.Size(224, 72);
             this.btn_Checkout.TabIndex = 3;
             this.btn_Checkout.Text = "Thanh toán";
+            this.btn_Checkout.Click += new System.EventHandler(this.btn_Checkout_Click);
             // 
             // btn_Dashboard
             // 
@@ -282,6 +313,7 @@
             this.btn_User.Size = new System.Drawing.Size(224, 72);
             this.btn_User.TabIndex = 4;
             this.btn_User.Text = "Người dùng";
+            this.btn_User.Click += new System.EventHandler(this.btn_User_Click);
             // 
             // btn_Booking
             // 
@@ -352,37 +384,17 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.uC_BookingDetail1);
+            this.panel2.Controls.Add(this.uC_Checkout1);
+            this.panel2.Controls.Add(this.uC_Category1);
+            this.panel2.Controls.Add(this.uC_DichVu1);
             this.panel2.Controls.Add(this.uC_Booking1);
             this.panel2.Controls.Add(this.uC_CustomerRes1);
             this.panel2.Controls.Add(this.uC_AddRoom1);
             this.panel2.Location = new System.Drawing.Point(267, 60);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1663, 1002);
+            this.panel2.Size = new System.Drawing.Size(1663, 969);
             this.panel2.TabIndex = 4;
-            // 
-            // uC_Booking1
-            // 
-            this.uC_Booking1.BackColor = System.Drawing.Color.White;
-            this.uC_Booking1.Location = new System.Drawing.Point(3, 3);
-            this.uC_Booking1.Name = "uC_Booking1";
-            this.uC_Booking1.Size = new System.Drawing.Size(1653, 991);
-            this.uC_Booking1.TabIndex = 2;
-            // 
-            // uC_CustomerRes1
-            // 
-            this.uC_CustomerRes1.BackColor = System.Drawing.Color.White;
-            this.uC_CustomerRes1.Location = new System.Drawing.Point(3, 3);
-            this.uC_CustomerRes1.Name = "uC_CustomerRes1";
-            this.uC_CustomerRes1.Size = new System.Drawing.Size(1653, 991);
-            this.uC_CustomerRes1.TabIndex = 1;
-            // 
-            // uC_AddRoom1
-            // 
-            this.uC_AddRoom1.BackColor = System.Drawing.Color.White;
-            this.uC_AddRoom1.Location = new System.Drawing.Point(3, 5);
-            this.uC_AddRoom1.Name = "uC_AddRoom1";
-            this.uC_AddRoom1.Size = new System.Drawing.Size(1653, 991);
-            this.uC_AddRoom1.TabIndex = 0;
             // 
             // guna2Elipse1
             // 
@@ -412,36 +424,104 @@
             this.txt_Authority.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_Authority.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_Authority.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Authority.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_Authority.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_Authority.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.txt_Authority.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Authority.Location = new System.Drawing.Point(267, 11);
+            this.txt_Authority.Location = new System.Drawing.Point(613, 12);
             this.txt_Authority.Name = "txt_Authority";
             this.txt_Authority.PasswordChar = '\0';
+            this.txt_Authority.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.txt_Authority.PlaceholderText = "";
             this.txt_Authority.ReadOnly = true;
             this.txt_Authority.SelectedText = "";
             this.txt_Authority.Size = new System.Drawing.Size(200, 36);
             this.txt_Authority.TabIndex = 6;
             // 
-            // btn_Logout
+            // txt_Name
             // 
-            this.btn_Logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btn_Logout.BorderThickness = 1;
-            this.btn_Logout.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btn_Logout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Logout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Logout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Logout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Logout.FillColor = System.Drawing.Color.IndianRed;
-            this.btn_Logout.Font = new System.Drawing.Font("MTO Canun", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Logout.ForeColor = System.Drawing.Color.White;
-            this.btn_Logout.Image = ((System.Drawing.Image)(resources.GetObject("btn_Logout.Image")));
-            this.btn_Logout.ImageSize = new System.Drawing.Size(40, 40);
-            this.btn_Logout.Location = new System.Drawing.Point(4, 921);
-            this.btn_Logout.Name = "btn_Logout";
-            this.btn_Logout.Size = new System.Drawing.Size(224, 72);
-            this.btn_Logout.TabIndex = 12;
-            this.btn_Logout.Text = "Đăng xuất";
+            this.txt_Name.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Name.DefaultText = "";
+            this.txt_Name.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_Name.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_Name.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Name.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Name.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Name.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_Name.ForeColor = System.Drawing.Color.Blue;
+            this.txt_Name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Name.Location = new System.Drawing.Point(267, 12);
+            this.txt_Name.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txt_Name.Name = "txt_Name";
+            this.txt_Name.PasswordChar = '\0';
+            this.txt_Name.PlaceholderText = "";
+            this.txt_Name.ReadOnly = true;
+            this.txt_Name.SelectedText = "";
+            this.txt_Name.Size = new System.Drawing.Size(340, 36);
+            this.txt_Name.TabIndex = 7;
+            // 
+            // uC_BookingDetail1
+            // 
+            this.uC_BookingDetail1.BackColor = System.Drawing.Color.White;
+            this.uC_BookingDetail1.Location = new System.Drawing.Point(3, 2);
+            this.uC_BookingDetail1.Name = "uC_BookingDetail1";
+            this.uC_BookingDetail1.Size = new System.Drawing.Size(1650, 994);
+            this.uC_BookingDetail1.TabIndex = 6;
+            // 
+            // uC_Checkout1
+            // 
+            this.uC_Checkout1.BackColor = System.Drawing.Color.White;
+            this.uC_Checkout1.Location = new System.Drawing.Point(3, 3);
+            this.uC_Checkout1.Name = "uC_Checkout1";
+            this.uC_Checkout1.Size = new System.Drawing.Size(1650, 991);
+            this.uC_Checkout1.TabIndex = 5;
+            // 
+            // uC_Category1
+            // 
+            this.uC_Category1.BackColor = System.Drawing.Color.White;
+            this.uC_Category1.Location = new System.Drawing.Point(3, 3);
+            this.uC_Category1.Name = "uC_Category1";
+            this.uC_Category1.Size = new System.Drawing.Size(1650, 991);
+            this.uC_Category1.TabIndex = 4;
+            // 
+            // uC_DichVu1
+            // 
+            this.uC_DichVu1.BackColor = System.Drawing.Color.White;
+            this.uC_DichVu1.Location = new System.Drawing.Point(3, 2);
+            this.uC_DichVu1.Name = "uC_DichVu1";
+            this.uC_DichVu1.Size = new System.Drawing.Size(1650, 992);
+            this.uC_DichVu1.TabIndex = 3;
+            // 
+            // uC_Booking1
+            // 
+            this.uC_Booking1.BackColor = System.Drawing.Color.White;
+            this.uC_Booking1.Location = new System.Drawing.Point(3, 3);
+            this.uC_Booking1.Name = "uC_Booking1";
+            this.uC_Booking1.Size = new System.Drawing.Size(1653, 991);
+            this.uC_Booking1.TabIndex = 2;
+            // 
+            // uC_CustomerRes1
+            // 
+            this.uC_CustomerRes1.BackColor = System.Drawing.Color.White;
+            this.uC_CustomerRes1.Location = new System.Drawing.Point(3, 3);
+            this.uC_CustomerRes1.Name = "uC_CustomerRes1";
+            this.uC_CustomerRes1.Size = new System.Drawing.Size(1653, 991);
+            this.uC_CustomerRes1.TabIndex = 1;
+            // 
+            // uC_AddRoom1
+            // 
+            this.uC_AddRoom1.BackColor = System.Drawing.Color.White;
+            this.uC_AddRoom1.Location = new System.Drawing.Point(3, 5);
+            this.uC_AddRoom1.Name = "uC_AddRoom1";
+            this.uC_AddRoom1.Size = new System.Drawing.Size(1653, 991);
+            this.uC_AddRoom1.TabIndex = 0;
+            // 
+            // uC_User1
+            // 
+            this.uC_User1.BackColor = System.Drawing.Color.White;
+            this.uC_User1.Location = new System.Drawing.Point(3, 2);
+            this.uC_User1.Name = "uC_User1";
+            this.uC_User1.Size = new System.Drawing.Size(1650, 994);
+            this.uC_User1.TabIndex = 7;
             // 
             // frm_Dashboard
             // 
@@ -449,10 +529,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1942, 1102);
+            this.Controls.Add(this.txt_Name);
             this.Controls.Add(this.txt_Authority);
             this.Controls.Add(this.guna2PictureBox1);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.btn_Minisize);
             this.Controls.Add(this.btn_Exit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -493,5 +574,11 @@
         private Guna.UI2.WinForms.Guna2Button btn_Account;
         private Guna.UI2.WinForms.Guna2TextBox txt_Authority;
         private Guna.UI2.WinForms.Guna2Button btn_Logout;
+        private UserControls.UC_DichVu uC_DichVu1;
+        private UserControls.UC_Category uC_Category1;
+        private UserControls.UC_User uC_User1;
+        private UserControls.UC_BookingDetail uC_BookingDetail1;
+        private UserControls.UC_Checkout uC_Checkout1;
+        private Guna.UI2.WinForms.Guna2TextBox txt_Name;
     }
 }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_CustomerRes));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -52,9 +51,9 @@
             this.txt_Name = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_Delete = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Edit = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_Search = new Guna.UI2.WinForms.Guna2CircleButton();
             this.txt_Search = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgv_Customer = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btn_Search = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Customer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -338,23 +337,6 @@
             this.btn_Edit.TabIndex = 29;
             this.btn_Edit.Text = "Sửa";
             // 
-            // btn_Search
-            // 
-            this.btn_Search.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Search.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Search.FillColor = System.Drawing.Color.White;
-            this.btn_Search.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_Search.ForeColor = System.Drawing.Color.White;
-            this.btn_Search.Image = ((System.Drawing.Image)(resources.GetObject("btn_Search.Image")));
-            this.btn_Search.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_Search.Location = new System.Drawing.Point(1578, 420);
-            this.btn_Search.Name = "btn_Search";
-            this.btn_Search.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btn_Search.Size = new System.Drawing.Size(48, 46);
-            this.btn_Search.TabIndex = 32;
-            // 
             // txt_Search
             // 
             this.txt_Search.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -366,7 +348,7 @@
             this.txt_Search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Search.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_Search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Search.Location = new System.Drawing.Point(1277, 420);
+            this.txt_Search.Location = new System.Drawing.Point(1217, 421);
             this.txt_Search.Name = "txt_Search";
             this.txt_Search.PasswordChar = '\0';
             this.txt_Search.PlaceholderText = "Enter Customer Name";
@@ -378,6 +360,7 @@
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgv_Customer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_Customer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_Customer.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
@@ -427,12 +410,27 @@
             this.dgv_Customer.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_Customer.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // btn_Search
+            // 
+            this.btn_Search.BorderThickness = 1;
+            this.btn_Search.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Search.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Search.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Search.ForeColor = System.Drawing.Color.White;
+            this.btn_Search.Location = new System.Drawing.Point(1500, 421);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(97, 36);
+            this.btn_Search.TabIndex = 83;
+            this.btn_Search.Text = "Search";
+            // 
             // UC_CustomerRes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dgv_Customer);
             this.Controls.Add(this.btn_Search);
+            this.Controls.Add(this.dgv_Customer);
             this.Controls.Add(this.txt_Search);
             this.Controls.Add(this.btn_Edit);
             this.Controls.Add(this.btn_Delete);
@@ -482,8 +480,8 @@
         private Guna.UI2.WinForms.Guna2TextBox txt_Name;
         private Guna.UI2.WinForms.Guna2Button btn_Delete;
         private Guna.UI2.WinForms.Guna2Button btn_Edit;
-        private Guna.UI2.WinForms.Guna2CircleButton btn_Search;
         private Guna.UI2.WinForms.Guna2TextBox txt_Search;
         private Guna.UI2.WinForms.Guna2DataGridView dgv_Customer;
+        private Guna.UI2.WinForms.Guna2Button btn_Search;
     }
 }

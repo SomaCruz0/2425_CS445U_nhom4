@@ -32,7 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_AddRoom));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_RoomNo = new Guna.UI2.WinForms.Guna2TextBox();
@@ -48,10 +47,10 @@
             this.btn_Edit = new Guna.UI2.WinForms.Guna2Button();
             this.dgv_Room = new Guna.UI2.WinForms.Guna2DataGridView();
             this.txt_Search = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btn_Search = new Guna.UI2.WinForms.Guna2CircleButton();
             this.rbt_NotBooked = new System.Windows.Forms.RadioButton();
             this.rbt_IsBooked = new System.Windows.Forms.RadioButton();
             this.btn_Load = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Search = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Room)).BeginInit();
             this.SuspendLayout();
             // 
@@ -318,23 +317,6 @@
             this.txt_Search.Size = new System.Drawing.Size(349, 36);
             this.txt_Search.TabIndex = 16;
             // 
-            // btn_Search
-            // 
-            this.btn_Search.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Search.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Search.FillColor = System.Drawing.Color.White;
-            this.btn_Search.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_Search.ForeColor = System.Drawing.Color.White;
-            this.btn_Search.Image = ((System.Drawing.Image)(resources.GetObject("btn_Search.Image")));
-            this.btn_Search.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_Search.Location = new System.Drawing.Point(500, 112);
-            this.btn_Search.Name = "btn_Search";
-            this.btn_Search.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btn_Search.Size = new System.Drawing.Size(50, 46);
-            this.btn_Search.TabIndex = 17;
-            // 
             // rbt_NotBooked
             // 
             this.rbt_NotBooked.AutoSize = true;
@@ -378,14 +360,29 @@
             this.btn_Load.TabIndex = 20;
             this.btn_Load.Text = "Load";
             // 
+            // btn_Search
+            // 
+            this.btn_Search.BorderThickness = 1;
+            this.btn_Search.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Search.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Search.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Search.ForeColor = System.Drawing.Color.White;
+            this.btn_Search.Location = new System.Drawing.Point(500, 115);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(97, 36);
+            this.btn_Search.TabIndex = 82;
+            this.btn_Search.Text = "Search";
+            // 
             // UC_AddRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.btn_Load);
             this.Controls.Add(this.rbt_IsBooked);
             this.Controls.Add(this.rbt_NotBooked);
-            this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.txt_Search);
             this.Controls.Add(this.dgv_Room);
             this.Controls.Add(this.btn_Edit);
@@ -425,10 +422,10 @@
         private Guna.UI2.WinForms.Guna2Button btn_Edit;
         private Guna.UI2.WinForms.Guna2Button btn_Delete;
         private Guna.UI2.WinForms.Guna2DataGridView dgv_Room;
-        private Guna.UI2.WinForms.Guna2CircleButton btn_Search;
         private Guna.UI2.WinForms.Guna2TextBox txt_Search;
         private System.Windows.Forms.RadioButton rbt_IsBooked;
         private System.Windows.Forms.RadioButton rbt_NotBooked;
         private Guna.UI2.WinForms.Guna2Button btn_Load;
+        private Guna.UI2.WinForms.Guna2Button btn_Search;
     }
 }
