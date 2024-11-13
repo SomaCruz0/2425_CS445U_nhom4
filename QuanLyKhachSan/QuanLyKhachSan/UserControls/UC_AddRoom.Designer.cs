@@ -29,19 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_RoomNo = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cb_RoomType = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.txt_Price = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.cb_BedType = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txt_Price = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.cb_BedType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btn_AddRoom = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Load = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btn_Delete = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Edit = new Guna.UI2.WinForms.Guna2Button();
@@ -49,7 +50,6 @@
             this.txt_Search = new Guna.UI2.WinForms.Guna2TextBox();
             this.rbt_NotBooked = new System.Windows.Forms.RadioButton();
             this.rbt_IsBooked = new System.Windows.Forms.RadioButton();
-            this.btn_Load = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Search = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Room)).BeginInit();
             this.SuspendLayout();
@@ -67,11 +67,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(1040, 112);
+            this.label2.Location = new System.Drawing.Point(1037, 203);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 23);
+            this.label2.Size = new System.Drawing.Size(94, 28);
             this.label2.TabIndex = 2;
             this.label2.Text = "Số phòng";
             // 
@@ -87,23 +87,23 @@
             this.txt_RoomNo.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txt_RoomNo.ForeColor = System.Drawing.Color.Black;
             this.txt_RoomNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_RoomNo.Location = new System.Drawing.Point(1044, 155);
+            this.txt_RoomNo.Location = new System.Drawing.Point(1041, 246);
             this.txt_RoomNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_RoomNo.Name = "txt_RoomNo";
             this.txt_RoomNo.PasswordChar = '\0';
             this.txt_RoomNo.PlaceholderText = "";
             this.txt_RoomNo.SelectedText = "";
-            this.txt_RoomNo.Size = new System.Drawing.Size(500, 73);
+            this.txt_RoomNo.Size = new System.Drawing.Size(500, 57);
             this.txt_RoomNo.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(1040, 262);
+            this.label3.Location = new System.Drawing.Point(1037, 353);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 23);
+            this.label3.Size = new System.Drawing.Size(109, 28);
             this.label3.TabIndex = 5;
             this.label3.Text = "Loại phòng";
             // 
@@ -117,10 +117,21 @@
             this.cb_RoomType.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cb_RoomType.ForeColor = System.Drawing.Color.Black;
             this.cb_RoomType.ItemHeight = 30;
-            this.cb_RoomType.Location = new System.Drawing.Point(1044, 323);
+            this.cb_RoomType.Location = new System.Drawing.Point(1041, 414);
             this.cb_RoomType.Name = "cb_RoomType";
             this.cb_RoomType.Size = new System.Drawing.Size(500, 36);
             this.cb_RoomType.TabIndex = 6;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(1037, 637);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 28);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Giá tiền";
             // 
             // txt_Price
             // 
@@ -134,25 +145,25 @@
             this.txt_Price.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txt_Price.ForeColor = System.Drawing.Color.Black;
             this.txt_Price.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Price.Location = new System.Drawing.Point(1044, 599);
+            this.txt_Price.Location = new System.Drawing.Point(1041, 690);
             this.txt_Price.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_Price.Name = "txt_Price";
             this.txt_Price.PasswordChar = '\0';
             this.txt_Price.PlaceholderText = "";
             this.txt_Price.SelectedText = "";
-            this.txt_Price.Size = new System.Drawing.Size(500, 73);
+            this.txt_Price.Size = new System.Drawing.Size(500, 57);
             this.txt_Price.TabIndex = 8;
             // 
-            // label4
+            // label5
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(1040, 546);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 23);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Giá tiền";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(1037, 497);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(115, 28);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Loại giường";
             // 
             // cb_BedType
             // 
@@ -164,21 +175,10 @@
             this.cb_BedType.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cb_BedType.ForeColor = System.Drawing.Color.Black;
             this.cb_BedType.ItemHeight = 30;
-            this.cb_BedType.Location = new System.Drawing.Point(1044, 467);
+            this.cb_BedType.Location = new System.Drawing.Point(1041, 558);
             this.cb_BedType.Name = "cb_BedType";
             this.cb_BedType.Size = new System.Drawing.Size(500, 36);
             this.cb_BedType.TabIndex = 10;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(1040, 406);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 23);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Loại giường";
             // 
             // btn_AddRoom
             // 
@@ -193,12 +193,31 @@
             this.btn_AddRoom.FillColor = System.Drawing.Color.White;
             this.btn_AddRoom.Font = new System.Drawing.Font("000 Frank Bellamy iCiel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_AddRoom.ForeColor = System.Drawing.Color.Black;
-            this.btn_AddRoom.Location = new System.Drawing.Point(1044, 725);
+            this.btn_AddRoom.Location = new System.Drawing.Point(1041, 816);
             this.btn_AddRoom.Name = "btn_AddRoom";
             this.btn_AddRoom.Size = new System.Drawing.Size(131, 62);
             this.btn_AddRoom.TabIndex = 11;
             this.btn_AddRoom.Text = "Thêm";
             this.btn_AddRoom.Click += new System.EventHandler(this.btn_AddRoom_Click);
+            // 
+            // btn_Load
+            // 
+            this.btn_Load.BorderRadius = 15;
+            this.btn_Load.BorderThickness = 1;
+            this.btn_Load.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_Load.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.btn_Load.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Load.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Load.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Load.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Load.FillColor = System.Drawing.Color.White;
+            this.btn_Load.Font = new System.Drawing.Font("000 Frank Bellamy iCiel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Load.ForeColor = System.Drawing.Color.Black;
+            this.btn_Load.Location = new System.Drawing.Point(744, 115);
+            this.btn_Load.Name = "btn_Load";
+            this.btn_Load.Size = new System.Drawing.Size(131, 53);
+            this.btn_Load.TabIndex = 20;
+            this.btn_Load.Text = "Load";
             // 
             // guna2Elipse1
             // 
@@ -218,7 +237,7 @@
             this.btn_Delete.FillColor = System.Drawing.Color.White;
             this.btn_Delete.Font = new System.Drawing.Font("000 Frank Bellamy iCiel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Delete.ForeColor = System.Drawing.Color.Black;
-            this.btn_Delete.Location = new System.Drawing.Point(1413, 725);
+            this.btn_Delete.Location = new System.Drawing.Point(1410, 816);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(131, 62);
             this.btn_Delete.TabIndex = 12;
@@ -237,7 +256,7 @@
             this.btn_Edit.FillColor = System.Drawing.Color.White;
             this.btn_Edit.Font = new System.Drawing.Font("000 Frank Bellamy iCiel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Edit.ForeColor = System.Drawing.Color.Black;
-            this.btn_Edit.Location = new System.Drawing.Point(1231, 725);
+            this.btn_Edit.Location = new System.Drawing.Point(1228, 816);
             this.btn_Edit.Name = "btn_Edit";
             this.btn_Edit.Size = new System.Drawing.Size(131, 62);
             this.btn_Edit.TabIndex = 13;
@@ -245,28 +264,28 @@
             // 
             // dgv_Room
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgv_Room.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgv_Room.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_Room.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_Room.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dgv_Room.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Room.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Room.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_Room.ColumnHeadersHeight = 20;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Room.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Room.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_Room.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_Room.Location = new System.Drawing.Point(37, 204);
             this.dgv_Room.Name = "dgv_Room";
@@ -309,7 +328,7 @@
             this.txt_Search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Search.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_Search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Search.Location = new System.Drawing.Point(145, 115);
+            this.txt_Search.Location = new System.Drawing.Point(37, 112);
             this.txt_Search.Name = "txt_Search";
             this.txt_Search.PasswordChar = '\0';
             this.txt_Search.PlaceholderText = "Enter Room No";
@@ -321,7 +340,7 @@
             // 
             this.rbt_NotBooked.AutoSize = true;
             this.rbt_NotBooked.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rbt_NotBooked.Location = new System.Drawing.Point(145, 168);
+            this.rbt_NotBooked.Location = new System.Drawing.Point(37, 165);
             this.rbt_NotBooked.Name = "rbt_NotBooked";
             this.rbt_NotBooked.Size = new System.Drawing.Size(119, 29);
             this.rbt_NotBooked.TabIndex = 18;
@@ -333,32 +352,13 @@
             // 
             this.rbt_IsBooked.AutoSize = true;
             this.rbt_IsBooked.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rbt_IsBooked.Location = new System.Drawing.Point(297, 169);
+            this.rbt_IsBooked.Location = new System.Drawing.Point(189, 166);
             this.rbt_IsBooked.Name = "rbt_IsBooked";
             this.rbt_IsBooked.Size = new System.Drawing.Size(138, 29);
             this.rbt_IsBooked.TabIndex = 19;
             this.rbt_IsBooked.TabStop = true;
             this.rbt_IsBooked.Text = "Đã được đặt";
             this.rbt_IsBooked.UseVisualStyleBackColor = true;
-            // 
-            // btn_Load
-            // 
-            this.btn_Load.BorderRadius = 15;
-            this.btn_Load.BorderThickness = 1;
-            this.btn_Load.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_Load.CheckedState.ForeColor = System.Drawing.Color.White;
-            this.btn_Load.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Load.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Load.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Load.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Load.FillColor = System.Drawing.Color.White;
-            this.btn_Load.Font = new System.Drawing.Font("000 Frank Bellamy iCiel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Load.ForeColor = System.Drawing.Color.Black;
-            this.btn_Load.Location = new System.Drawing.Point(744, 115);
-            this.btn_Load.Name = "btn_Load";
-            this.btn_Load.Size = new System.Drawing.Size(131, 53);
-            this.btn_Load.TabIndex = 20;
-            this.btn_Load.Text = "Load";
             // 
             // btn_Search
             // 
@@ -369,7 +369,7 @@
             this.btn_Search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_Search.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_Search.ForeColor = System.Drawing.Color.White;
-            this.btn_Search.Location = new System.Drawing.Point(500, 115);
+            this.btn_Search.Location = new System.Drawing.Point(392, 112);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(97, 36);
             this.btn_Search.TabIndex = 82;
@@ -413,19 +413,19 @@
         private Guna.UI2.WinForms.Guna2TextBox txt_RoomNo;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2ComboBox cb_RoomType;
-        private Guna.UI2.WinForms.Guna2TextBox txt_Price;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2ComboBox cb_BedType;
+        private Guna.UI2.WinForms.Guna2TextBox txt_Price;
         private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2ComboBox cb_BedType;
         private Guna.UI2.WinForms.Guna2Button btn_AddRoom;
+        private Guna.UI2.WinForms.Guna2Button btn_Load;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2Button btn_Edit;
-        private Guna.UI2.WinForms.Guna2Button btn_Delete;
-        private Guna.UI2.WinForms.Guna2DataGridView dgv_Room;
-        private Guna.UI2.WinForms.Guna2TextBox txt_Search;
+        private Guna.UI2.WinForms.Guna2Button btn_Search;
         private System.Windows.Forms.RadioButton rbt_IsBooked;
         private System.Windows.Forms.RadioButton rbt_NotBooked;
-        private Guna.UI2.WinForms.Guna2Button btn_Load;
-        private Guna.UI2.WinForms.Guna2Button btn_Search;
+        private Guna.UI2.WinForms.Guna2TextBox txt_Search;
+        private Guna.UI2.WinForms.Guna2DataGridView dgv_Room;
+        private Guna.UI2.WinForms.Guna2Button btn_Edit;
+        private Guna.UI2.WinForms.Guna2Button btn_Delete;
     }
 }

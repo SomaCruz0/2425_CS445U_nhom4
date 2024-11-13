@@ -26,7 +26,6 @@ namespace QuanLyKhachSan
             uC_AddRoom1.Visible = false;
             uC_CustomerRes1.Visible = false;
             uC_DichVu1.Visible = false;
-            uC_User1.Visible = false;
             uC_Booking1.Visible = false;
             uC_BookingDetail1.Visible = false;
             uC_Category1.Visible = false;

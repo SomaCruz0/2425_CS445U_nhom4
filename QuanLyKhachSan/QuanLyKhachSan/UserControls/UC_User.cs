@@ -23,17 +23,20 @@ namespace QuanLyKhachSan.UserControls
             string sql = "Select * from TAIKHOAN WHERE Uid = '" + Const.ID + "'";
             DataTable dt = new DataTable();
             dt = fn.GetDataTable(sql);
-            txt_ID.Text = dt.Rows[0][0].ToString();
-            txt_Name.Text = dt.Rows[0][1].ToString();
-            txt_UserName.Text = dt.Rows[0][2].ToString();
-            txt_Password.Text = dt.Rows[0][3].ToString();
-            if (dt.Rows[0][4].ToString() == "1")
+            if (dt.Rows.Count > 0)
             {
-                txt_Role.Text = "Admin" ;
+                // Có dữ liệu, truy cập vào hàng đầu tiên
+                DataRow row = dt.Rows[0];
+                txt_ID.Text = row[0].ToString();
+                txt_Name.Text = row[1].ToString();
+                txt_UserName.Text = row[2].ToString();
+                txt_Password.Text = row[3].ToString();
+                txt_Role.Text = (row[4].ToString() == "1") ? "Admin" : "Nhân viên";
             }
             else
             {
-                txt_Role.Text = "Nhân viên";
+                // Không có dữ liệu, hiển thị thông báo lỗi hoặc xử lý khác
+                MessageBox.Show("Không tìm thấy dữ liệu người dùng.");
             }
         }
     }
