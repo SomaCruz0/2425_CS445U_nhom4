@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|d:\\study\\doanchuyennganh\\project\\quanlykhachsan\\quanlykhachsan\\usercontrols\\uc_checkout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|solutionrelative:quanlykhachsan\\usercontrols\\uc_checkout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|d:\\study\\doanchuyennganh\\project\\quanlykhachsan\\quanlykhachsan\\frm_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|solutionrelative:quanlykhachsan\\frm_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,13 +47,13 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UC_Checkout.cs [Design]",
-              "DocumentMoniker": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\UserControls\\UC_Checkout.cs",
-              "RelativeDocumentMoniker": "QuanLyKhachSan\\UserControls\\UC_Checkout.cs",
-              "ToolTip": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\UserControls\\UC_Checkout.cs [Design]",
-              "RelativeToolTip": "QuanLyKhachSan\\UserControls\\UC_Checkout.cs [Design]",
+              "Title": "frm_Dashboard.cs [Design]",
+              "DocumentMoniker": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\frm_Dashboard.cs",
+              "RelativeDocumentMoniker": "QuanLyKhachSan\\frm_Dashboard.cs",
+              "ToolTip": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\frm_Dashboard.cs [Design]",
+              "RelativeToolTip": "QuanLyKhachSan\\frm_Dashboard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T16:01:22.46Z",
+              "WhenOpened": "2024-11-14T08:44:17.662Z",
               "EditorCaption": " [Design]"
             }
           ]

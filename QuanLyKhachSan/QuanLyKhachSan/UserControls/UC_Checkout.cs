@@ -16,5 +16,10 @@ namespace QuanLyKhachSan.UserControls
         {
             InitializeComponent();
         }
+
+        private void UC_Checkout_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

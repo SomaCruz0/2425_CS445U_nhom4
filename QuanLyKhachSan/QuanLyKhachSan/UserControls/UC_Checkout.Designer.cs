@@ -48,6 +48,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txt_TongTien = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_Checkout = new Guna.UI2.WinForms.Guna2Button();
+            this.txt_ServiceCost = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_RoomCost = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Booking)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_BookingDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
@@ -185,7 +189,7 @@
             this.dgv_BookingDetail.RowHeadersVisible = false;
             this.dgv_BookingDetail.RowHeadersWidth = 51;
             this.dgv_BookingDetail.RowTemplate.Height = 24;
-            this.dgv_BookingDetail.Size = new System.Drawing.Size(787, 329);
+            this.dgv_BookingDetail.Size = new System.Drawing.Size(787, 240);
             this.dgv_BookingDetail.TabIndex = 85;
             this.dgv_BookingDetail.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv_BookingDetail.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -234,12 +238,12 @@
             dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle21;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(779, 487);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(779, 398);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.RowTemplate.Height = 24;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(787, 329);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(787, 298);
             this.guna2DataGridView1.TabIndex = 86;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -284,14 +288,14 @@
             this.txt_TongTien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_TongTien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txt_TongTien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_TongTien.Location = new System.Drawing.Point(953, 857);
+            this.txt_TongTien.Location = new System.Drawing.Point(990, 868);
             this.txt_TongTien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_TongTien.Name = "txt_TongTien";
             this.txt_TongTien.PasswordChar = '\0';
             this.txt_TongTien.PlaceholderText = "";
             this.txt_TongTien.ReadOnly = true;
             this.txt_TongTien.SelectedText = "";
-            this.txt_TongTien.Size = new System.Drawing.Size(388, 67);
+            this.txt_TongTien.Size = new System.Drawing.Size(351, 56);
             this.txt_TongTien.TabIndex = 88;
             // 
             // btn_Checkout
@@ -305,16 +309,82 @@
             this.btn_Checkout.FillColor = System.Drawing.Color.White;
             this.btn_Checkout.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_Checkout.ForeColor = System.Drawing.Color.Black;
-            this.btn_Checkout.Location = new System.Drawing.Point(1348, 857);
+            this.btn_Checkout.Location = new System.Drawing.Point(1348, 801);
             this.btn_Checkout.Name = "btn_Checkout";
-            this.btn_Checkout.Size = new System.Drawing.Size(218, 67);
+            this.btn_Checkout.Size = new System.Drawing.Size(218, 123);
             this.btn_Checkout.TabIndex = 89;
             this.btn_Checkout.Text = "THANH TOÁN";
+            // 
+            // txt_ServiceCost
+            // 
+            this.txt_ServiceCost.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_ServiceCost.DefaultText = "";
+            this.txt_ServiceCost.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_ServiceCost.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_ServiceCost.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_ServiceCost.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_ServiceCost.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_ServiceCost.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_ServiceCost.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_ServiceCost.Location = new System.Drawing.Point(990, 801);
+            this.txt_ServiceCost.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_ServiceCost.Name = "txt_ServiceCost";
+            this.txt_ServiceCost.PasswordChar = '\0';
+            this.txt_ServiceCost.PlaceholderText = "";
+            this.txt_ServiceCost.ReadOnly = true;
+            this.txt_ServiceCost.SelectedText = "";
+            this.txt_ServiceCost.Size = new System.Drawing.Size(351, 56);
+            this.txt_ServiceCost.TabIndex = 91;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.Location = new System.Drawing.Point(781, 814);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(170, 31);
+            this.label3.TabIndex = 90;
+            this.label3.Text = "TIỀN DỊCH VỤ:";
+            // 
+            // txt_RoomCost
+            // 
+            this.txt_RoomCost.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_RoomCost.DefaultText = "";
+            this.txt_RoomCost.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_RoomCost.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_RoomCost.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_RoomCost.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_RoomCost.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_RoomCost.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_RoomCost.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_RoomCost.Location = new System.Drawing.Point(990, 734);
+            this.txt_RoomCost.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_RoomCost.Name = "txt_RoomCost";
+            this.txt_RoomCost.PasswordChar = '\0';
+            this.txt_RoomCost.PlaceholderText = "";
+            this.txt_RoomCost.ReadOnly = true;
+            this.txt_RoomCost.SelectedText = "";
+            this.txt_RoomCost.Size = new System.Drawing.Size(351, 56);
+            this.txt_RoomCost.TabIndex = 93;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label4.Location = new System.Drawing.Point(781, 749);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(159, 31);
+            this.label4.TabIndex = 92;
+            this.label4.Text = "TIỀN PHÒNG:";
             // 
             // UC_Checkout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txt_RoomCost);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txt_ServiceCost);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_Checkout);
             this.Controls.Add(this.txt_TongTien);
             this.Controls.Add(this.label2);
@@ -326,6 +396,7 @@
             this.Controls.Add(this.label1);
             this.Name = "UC_Checkout";
             this.Size = new System.Drawing.Size(1650, 1010);
+            this.Load += new System.EventHandler(this.UC_Checkout_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Booking)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_BookingDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
@@ -346,5 +417,9 @@
         private Guna.UI2.WinForms.Guna2TextBox txt_Search;
         private Guna.UI2.WinForms.Guna2Button btn_Checkout;
         private Guna.UI2.WinForms.Guna2TextBox txt_TongTien;
+        private Guna.UI2.WinForms.Guna2TextBox txt_RoomCost;
+        private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2TextBox txt_ServiceCost;
+        private System.Windows.Forms.Label label3;
     }
 }
