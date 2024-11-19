@@ -54,6 +54,7 @@
             // btn_Login
             // 
             this.btn_Login.BorderRadius = 18;
+            this.btn_Login.BorderThickness = 1;
             this.btn_Login.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_Login.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_Login.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -120,7 +121,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("000 Comic Sans TB", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(707, 96);
+            this.label1.Location = new System.Drawing.Point(705, 99);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(264, 61);
             this.label1.TabIndex = 9;
@@ -130,9 +131,9 @@
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(32, 38);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(41, 12);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(540, 533);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(554, 557);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 8;
             this.guna2PictureBox1.TabStop = false;

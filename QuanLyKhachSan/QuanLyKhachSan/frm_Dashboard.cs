@@ -109,5 +109,34 @@ namespace QuanLyKhachSan
             uC_User1.Visible = true;
             uC_User1.BringToFront();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime currentTime = DateTime.Now;
+            string formattedTime = currentTime.ToString();
+
+            txt_Time.Text = formattedTime;
+        }
+
+        private void btn_Dashboard_Click(object sender, EventArgs e)
+        {
+            uC_Dashboard1.Visible = true;
+            uC_Dashboard1.BringToFront();
+        }
+
+        private void btn_System_Click(object sender, EventArgs e)
+        {
+
+            uC_System1.Visible = true;
+            uC_System1.BringToFront();
+        }
+
+        private void btn_Account_Click(object sender, EventArgs e)
+        {
+
+            uC_Account1.Visible = true;
+            uC_Account1.BringToFront();
+        }
+
     }
 }

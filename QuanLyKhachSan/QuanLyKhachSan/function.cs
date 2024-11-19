@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,6 +34,7 @@ namespace QuanLyKhachSan
         }
         public void setData(String query, String message)
         {
+
             SqlConnection con = getConnection();
             SqlCommand cmd = new SqlCommand();
 
@@ -45,6 +47,7 @@ namespace QuanLyKhachSan
             con.Close();
 
             MessageBox.Show(message, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
         public SqlDataReader getForCombo(String query)
@@ -82,7 +85,7 @@ namespace QuanLyKhachSan
             try
             {
                 con.Open();
-                SqlDataAdapter sda  = new SqlDataAdapter(cmd);
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 sda.Fill(dt);
             }
             catch (Exception ex)

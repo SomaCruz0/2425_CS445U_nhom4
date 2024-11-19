@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLyKhachSan.UserControls
 {
-    public partial class UC_DichVu : UserControl
+    public partial class UC_Chart : UserControl
     {
-        public UC_DichVu()
+        public UC_Chart()
         {
             InitializeComponent();
-        }
-
-        private void UC_DichVu_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

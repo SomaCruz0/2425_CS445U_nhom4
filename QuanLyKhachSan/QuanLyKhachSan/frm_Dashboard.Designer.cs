@@ -46,23 +46,33 @@
             this.btn_Customer = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Room = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.uC_Account1 = new QuanLyKhachSan.UserControls.UC_Account();
+            this.uC_System1 = new QuanLyKhachSan.UserControls.UC_System();
+            this.uC_Dashboard1 = new QuanLyKhachSan.UserControls.UC_Chart();
             this.uC_User1 = new QuanLyKhachSan.UserControls.UC_User();
             this.uC_BookingDetail1 = new QuanLyKhachSan.UserControls.UC_BookingDetail();
             this.uC_Checkout1 = new QuanLyKhachSan.UserControls.UC_Checkout();
             this.uC_Category1 = new QuanLyKhachSan.UserControls.UC_Category();
-            this.uC_DichVu1 = new QuanLyKhachSan.UserControls.UC_DichVu();
+            this.uC_DichVu1 = new QuanLyKhachSan.UserControls.UC_Service();
             this.uC_Booking1 = new QuanLyKhachSan.UserControls.UC_Booking();
             this.uC_CustomerRes1 = new QuanLyKhachSan.UserControls.UC_CustomerRes();
-            this.uC_AddRoom1 = new QuanLyKhachSan.UserControls.UC_AddRoom();
+            this.uC_AddRoom1 = new QuanLyKhachSan.UserControls.UC_Room();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.txt_Authority = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txt_Name = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_Authority = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txt_Time = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_Name = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_Exit
@@ -76,7 +86,7 @@
             this.btn_Exit.ForeColor = System.Drawing.Color.White;
             this.btn_Exit.Image = ((System.Drawing.Image)(resources.GetObject("btn_Exit.Image")));
             this.btn_Exit.ImageSize = new System.Drawing.Size(35, 35);
-            this.btn_Exit.Location = new System.Drawing.Point(1882, 2);
+            this.btn_Exit.Location = new System.Drawing.Point(1823, 2);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.PressedColor = System.Drawing.Color.BlueViolet;
             this.btn_Exit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -95,7 +105,7 @@
             this.btn_Minisize.ForeColor = System.Drawing.Color.White;
             this.btn_Minisize.Image = ((System.Drawing.Image)(resources.GetObject("btn_Minisize.Image")));
             this.btn_Minisize.ImageSize = new System.Drawing.Size(35, 35);
-            this.btn_Minisize.Location = new System.Drawing.Point(1819, 2);
+            this.btn_Minisize.Location = new System.Drawing.Point(1760, 2);
             this.btn_Minisize.Name = "btn_Minisize";
             this.btn_Minisize.PressedColor = System.Drawing.Color.BlueViolet;
             this.btn_Minisize.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -104,6 +114,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.btn_Logout);
             this.panel1.Controls.Add(this.btn_Account);
@@ -124,7 +135,7 @@
             // 
             // btn_Logout
             // 
-            this.btn_Logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_Logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btn_Logout.BorderRadius = 20;
             this.btn_Logout.BorderThickness = 1;
             this.btn_Logout.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
@@ -145,7 +156,7 @@
             // 
             // btn_Account
             // 
-            this.btn_Account.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_Account.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btn_Account.BorderRadius = 20;
             this.btn_Account.BorderThickness = 1;
             this.btn_Account.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
@@ -163,10 +174,11 @@
             this.btn_Account.Size = new System.Drawing.Size(224, 72);
             this.btn_Account.TabIndex = 11;
             this.btn_Account.Text = "Tài khoản";
+            this.btn_Account.Click += new System.EventHandler(this.btn_Account_Click);
             // 
             // btn_System
             // 
-            this.btn_System.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_System.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btn_System.BorderRadius = 20;
             this.btn_System.BorderThickness = 1;
             this.btn_System.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
@@ -184,10 +196,11 @@
             this.btn_System.Size = new System.Drawing.Size(224, 72);
             this.btn_System.TabIndex = 10;
             this.btn_System.Text = "Hệ thống";
+            this.btn_System.Click += new System.EventHandler(this.btn_System_Click);
             // 
             // btn_Service
             // 
-            this.btn_Service.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_Service.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btn_Service.BorderRadius = 20;
             this.btn_Service.BorderThickness = 1;
             this.btn_Service.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
@@ -209,7 +222,7 @@
             // 
             // btn_BookingDetail
             // 
-            this.btn_BookingDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_BookingDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btn_BookingDetail.BorderRadius = 20;
             this.btn_BookingDetail.BorderThickness = 1;
             this.btn_BookingDetail.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
@@ -231,7 +244,7 @@
             // 
             // btn_Category
             // 
-            this.btn_Category.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_Category.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btn_Category.BorderRadius = 20;
             this.btn_Category.BorderThickness = 1;
             this.btn_Category.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
@@ -253,7 +266,7 @@
             // 
             // btn_Checkout
             // 
-            this.btn_Checkout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_Checkout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btn_Checkout.BorderRadius = 20;
             this.btn_Checkout.BorderThickness = 1;
             this.btn_Checkout.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
@@ -275,7 +288,7 @@
             // 
             // btn_Dashboard
             // 
-            this.btn_Dashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_Dashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btn_Dashboard.BorderRadius = 20;
             this.btn_Dashboard.BorderThickness = 1;
             this.btn_Dashboard.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
@@ -293,10 +306,11 @@
             this.btn_Dashboard.Size = new System.Drawing.Size(224, 72);
             this.btn_Dashboard.TabIndex = 5;
             this.btn_Dashboard.Text = "Thống kê";
+            this.btn_Dashboard.Click += new System.EventHandler(this.btn_Dashboard_Click);
             // 
             // btn_User
             // 
-            this.btn_User.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_User.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btn_User.BorderRadius = 20;
             this.btn_User.BorderThickness = 1;
             this.btn_User.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
@@ -318,7 +332,7 @@
             // 
             // btn_Booking
             // 
-            this.btn_Booking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_Booking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btn_Booking.BorderRadius = 20;
             this.btn_Booking.BorderThickness = 1;
             this.btn_Booking.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
@@ -340,7 +354,7 @@
             // 
             // btn_Customer
             // 
-            this.btn_Customer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_Customer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btn_Customer.BorderRadius = 20;
             this.btn_Customer.BorderThickness = 1;
             this.btn_Customer.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
@@ -362,7 +376,7 @@
             // 
             // btn_Room
             // 
-            this.btn_Room.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_Room.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btn_Room.BorderRadius = 20;
             this.btn_Room.BorderThickness = 1;
             this.btn_Room.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
@@ -385,6 +399,9 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.uC_Account1);
+            this.panel2.Controls.Add(this.uC_System1);
+            this.panel2.Controls.Add(this.uC_Dashboard1);
             this.panel2.Controls.Add(this.uC_User1);
             this.panel2.Controls.Add(this.uC_BookingDetail1);
             this.panel2.Controls.Add(this.uC_Checkout1);
@@ -397,6 +414,30 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1663, 969);
             this.panel2.TabIndex = 4;
+            // 
+            // uC_Account1
+            // 
+            this.uC_Account1.BackColor = System.Drawing.Color.White;
+            this.uC_Account1.Location = new System.Drawing.Point(3, 2);
+            this.uC_Account1.Name = "uC_Account1";
+            this.uC_Account1.Size = new System.Drawing.Size(1650, 962);
+            this.uC_Account1.TabIndex = 10;
+            // 
+            // uC_System1
+            // 
+            this.uC_System1.BackColor = System.Drawing.Color.White;
+            this.uC_System1.Location = new System.Drawing.Point(3, 2);
+            this.uC_System1.Name = "uC_System1";
+            this.uC_System1.Size = new System.Drawing.Size(1650, 966);
+            this.uC_System1.TabIndex = 9;
+            // 
+            // uC_Dashboard1
+            // 
+            this.uC_Dashboard1.BackColor = System.Drawing.Color.White;
+            this.uC_Dashboard1.Location = new System.Drawing.Point(3, 2);
+            this.uC_Dashboard1.Name = "uC_Dashboard1";
+            this.uC_Dashboard1.Size = new System.Drawing.Size(1650, 971);
+            this.uC_Dashboard1.TabIndex = 8;
             // 
             // uC_User1
             // 
@@ -470,7 +511,7 @@
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 2);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 9);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(47, 45);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -481,6 +522,52 @@
             // 
             this.guna2Elipse2.TargetControl = this;
             // 
+            // guna2Elipse3
+            // 
+            this.guna2Elipse3.TargetControl = this;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.txt_Authority);
+            this.panel3.Controls.Add(this.txt_Time);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.txt_Name);
+            this.panel3.Location = new System.Drawing.Point(267, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1108, 54);
+            this.panel3.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(786, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 28);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Time:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(457, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 28);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Role:";
+            // 
             // txt_Authority
             // 
             this.txt_Authority.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -489,11 +576,12 @@
             this.txt_Authority.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txt_Authority.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_Authority.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Authority.Enabled = false;
             this.txt_Authority.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Authority.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txt_Authority.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.txt_Authority.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Authority.Location = new System.Drawing.Point(613, 12);
+            this.txt_Authority.Location = new System.Drawing.Point(522, 5);
             this.txt_Authority.Name = "txt_Authority";
             this.txt_Authority.PasswordChar = '\0';
             this.txt_Authority.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -501,7 +589,41 @@
             this.txt_Authority.ReadOnly = true;
             this.txt_Authority.SelectedText = "";
             this.txt_Authority.Size = new System.Drawing.Size(200, 36);
-            this.txt_Authority.TabIndex = 6;
+            this.txt_Authority.TabIndex = 18;
+            // 
+            // txt_Time
+            // 
+            this.txt_Time.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Time.DefaultText = "";
+            this.txt_Time.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_Time.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_Time.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Time.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Time.Enabled = false;
+            this.txt_Time.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Time.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_Time.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_Time.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Time.Location = new System.Drawing.Point(856, 5);
+            this.txt_Time.Name = "txt_Time";
+            this.txt_Time.PasswordChar = '\0';
+            this.txt_Time.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.txt_Time.PlaceholderText = "";
+            this.txt_Time.ReadOnly = true;
+            this.txt_Time.SelectedText = "";
+            this.txt_Time.Size = new System.Drawing.Size(200, 36);
+            this.txt_Time.TabIndex = 20;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(22, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 28);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "User:";
             // 
             // txt_Name
             // 
@@ -511,11 +633,12 @@
             this.txt_Name.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txt_Name.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_Name.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Name.Enabled = false;
             this.txt_Name.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Name.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txt_Name.ForeColor = System.Drawing.Color.Blue;
             this.txt_Name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Name.Location = new System.Drawing.Point(267, 12);
+            this.txt_Name.Location = new System.Drawing.Point(89, 7);
             this.txt_Name.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txt_Name.Name = "txt_Name";
             this.txt_Name.PasswordChar = '\0';
@@ -523,11 +646,7 @@
             this.txt_Name.ReadOnly = true;
             this.txt_Name.SelectedText = "";
             this.txt_Name.Size = new System.Drawing.Size(340, 36);
-            this.txt_Name.TabIndex = 7;
-            // 
-            // guna2Elipse3
-            // 
-            this.guna2Elipse3.TargetControl = this;
+            this.txt_Name.TabIndex = 19;
             // 
             // frm_Dashboard
             // 
@@ -535,13 +654,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1942, 1102);
-            this.Controls.Add(this.txt_Name);
-            this.Controls.Add(this.txt_Authority);
-            this.Controls.Add(this.guna2PictureBox1);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.btn_Minisize);
             this.Controls.Add(this.btn_Exit);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.guna2PictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -551,6 +669,8 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -567,7 +687,7 @@
         private Guna.UI2.WinForms.Guna2Button btn_Customer;
         private Guna.UI2.WinForms.Guna2Button btn_User;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private UserControls.UC_AddRoom uC_AddRoom1;
+        private UserControls.UC_Room uC_AddRoom1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Button btn_Dashboard;
@@ -578,14 +698,23 @@
         private Guna.UI2.WinForms.Guna2Button btn_Service;
         private Guna.UI2.WinForms.Guna2Button btn_System;
         private Guna.UI2.WinForms.Guna2Button btn_Account;
-        private Guna.UI2.WinForms.Guna2TextBox txt_Authority;
         private Guna.UI2.WinForms.Guna2Button btn_Logout;
-        private UserControls.UC_DichVu uC_DichVu1;
+        private UserControls.UC_Service uC_DichVu1;
         private UserControls.UC_Category uC_Category1;
         private UserControls.UC_BookingDetail uC_BookingDetail1;
         private UserControls.UC_Checkout uC_Checkout1;
-        private Guna.UI2.WinForms.Guna2TextBox txt_Name;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private UserControls.UC_User uC_User1;
+        private System.Windows.Forms.Timer timer1;
+        private UserControls.UC_Chart uC_Dashboard1;
+        private UserControls.UC_System uC_System1;
+        private UserControls.UC_Account uC_Account1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2TextBox txt_Authority;
+        private Guna.UI2.WinForms.Guna2TextBox txt_Time;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2TextBox txt_Name;
     }
 }

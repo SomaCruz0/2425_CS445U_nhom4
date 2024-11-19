@@ -1,6 +1,6 @@
 ﻿namespace QuanLyKhachSan.UserControls
 {
-    partial class UC_DichVu
+    partial class UC_Service
     {
         /// <summary> 
         /// Required designer variable.
