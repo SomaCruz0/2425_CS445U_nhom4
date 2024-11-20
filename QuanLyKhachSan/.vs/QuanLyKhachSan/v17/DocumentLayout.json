@@ -9,10 +9,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|d:\\study\\doanchuyennganh\\project\\quanlykhachsan\\quanlykhachsan\\usercontrols\\uc_room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|solutionrelative:quanlykhachsan\\usercontrols\\uc_room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|d:\\study\\doanchuyennganh\\project\\quanlykhachsan\\quanlykhachsan\\function.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|solutionrelative:quanlykhachsan\\function.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -61,21 +57,8 @@
               "ToolTip": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\UserControls\\UC_Room.cs [Design]",
               "RelativeToolTip": "QuanLyKhachSan\\UserControls\\UC_Room.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T15:23:56.362Z",
+              "WhenOpened": "2024-11-20T15:46:35.613Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "function.cs",
-              "DocumentMoniker": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\function.cs",
-              "RelativeDocumentMoniker": "QuanLyKhachSan\\function.cs",
-              "ToolTip": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\function.cs",
-              "RelativeToolTip": "QuanLyKhachSan\\function.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAkwCwAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T15:18:09.672Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -85,9 +68,9 @@
               "RelativeDocumentMoniker": "QuanLyKhachSan\\UserControls\\UC_Room.cs",
               "ToolTip": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\UserControls\\UC_Room.cs",
               "RelativeToolTip": "QuanLyKhachSan\\UserControls\\UC_Room.cs",
-              "ViewState": "AQIAAE0AAAAAAAAAAAAkwGIAAAAgAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwBsAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T15:15:27.551Z",
+              "WhenOpened": "2024-11-20T14:39:42.015Z",
               "EditorCaption": ""
             }
           ]

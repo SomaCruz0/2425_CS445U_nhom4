@@ -33,13 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btn_Load = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.dgv_Room = new Guna.UI2.WinForms.Guna2DataGridView();
             this.txt_Search = new Guna.UI2.WinForms.Guna2TextBox();
             this.rbt_NotBooked = new System.Windows.Forms.RadioButton();
             this.rbt_IsBooked = new System.Windows.Forms.RadioButton();
-            this.btn_Search = new Guna.UI2.WinForms.Guna2Button();
             this.txt_Price = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btn_AddRoom = new Guna.UI2.WinForms.Guna2Button();
@@ -55,28 +53,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.txt_Count = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btn_Load = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Room)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btn_Load
-            // 
-            this.btn_Load.BorderRadius = 15;
-            this.btn_Load.BorderThickness = 1;
-            this.btn_Load.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_Load.CheckedState.ForeColor = System.Drawing.Color.White;
-            this.btn_Load.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Load.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Load.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Load.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Load.FillColor = System.Drawing.Color.White;
-            this.btn_Load.Font = new System.Drawing.Font("000 Frank Bellamy iCiel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Load.ForeColor = System.Drawing.Color.Black;
-            this.btn_Load.Location = new System.Drawing.Point(744, 115);
-            this.btn_Load.Name = "btn_Load";
-            this.btn_Load.Size = new System.Drawing.Size(131, 53);
-            this.btn_Load.TabIndex = 20;
-            this.btn_Load.Text = "Load";
             // 
             // guna2Elipse1
             // 
@@ -91,7 +75,7 @@
             this.dgv_Room.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(205)))), ((int)(((byte)(233)))));
             this.dgv_Room.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_Room.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgv_Room.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dgv_Room.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dgv_Room.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -113,7 +97,7 @@
             this.dgv_Room.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Room.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_Room.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(201)))), ((int)(((byte)(231)))));
-            this.dgv_Room.Location = new System.Drawing.Point(37, 204);
+            this.dgv_Room.Location = new System.Drawing.Point(37, 223);
             this.dgv_Room.Name = "dgv_Room";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
@@ -126,7 +110,7 @@
             this.dgv_Room.RowHeadersVisible = false;
             this.dgv_Room.RowHeadersWidth = 51;
             this.dgv_Room.RowTemplate.Height = 24;
-            this.dgv_Room.Size = new System.Drawing.Size(863, 675);
+            this.dgv_Room.Size = new System.Drawing.Size(863, 656);
             this.dgv_Room.TabIndex = 14;
             this.dgv_Room.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Amethyst;
             this.dgv_Room.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(205)))), ((int)(((byte)(233)))));
@@ -163,52 +147,40 @@
             this.txt_Search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Search.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_Search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Search.Location = new System.Drawing.Point(37, 112);
+            this.txt_Search.Location = new System.Drawing.Point(176, 147);
             this.txt_Search.Name = "txt_Search";
             this.txt_Search.PasswordChar = '\0';
             this.txt_Search.PlaceholderText = "Enter Room No";
             this.txt_Search.SelectedText = "";
-            this.txt_Search.Size = new System.Drawing.Size(349, 36);
+            this.txt_Search.Size = new System.Drawing.Size(184, 50);
             this.txt_Search.TabIndex = 16;
+            this.txt_Search.TextChanged += new System.EventHandler(this.txt_Search_TextChanged);
             // 
             // rbt_NotBooked
             // 
             this.rbt_NotBooked.AutoSize = true;
-            this.rbt_NotBooked.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rbt_NotBooked.Location = new System.Drawing.Point(37, 165);
+            this.rbt_NotBooked.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rbt_NotBooked.Location = new System.Drawing.Point(387, 125);
             this.rbt_NotBooked.Name = "rbt_NotBooked";
-            this.rbt_NotBooked.Size = new System.Drawing.Size(119, 29);
+            this.rbt_NotBooked.Size = new System.Drawing.Size(120, 32);
             this.rbt_NotBooked.TabIndex = 18;
             this.rbt_NotBooked.TabStop = true;
             this.rbt_NotBooked.Text = "Còn trống";
             this.rbt_NotBooked.UseVisualStyleBackColor = true;
+            this.rbt_NotBooked.CheckedChanged += new System.EventHandler(this.rbt_NotBooked_CheckedChanged);
             // 
             // rbt_IsBooked
             // 
             this.rbt_IsBooked.AutoSize = true;
-            this.rbt_IsBooked.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rbt_IsBooked.Location = new System.Drawing.Point(189, 166);
+            this.rbt_IsBooked.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rbt_IsBooked.Location = new System.Drawing.Point(387, 168);
             this.rbt_IsBooked.Name = "rbt_IsBooked";
-            this.rbt_IsBooked.Size = new System.Drawing.Size(138, 29);
+            this.rbt_IsBooked.Size = new System.Drawing.Size(141, 32);
             this.rbt_IsBooked.TabIndex = 19;
             this.rbt_IsBooked.TabStop = true;
             this.rbt_IsBooked.Text = "Đã được đặt";
             this.rbt_IsBooked.UseVisualStyleBackColor = true;
-            // 
-            // btn_Search
-            // 
-            this.btn_Search.BorderThickness = 1;
-            this.btn_Search.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Search.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Search.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_Search.ForeColor = System.Drawing.Color.White;
-            this.btn_Search.Location = new System.Drawing.Point(392, 112);
-            this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(97, 36);
-            this.btn_Search.TabIndex = 82;
-            this.btn_Search.Text = "Search";
+            this.rbt_IsBooked.CheckedChanged += new System.EventHandler(this.rbt_IsBooked_CheckedChanged);
             // 
             // txt_Price
             // 
@@ -440,17 +412,96 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "QUẢN LÝ PHÒNG";
             // 
+            // txt_Count
+            // 
+            this.txt_Count.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Count.DefaultText = "";
+            this.txt_Count.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_Count.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_Count.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Count.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Count.Enabled = false;
+            this.txt_Count.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Count.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_Count.ForeColor = System.Drawing.Color.Black;
+            this.txt_Count.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Count.Location = new System.Drawing.Point(822, 154);
+            this.txt_Count.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Count.Name = "txt_Count";
+            this.txt_Count.PasswordChar = '\0';
+            this.txt_Count.PlaceholderText = "";
+            this.txt_Count.ReadOnly = true;
+            this.txt_Count.SelectedText = "";
+            this.txt_Count.Size = new System.Drawing.Size(78, 43);
+            this.txt_Count.TabIndex = 87;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(694, 159);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(121, 28);
+            this.label7.TabIndex = 86;
+            this.label7.Text = "Tổng phòng:";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.LightSalmon;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Location = new System.Drawing.Point(953, 91);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(7, 844);
+            this.panel2.TabIndex = 88;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.LightSalmon;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(39, 153);
+            this.label8.Name = "label8";
+            this.label8.Padding = new System.Windows.Forms.Padding(3);
+            this.label8.Size = new System.Drawing.Size(116, 34);
+            this.label8.TabIndex = 89;
+            this.label8.Text = "Tìm phòng:";
+            // 
+            // btn_Load
+            // 
+            this.btn_Load.BorderRadius = 5;
+            this.btn_Load.BorderThickness = 1;
+            this.btn_Load.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_Load.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.btn_Load.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Load.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Load.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Load.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Load.FillColor = System.Drawing.Color.White;
+            this.btn_Load.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Load.ForeColor = System.Drawing.Color.Black;
+            this.btn_Load.Location = new System.Drawing.Point(548, 125);
+            this.btn_Load.Name = "btn_Load";
+            this.btn_Load.Size = new System.Drawing.Size(123, 72);
+            this.btn_Load.TabIndex = 90;
+            this.btn_Load.Text = "HIỂN THỊ TẤT CẢ";
+            this.btn_Load.Click += new System.EventHandler(this.btn_Load_Click);
+            // 
             // UC_Room
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btn_Load);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.txt_Count);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txt_ID);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btn_Load);
             this.Controls.Add(this.txt_RoomNo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.rbt_IsBooked);
@@ -477,9 +528,7 @@
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2Button btn_Load;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2Button btn_Search;
         private System.Windows.Forms.RadioButton rbt_IsBooked;
         private System.Windows.Forms.RadioButton rbt_NotBooked;
         private Guna.UI2.WinForms.Guna2TextBox txt_Search;
@@ -499,5 +548,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2TextBox txt_Count;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label8;
+        private Guna.UI2.WinForms.Guna2Button btn_Load;
     }
 }

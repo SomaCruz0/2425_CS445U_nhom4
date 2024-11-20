@@ -21,16 +21,22 @@ namespace QuanLyKhachSan.UserControls
             InitializeComponent();
         }
 
-        private void UC_AddRoom_Load(object sender, EventArgs e)
+        private void Config()
         {
             dgv_Room.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 11);
             dgv_Room.ColumnHeadersDefaultCellStyle.ForeColor = Color.MintCream;
-            dgv_Room.RowTemplate.Height = 35;
+            dgv_Room.RowTemplate.Height = 40;
+        }
+        private void LoadRoom()
+        {
             query = "select IDPhong, SoPhong as N'Số phòng', rt.Ten as N'Loại phòng', b.Ten as N'Loại giường', Gia as 'Giá', TinhTrang from LoaiGiuong b, LoaiPhong rt, Phong r where b.IDLoaiGiuong = r.LoaiGiuong and rt.IDLoaiPhong = r.LoaiPhong";
 
             DataSet ds = fn.getData(query);
             dgv_Room.DataSource = ds.Tables[0];
-
+            txt_Count.Text = dgv_Room.RowCount.ToString();
+        }
+        private void LoadDanhMuc()
+        {
             query = "select * from LoaiGiuong";
             DataSet bt = fn.getData(query);
             cb_BedType.DataSource = bt.Tables[0];
@@ -42,6 +48,12 @@ namespace QuanLyKhachSan.UserControls
             cb_RoomType.DataSource = rt.Tables[0];
             cb_RoomType.ValueMember = "IDLoaiPhong";
             cb_RoomType.DisplayMember = "Ten";
+        }
+        private void UC_AddRoom_Load(object sender, EventArgs e)
+        {
+            Config();
+            LoadRoom();
+            LoadDanhMuc();
         }
 
         private void btn_AddRoom_Click(object sender, EventArgs e)
@@ -56,7 +68,7 @@ namespace QuanLyKhachSan.UserControls
                 {
                     query = "insert into Phong (SoPhong, LoaiPhong, LoaiGiuong, Gia) values ('" + txt_RoomNo.Text + "','" + cb_RoomType.SelectedValue + "','" + cb_BedType.SelectedValue + "','" + txt_Price.Text + "')";
                     fn.setData(query, "Đã thêm phòng");
-                    UC_AddRoom_Load(this, null);
+                    LoadRoom();
                 }
                 else
                 {
@@ -87,7 +99,7 @@ namespace QuanLyKhachSan.UserControls
                         "Gia = N'" + txt_Price.Text + "' " +
                         "Where IDPhong = '" + txt_ID.Text + "'";
             fn.setData(query, "Sửa thành công");
-            UC_AddRoom_Load(this, null);
+            LoadRoom();
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)
@@ -100,12 +112,50 @@ namespace QuanLyKhachSan.UserControls
             {
                 query = "delete phong where IDPhong = '" + txt_ID.Text + "'";
                 fn.setData(query, "Xóa thành công");
-                UC_AddRoom_Load(this, null);
+                LoadRoom();
             }
             else
             {
-                MessageBox.Show("Không thể xóa do phòng đã được lưu trong hóa đơn", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Không thể xóa phòng đã được lưu hóa đơn", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+
+        private void txt_Search_TextChanged(object sender, EventArgs e)
+        {
+            query = "select IDPhong, SoPhong as N'Số phòng', rt.Ten as N'Loại phòng', b.Ten as N'Loại giường', Gia as 'Giá', TinhTrang " +
+                "from LoaiGiuong b, LoaiPhong rt, Phong r " +
+                "where b.IDLoaiGiuong = r.LoaiGiuong and rt.IDLoaiPhong = r.LoaiPhong and SoPhong like '%" + txt_Search.Text.Trim() + "%'";
+            DataSet ds = fn.getData(query);
+            dgv_Room.DataSource = ds.Tables[0];
+
+            txt_Count.Text = dgv_Room.RowCount.ToString();
+        }
+
+        private void rbt_NotBooked_CheckedChanged(object sender, EventArgs e)
+        {
+            query = "select IDPhong, SoPhong as N'Số phòng', rt.Ten as N'Loại phòng', b.Ten as N'Loại giường', Gia as 'Giá', TinhTrang " +
+                "from LoaiGiuong b, LoaiPhong rt, Phong r " +
+                "where b.IDLoaiGiuong = r.LoaiGiuong and rt.IDLoaiPhong = r.LoaiPhong and TinhTrang = N'Trống'";
+            DataSet ds = fn.getData(query);
+            dgv_Room.DataSource = ds.Tables[0];
+
+            txt_Count.Text = dgv_Room.RowCount.ToString();
+        }
+        private void rbt_IsBooked_CheckedChanged(object sender, EventArgs e)
+        {
+            query = "select IDPhong, SoPhong as N'Số phòng', rt.Ten as N'Loại phòng', b.Ten as N'Loại giường', Gia as 'Giá', TinhTrang " +
+                "from LoaiGiuong b, LoaiPhong rt, Phong r " +
+                "where b.IDLoaiGiuong = r.LoaiGiuong and rt.IDLoaiPhong = r.LoaiPhong and TinhTrang = N'Đã đặt'";
+            DataSet ds = fn.getData(query);
+            dgv_Room.DataSource = ds.Tables[0];
+
+            txt_Count.Text = dgv_Room.RowCount.ToString();
+        }
+
+        private void btn_Load_Click(object sender, EventArgs e)
+        {
+            LoadRoom();
         }
     }
 }
