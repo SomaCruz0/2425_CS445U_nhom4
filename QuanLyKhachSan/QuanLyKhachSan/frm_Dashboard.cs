@@ -23,7 +23,7 @@ namespace QuanLyKhachSan
         private void frm_Dashboard_Load(object sender, EventArgs e)
         {
             KiemTraQuyen();
-            uC_AddRoom1.Visible = false;
+            uC_Room1.Visible = false;
             uC_CustomerRes1.Visible = false;
             uC_DichVu1.Visible = false;
             uC_Booking1.Visible = false;
@@ -63,8 +63,8 @@ namespace QuanLyKhachSan
 
         private void btn_Room_Click(object sender, EventArgs e)
         {
-            uC_AddRoom1.Visible = true;
-            uC_AddRoom1.BringToFront();
+            uC_Room1.Visible = true;
+            uC_Room1.BringToFront();
         }
 
 
@@ -138,5 +138,9 @@ namespace QuanLyKhachSan
             uC_Account1.BringToFront();
         }
 
+        private void btn_Minisize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

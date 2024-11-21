@@ -19,11 +19,23 @@ namespace QuanLyKhachSan.UserControls
             InitializeComponent();
         }
 
-        private void UC_CustomerRes_Load(object sender, EventArgs e)
+        private void Config()
+        {
+            dgv_Customer.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 11);
+            dgv_Customer.ColumnHeadersDefaultCellStyle.ForeColor = Color.MintCream;
+            dgv_Customer.RowTemplate.Height = 40;
+        }
+        void LoadCustomer()
         {
             query = "Select * from KhachHang";
             DataSet ds = fn.getData(query);
             dgv_Customer.DataSource = ds.Tables[0];
         }
+        private void UC_CustomerRes_Load(object sender, EventArgs e)
+        {
+            Config();
+            LoadCustomer();
+        }
+
     }
 }

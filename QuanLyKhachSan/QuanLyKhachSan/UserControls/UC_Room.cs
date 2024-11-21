@@ -24,7 +24,7 @@ namespace QuanLyKhachSan.UserControls
         private void Config()
         {
             dgv_Room.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 11);
-            dgv_Room.ColumnHeadersDefaultCellStyle.ForeColor = Color.MintCream;
+            dgv_Room.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
             dgv_Room.RowTemplate.Height = 40;
         }
         private void LoadRoom()
@@ -58,7 +58,7 @@ namespace QuanLyKhachSan.UserControls
 
         private void btn_AddRoom_Click(object sender, EventArgs e)
         {
-            if (txt_RoomNo.Text != "" || txt_Price.Text != "")
+            if (txt_RoomNo.Text != "" && txt_Price.Text != "")
             {
                 query = "Select * from PHONG WHERE SoPhong = '" + txt_RoomNo.Text + "'";
                 DataTable dt = new DataTable();
@@ -92,14 +92,21 @@ namespace QuanLyKhachSan.UserControls
 
         private void btn_Edit_Click(object sender, EventArgs e)
         {
-            query = "Update Phong Set " +
-                        "SoPhong = N'" + txt_RoomNo.Text + "', " +
-                        "LoaiPhong = '" + cb_RoomType.SelectedValue + "', " +
-                        "LoaiGiuong = N'" + cb_BedType.SelectedValue + "', " +
-                        "Gia = N'" + txt_Price.Text + "' " +
-                        "Where IDPhong = '" + txt_ID.Text + "'";
-            fn.setData(query, "Sửa thành công");
-            LoadRoom();
+            if (txt_RoomNo.Text != "" && txt_Price.Text != "")
+            {
+                query = "Update Phong Set " +
+                    "SoPhong = N'" + txt_RoomNo.Text + "', " +
+                    "LoaiPhong = '" + cb_RoomType.SelectedValue + "', " +
+                    "LoaiGiuong = N'" + cb_BedType.SelectedValue + "', " +
+                    "Gia = N'" + txt_Price.Text + "' " +
+                    "Where IDPhong = '" + txt_ID.Text + "'";
+                fn.setData(query, "Sửa thành công");
+                LoadRoom();
+            }
+            else
+            {
+                MessageBox.Show("Hãy nhập đầy đủ thông tin", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)
@@ -155,6 +162,8 @@ namespace QuanLyKhachSan.UserControls
 
         private void btn_Load_Click(object sender, EventArgs e)
         {
+            rbt_IsBooked.Checked = false;
+            rbt_NotBooked.Checked = false;
             LoadRoom();
         }
     }

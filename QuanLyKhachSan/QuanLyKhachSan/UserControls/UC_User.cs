@@ -39,5 +39,10 @@ namespace QuanLyKhachSan.UserControls
                 MessageBox.Show("Không tìm thấy dữ liệu người dùng.");
             }
         }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            Panel_ChangePass.Visible = true;
+        }
     }
 }

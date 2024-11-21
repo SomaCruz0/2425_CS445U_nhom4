@@ -45,5 +45,10 @@ namespace QuanLyKhachSan
                 lbl_Error.Show();
             }
         }
+
+        private void btn_Minisize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

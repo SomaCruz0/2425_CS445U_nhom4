@@ -36,6 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btn_Exit = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btn_Minisize = new Guna.UI2.WinForms.Guna2CircleButton();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -157,6 +158,25 @@
             this.btn_Exit.TabIndex = 7;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
+            // btn_Minisize
+            // 
+            this.btn_Minisize.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Minisize.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Minisize.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Minisize.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Minisize.FillColor = System.Drawing.Color.White;
+            this.btn_Minisize.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Minisize.ForeColor = System.Drawing.Color.White;
+            this.btn_Minisize.Image = ((System.Drawing.Image)(resources.GetObject("btn_Minisize.Image")));
+            this.btn_Minisize.ImageSize = new System.Drawing.Size(35, 35);
+            this.btn_Minisize.Location = new System.Drawing.Point(1020, 12);
+            this.btn_Minisize.Name = "btn_Minisize";
+            this.btn_Minisize.PressedColor = System.Drawing.Color.BlueViolet;
+            this.btn_Minisize.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btn_Minisize.Size = new System.Drawing.Size(57, 52);
+            this.btn_Minisize.TabIndex = 14;
+            this.btn_Minisize.Click += new System.EventHandler(this.btn_Minisize_Click);
+            // 
             // frm_Login
             // 
             this.AcceptButton = this.btn_Login;
@@ -164,6 +184,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1170, 609);
+            this.Controls.Add(this.btn_Minisize);
             this.Controls.Add(this.lbl_Error);
             this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.txt_Password);
@@ -190,6 +211,7 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2CircleButton btn_Exit;
+        private Guna.UI2.WinForms.Guna2CircleButton btn_Minisize;
     }
 }
 
