@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.txt_Search = new Guna.UI2.WinForms.Guna2TextBox();
             this.rbt_NotBooked = new System.Windows.Forms.RadioButton();
@@ -60,6 +60,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgv_Room = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btn_Clear = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -129,21 +130,21 @@
             this.txt_Price.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txt_Price.ForeColor = System.Drawing.Color.Black;
             this.txt_Price.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Price.Location = new System.Drawing.Point(51, 575);
+            this.txt_Price.Location = new System.Drawing.Point(96, 660);
             this.txt_Price.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_Price.Name = "txt_Price";
             this.txt_Price.PasswordChar = '\0';
             this.txt_Price.PlaceholderText = "";
             this.txt_Price.SelectedText = "";
             this.txt_Price.Size = new System.Drawing.Size(500, 57);
-            this.txt_Price.TabIndex = 8;
+            this.txt_Price.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(51, 521);
+            this.label4.Location = new System.Drawing.Point(96, 606);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 28);
             this.label4.TabIndex = 7;
@@ -151,7 +152,7 @@
             // 
             // btn_AddRoom
             // 
-            this.btn_AddRoom.BorderRadius = 15;
+            this.btn_AddRoom.BorderRadius = 5;
             this.btn_AddRoom.BorderThickness = 1;
             this.btn_AddRoom.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_AddRoom.CheckedState.ForeColor = System.Drawing.Color.White;
@@ -162,7 +163,7 @@
             this.btn_AddRoom.FillColor = System.Drawing.Color.White;
             this.btn_AddRoom.Font = new System.Drawing.Font("000 Frank Bellamy iCiel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_AddRoom.ForeColor = System.Drawing.Color.Black;
-            this.btn_AddRoom.Location = new System.Drawing.Point(56, 655);
+            this.btn_AddRoom.Location = new System.Drawing.Point(96, 740);
             this.btn_AddRoom.Name = "btn_AddRoom";
             this.btn_AddRoom.Size = new System.Drawing.Size(131, 62);
             this.btn_AddRoom.TabIndex = 11;
@@ -171,7 +172,7 @@
             // 
             // btn_Delete
             // 
-            this.btn_Delete.BorderRadius = 15;
+            this.btn_Delete.BorderRadius = 5;
             this.btn_Delete.BorderThickness = 1;
             this.btn_Delete.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_Delete.CheckedState.ForeColor = System.Drawing.Color.White;
@@ -182,7 +183,7 @@
             this.btn_Delete.FillColor = System.Drawing.Color.White;
             this.btn_Delete.Font = new System.Drawing.Font("000 Frank Bellamy iCiel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Delete.ForeColor = System.Drawing.Color.Black;
-            this.btn_Delete.Location = new System.Drawing.Point(420, 655);
+            this.btn_Delete.Location = new System.Drawing.Point(465, 740);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(131, 62);
             this.btn_Delete.TabIndex = 12;
@@ -191,7 +192,7 @@
             // 
             // btn_Edit
             // 
-            this.btn_Edit.BorderRadius = 15;
+            this.btn_Edit.BorderRadius = 5;
             this.btn_Edit.BorderThickness = 1;
             this.btn_Edit.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_Edit.CheckedState.ForeColor = System.Drawing.Color.White;
@@ -202,7 +203,7 @@
             this.btn_Edit.FillColor = System.Drawing.Color.White;
             this.btn_Edit.Font = new System.Drawing.Font("000 Frank Bellamy iCiel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Edit.ForeColor = System.Drawing.Color.Black;
-            this.btn_Edit.Location = new System.Drawing.Point(244, 655);
+            this.btn_Edit.Location = new System.Drawing.Point(283, 740);
             this.btn_Edit.Name = "btn_Edit";
             this.btn_Edit.Size = new System.Drawing.Size(131, 62);
             this.btn_Edit.TabIndex = 13;
@@ -214,7 +215,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(51, 412);
+            this.label5.Location = new System.Drawing.Point(96, 497);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(115, 28);
             this.label5.TabIndex = 9;
@@ -230,10 +231,10 @@
             this.cb_BedType.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cb_BedType.ForeColor = System.Drawing.Color.Black;
             this.cb_BedType.ItemHeight = 30;
-            this.cb_BedType.Location = new System.Drawing.Point(51, 465);
+            this.cb_BedType.Location = new System.Drawing.Point(96, 550);
             this.cb_BedType.Name = "cb_BedType";
             this.cb_BedType.Size = new System.Drawing.Size(500, 36);
-            this.cb_BedType.TabIndex = 10;
+            this.cb_BedType.TabIndex = 4;
             // 
             // cb_RoomType
             // 
@@ -245,10 +246,10 @@
             this.cb_RoomType.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cb_RoomType.ForeColor = System.Drawing.Color.Black;
             this.cb_RoomType.ItemHeight = 30;
-            this.cb_RoomType.Location = new System.Drawing.Point(55, 347);
+            this.cb_RoomType.Location = new System.Drawing.Point(100, 432);
             this.cb_RoomType.Name = "cb_RoomType";
             this.cb_RoomType.Size = new System.Drawing.Size(499, 36);
-            this.cb_RoomType.TabIndex = 6;
+            this.cb_RoomType.TabIndex = 3;
             // 
             // txt_RoomNo
             // 
@@ -262,14 +263,14 @@
             this.txt_RoomNo.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txt_RoomNo.ForeColor = System.Drawing.Color.Black;
             this.txt_RoomNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_RoomNo.Location = new System.Drawing.Point(54, 198);
+            this.txt_RoomNo.Location = new System.Drawing.Point(99, 283);
             this.txt_RoomNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_RoomNo.Name = "txt_RoomNo";
             this.txt_RoomNo.PasswordChar = '\0';
             this.txt_RoomNo.PlaceholderText = "";
             this.txt_RoomNo.SelectedText = "";
             this.txt_RoomNo.Size = new System.Drawing.Size(500, 57);
-            this.txt_RoomNo.TabIndex = 4;
+            this.txt_RoomNo.TabIndex = 2;
             // 
             // txt_ID
             // 
@@ -284,7 +285,7 @@
             this.txt_ID.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txt_ID.ForeColor = System.Drawing.Color.Black;
             this.txt_ID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_ID.Location = new System.Drawing.Point(54, 63);
+            this.txt_ID.Location = new System.Drawing.Point(99, 148);
             this.txt_ID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_ID.Name = "txt_ID";
             this.txt_ID.PasswordChar = '\0';
@@ -292,14 +293,14 @@
             this.txt_ID.ReadOnly = true;
             this.txt_ID.SelectedText = "";
             this.txt_ID.Size = new System.Drawing.Size(500, 57);
-            this.txt_ID.TabIndex = 84;
+            this.txt_ID.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(51, 291);
+            this.label3.Location = new System.Drawing.Point(96, 376);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 28);
             this.label3.TabIndex = 5;
@@ -310,7 +311,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(50, 144);
+            this.label2.Location = new System.Drawing.Point(95, 229);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 28);
             this.label2.TabIndex = 2;
@@ -321,7 +322,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(51, 19);
+            this.label6.Location = new System.Drawing.Point(96, 104);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(31, 28);
             this.label6.TabIndex = 83;
@@ -332,9 +333,9 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(3, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1658, 85);
+            this.panel1.Size = new System.Drawing.Size(1644, 85);
             this.panel1.TabIndex = 85;
             // 
             // label1
@@ -435,15 +436,16 @@
             this.panel3.Controls.Add(this.rbt_IsBooked);
             this.panel3.Controls.Add(this.rbt_NotBooked);
             this.panel3.Controls.Add(this.txt_Search);
-            this.panel3.Location = new System.Drawing.Point(37, 91);
+            this.panel3.Location = new System.Drawing.Point(3, 91);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(869, 126);
+            this.panel3.Size = new System.Drawing.Size(937, 126);
             this.panel3.TabIndex = 91;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.btn_Clear);
             this.panel4.Controls.Add(this.txt_ID);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.label2);
@@ -457,9 +459,9 @@
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.txt_Price);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(989, 91);
+            this.panel4.Location = new System.Drawing.Point(959, 91);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(607, 788);
+            this.panel4.Size = new System.Drawing.Size(688, 844);
             this.panel4.TabIndex = 92;
             // 
             // dgv_Room
@@ -468,44 +470,44 @@
             this.dgv_Room.AllowUserToDeleteRows = false;
             this.dgv_Room.AllowUserToResizeColumns = false;
             this.dgv_Room.AllowUserToResizeRows = false;
-            dataGridViewCellStyle41.BackColor = System.Drawing.Color.White;
-            this.dgv_Room.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle41;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            this.dgv_Room.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgv_Room.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dgv_Room.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dgv_Room.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            dataGridViewCellStyle42.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle42.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Room.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle42;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Room.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgv_Room.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle43.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle43.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle43.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Room.DefaultCellStyle = dataGridViewCellStyle43;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Room.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgv_Room.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_Room.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            this.dgv_Room.Location = new System.Drawing.Point(37, 223);
+            this.dgv_Room.Location = new System.Drawing.Point(3, 223);
             this.dgv_Room.Name = "dgv_Room";
-            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle44.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle44.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle44.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Room.RowHeadersDefaultCellStyle = dataGridViewCellStyle44;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Room.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgv_Room.RowHeadersVisible = false;
             this.dgv_Room.RowHeadersWidth = 51;
             this.dgv_Room.RowTemplate.Height = 24;
-            this.dgv_Room.Size = new System.Drawing.Size(869, 656);
+            this.dgv_Room.Size = new System.Drawing.Size(937, 712);
             this.dgv_Room.TabIndex = 14;
             this.dgv_Room.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.LightGrid;
             this.dgv_Room.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -530,6 +532,26 @@
             this.dgv_Room.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.dgv_Room.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgv_Room.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Room_CellClick);
+            // 
+            // btn_Clear
+            // 
+            this.btn_Clear.BorderRadius = 5;
+            this.btn_Clear.BorderThickness = 1;
+            this.btn_Clear.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_Clear.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.btn_Clear.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Clear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Clear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Clear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Clear.FillColor = System.Drawing.Color.White;
+            this.btn_Clear.Font = new System.Drawing.Font("000 Frank Bellamy iCiel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Clear.ForeColor = System.Drawing.Color.Black;
+            this.btn_Clear.Location = new System.Drawing.Point(468, 15);
+            this.btn_Clear.Name = "btn_Clear";
+            this.btn_Clear.Size = new System.Drawing.Size(131, 62);
+            this.btn_Clear.TabIndex = 85;
+            this.btn_Clear.Text = "Clear";
+            this.btn_Clear.Click += new System.EventHandler(this.btn_Clear_Click);
             // 
             // UC_Room
             // 
@@ -583,5 +605,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private Guna.UI2.WinForms.Guna2DataGridView dgv_Room;
+        private Guna.UI2.WinForms.Guna2Button btn_Clear;
     }
 }

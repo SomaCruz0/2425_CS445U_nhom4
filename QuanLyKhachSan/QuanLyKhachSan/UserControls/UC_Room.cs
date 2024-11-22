@@ -42,12 +42,14 @@ namespace QuanLyKhachSan.UserControls
             cb_BedType.DataSource = bt.Tables[0];
             cb_BedType.ValueMember = "IDLoaiGiuong";
             cb_BedType.DisplayMember = "Ten";
+            cb_BedType.SelectedIndex = -1;
 
             query = "select * from LoaiPhong";
             DataSet rt = fn.getData(query);
             cb_RoomType.DataSource = rt.Tables[0];
             cb_RoomType.ValueMember = "IDLoaiPhong";
             cb_RoomType.DisplayMember = "Ten";
+            cb_RoomType.SelectedIndex = -1;
         }
         private void UC_AddRoom_Load(object sender, EventArgs e)
         {
@@ -111,19 +113,26 @@ namespace QuanLyKhachSan.UserControls
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            query = "Select * from DatPhong WHERE IDPhong = '" + txt_ID.Text + "'";
-            DataTable dt = new DataTable();
-            dt = fn.GetDataTable(query);
-
-            if (dt.Rows.Count == 0)
+            if (txt_ID.Text != "")
             {
-                query = "delete phong where IDPhong = '" + txt_ID.Text + "'";
-                fn.setData(query, "Xóa thành công");
-                LoadRoom();
+                query = "Select * from DatPhong WHERE IDPhong = '" + txt_ID.Text + "'";
+                DataTable dt = new DataTable();
+                dt = fn.GetDataTable(query);
+
+                if (dt.Rows.Count == 0)
+                {
+                    query = "delete phong where IDPhong = '" + txt_ID.Text + "'";
+                    fn.setData(query, "Xóa thành công");
+                    LoadRoom();
+                }
+                else
+                {
+                    MessageBox.Show("Không thể xóa phòng đã được lưu hóa đơn", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             else
             {
-                MessageBox.Show("Không thể xóa phòng đã được lưu hóa đơn", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng chọn phòng cần xóa", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -165,6 +174,15 @@ namespace QuanLyKhachSan.UserControls
             rbt_IsBooked.Checked = false;
             rbt_NotBooked.Checked = false;
             LoadRoom();
+        }
+
+        private void btn_Clear_Click(object sender, EventArgs e)
+        {
+            txt_ID.Text = "";
+            txt_RoomNo.Text = "";
+            txt_Price.Text = "";
+            cb_BedType.SelectedIndex = -1;
+            cb_RoomType.SelectedIndex = -1;
         }
     }
 }
