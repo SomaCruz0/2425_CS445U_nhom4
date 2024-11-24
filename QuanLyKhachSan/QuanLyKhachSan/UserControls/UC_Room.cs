@@ -24,12 +24,14 @@ namespace QuanLyKhachSan.UserControls
         private void Config()
         {
             dgv_Room.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 11);
-            dgv_Room.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            dgv_Room.ColumnHeadersDefaultCellStyle.ForeColor = Color.MintCream;
             dgv_Room.RowTemplate.Height = 40;
         }
         private void LoadRoom()
         {
-            query = "select IDPhong, SoPhong as N'Số phòng', rt.Ten as N'Loại phòng', b.Ten as N'Loại giường', Gia as 'Giá', TinhTrang from LoaiGiuong b, LoaiPhong rt, Phong r where b.IDLoaiGiuong = r.LoaiGiuong and rt.IDLoaiPhong = r.LoaiPhong";
+            query = "select SoPhong as N'Số phòng', rt.Ten as N'Loại phòng', b.Ten as N'Loại giường', Gia as 'Giá', TinhTrang " +
+                "from LoaiGiuong b, LoaiPhong rt, Phong r " +
+                "where b.IDLoaiGiuong = r.LoaiGiuong and rt.IDLoaiPhong = r.LoaiPhong";
 
             DataSet ds = fn.getData(query);
             dgv_Room.DataSource = ds.Tables[0];
@@ -85,11 +87,10 @@ namespace QuanLyKhachSan.UserControls
 
         private void dgv_Room_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txt_ID.Text = dgv_Room.CurrentRow.Cells[0].Value.ToString();
-            txt_RoomNo.Text = dgv_Room.CurrentRow.Cells[1].Value.ToString();
-            cb_RoomType.Text = dgv_Room.CurrentRow.Cells[2].Value.ToString();
-            cb_BedType.Text = dgv_Room.CurrentRow.Cells[3].Value.ToString();
-            txt_Price.Text = dgv_Room.CurrentRow.Cells[4].Value.ToString();
+            txt_RoomNo.Text = dgv_Room.CurrentRow.Cells[0].Value.ToString();
+            cb_RoomType.Text = dgv_Room.CurrentRow.Cells[1].Value.ToString();
+            cb_BedType.Text = dgv_Room.CurrentRow.Cells[2].Value.ToString();
+            txt_Price.Text = dgv_Room.CurrentRow.Cells[3].Value.ToString();
         }
 
         private void btn_Edit_Click(object sender, EventArgs e)
@@ -97,11 +98,10 @@ namespace QuanLyKhachSan.UserControls
             if (txt_RoomNo.Text != "" && txt_Price.Text != "")
             {
                 query = "Update Phong Set " +
-                    "SoPhong = N'" + txt_RoomNo.Text + "', " +
                     "LoaiPhong = '" + cb_RoomType.SelectedValue + "', " +
                     "LoaiGiuong = N'" + cb_BedType.SelectedValue + "', " +
                     "Gia = N'" + txt_Price.Text + "' " +
-                    "Where IDPhong = '" + txt_ID.Text + "'";
+                    "Where SoPhong = '" + txt_RoomNo.Text + "'";
                 fn.setData(query, "Sửa thành công");
                 LoadRoom();
             }
@@ -113,15 +113,15 @@ namespace QuanLyKhachSan.UserControls
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            if (txt_ID.Text != "")
+            if (txt_RoomNo.Text != "")
             {
-                query = "Select * from DatPhong WHERE IDPhong = '" + txt_ID.Text + "'";
+                query = "Select * from DatPhong WHERE SoPhong = '" + txt_RoomNo.Text + "'";
                 DataTable dt = new DataTable();
                 dt = fn.GetDataTable(query);
 
                 if (dt.Rows.Count == 0)
                 {
-                    query = "delete phong where IDPhong = '" + txt_ID.Text + "'";
+                    query = "delete phong where IDPhong = '" + txt_RoomNo.Text + "'";
                     fn.setData(query, "Xóa thành công");
                     LoadRoom();
                 }
@@ -139,7 +139,7 @@ namespace QuanLyKhachSan.UserControls
 
         private void txt_Search_TextChanged(object sender, EventArgs e)
         {
-            query = "select IDPhong, SoPhong as N'Số phòng', rt.Ten as N'Loại phòng', b.Ten as N'Loại giường', Gia as 'Giá', TinhTrang " +
+            query = "select SoPhong as N'Số phòng', rt.Ten as N'Loại phòng', b.Ten as N'Loại giường', Gia as 'Giá', TinhTrang " +
                 "from LoaiGiuong b, LoaiPhong rt, Phong r " +
                 "where b.IDLoaiGiuong = r.LoaiGiuong and rt.IDLoaiPhong = r.LoaiPhong and SoPhong like '%" + txt_Search.Text.Trim() + "%'";
             DataSet ds = fn.getData(query);
@@ -150,7 +150,7 @@ namespace QuanLyKhachSan.UserControls
 
         private void rbt_NotBooked_CheckedChanged(object sender, EventArgs e)
         {
-            query = "select IDPhong, SoPhong as N'Số phòng', rt.Ten as N'Loại phòng', b.Ten as N'Loại giường', Gia as 'Giá', TinhTrang " +
+            query = "select SoPhong as N'Số phòng', rt.Ten as N'Loại phòng', b.Ten as N'Loại giường', Gia as 'Giá', TinhTrang " +
                 "from LoaiGiuong b, LoaiPhong rt, Phong r " +
                 "where b.IDLoaiGiuong = r.LoaiGiuong and rt.IDLoaiPhong = r.LoaiPhong and TinhTrang = N'Trống'";
             DataSet ds = fn.getData(query);
@@ -160,7 +160,7 @@ namespace QuanLyKhachSan.UserControls
         }
         private void rbt_IsBooked_CheckedChanged(object sender, EventArgs e)
         {
-            query = "select IDPhong, SoPhong as N'Số phòng', rt.Ten as N'Loại phòng', b.Ten as N'Loại giường', Gia as 'Giá', TinhTrang " +
+            query = "select SoPhong as N'Số phòng', rt.Ten as N'Loại phòng', b.Ten as N'Loại giường', Gia as 'Giá', TinhTrang " +
                 "from LoaiGiuong b, LoaiPhong rt, Phong r " +
                 "where b.IDLoaiGiuong = r.LoaiGiuong and rt.IDLoaiPhong = r.LoaiPhong and TinhTrang = N'Đã đặt'";
             DataSet ds = fn.getData(query);
@@ -178,7 +178,6 @@ namespace QuanLyKhachSan.UserControls
 
         private void btn_Clear_Click(object sender, EventArgs e)
         {
-            txt_ID.Text = "";
             txt_RoomNo.Text = "";
             txt_Price.Text = "";
             cb_BedType.SelectedIndex = -1;

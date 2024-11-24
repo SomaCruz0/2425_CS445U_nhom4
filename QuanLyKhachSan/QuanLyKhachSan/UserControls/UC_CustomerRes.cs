@@ -22,7 +22,7 @@ namespace QuanLyKhachSan.UserControls
         private void Config()
         {
             dgv_Customer.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 11);
-            dgv_Customer.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            dgv_Customer.ColumnHeadersDefaultCellStyle.ForeColor = Color.MintCream;
             dgv_Customer.RowTemplate.Height = 40;
         }
         void LoadCustomer()
@@ -120,6 +120,14 @@ namespace QuanLyKhachSan.UserControls
             {
                 MessageBox.Show("Vui lòng chọn khách hàng cần xóa", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void txt_Search_TextChanged(object sender, EventArgs e)
+        {
+            query = "select * from KhachHang where LOWER(HoTen) like Lower(N'%"+txt_Search.Text+"%')";
+            DataSet ds = fn.getData(query);
+            dgv_Customer.DataSource = ds.Tables[0];
+
         }
     }
 }

@@ -46,6 +46,7 @@
             this.btn_Customer = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Room = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.uC_CustomerRes1 = new QuanLyKhachSan.UserControls.UC_CustomerRes();
             this.uC_Room1 = new QuanLyKhachSan.UserControls.UC_Room();
             this.uC_Account1 = new QuanLyKhachSan.UserControls.UC_Account();
             this.uC_System1 = new QuanLyKhachSan.UserControls.UC_System();
@@ -55,8 +56,6 @@
             this.uC_Checkout1 = new QuanLyKhachSan.UserControls.UC_Checkout();
             this.uC_Category1 = new QuanLyKhachSan.UserControls.UC_Category();
             this.uC_DichVu1 = new QuanLyKhachSan.UserControls.UC_Service();
-            this.uC_Booking1 = new QuanLyKhachSan.UserControls.UC_Booking();
-            this.uC_CustomerRes1 = new QuanLyKhachSan.UserControls.UC_CustomerRes();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -69,6 +68,7 @@
             this.txt_Time = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_Name = new Guna.UI2.WinForms.Guna2TextBox();
+            this.uC_Booking1 = new QuanLyKhachSan.UserControls.UC_Booking();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -81,12 +81,12 @@
             this.btn_Exit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_Exit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_Exit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Exit.FillColor = System.Drawing.Color.Silver;
+            this.btn_Exit.FillColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Exit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_Exit.ForeColor = System.Drawing.Color.White;
             this.btn_Exit.Image = ((System.Drawing.Image)(resources.GetObject("btn_Exit.Image")));
             this.btn_Exit.ImageSize = new System.Drawing.Size(35, 35);
-            this.btn_Exit.Location = new System.Drawing.Point(1596, 1);
+            this.btn_Exit.Location = new System.Drawing.Point(1853, 0);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.PressedColor = System.Drawing.Color.BlueViolet;
             this.btn_Exit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -100,12 +100,12 @@
             this.btn_Minisize.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_Minisize.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_Minisize.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Minisize.FillColor = System.Drawing.Color.Silver;
+            this.btn_Minisize.FillColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Minisize.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_Minisize.ForeColor = System.Drawing.Color.White;
             this.btn_Minisize.Image = ((System.Drawing.Image)(resources.GetObject("btn_Minisize.Image")));
             this.btn_Minisize.ImageSize = new System.Drawing.Size(35, 35);
-            this.btn_Minisize.Location = new System.Drawing.Point(1533, 0);
+            this.btn_Minisize.Location = new System.Drawing.Point(1790, -1);
             this.btn_Minisize.Name = "btn_Minisize";
             this.btn_Minisize.PressedColor = System.Drawing.Color.BlueViolet;
             this.btn_Minisize.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -116,7 +116,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btn_Logout);
             this.panel1.Controls.Add(this.btn_Account);
             this.panel1.Controls.Add(this.btn_System);
@@ -411,7 +411,9 @@
             // 
             // panel2
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.uC_Booking1);
+            this.panel2.Controls.Add(this.uC_CustomerRes1);
             this.panel2.Controls.Add(this.uC_Room1);
             this.panel2.Controls.Add(this.uC_Account1);
             this.panel2.Controls.Add(this.uC_System1);
@@ -421,19 +423,25 @@
             this.panel2.Controls.Add(this.uC_Checkout1);
             this.panel2.Controls.Add(this.uC_Category1);
             this.panel2.Controls.Add(this.uC_DichVu1);
-            this.panel2.Controls.Add(this.uC_Booking1);
-            this.panel2.Controls.Add(this.uC_CustomerRes1);
             this.panel2.Location = new System.Drawing.Point(267, 60);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1663, 969);
             this.panel2.TabIndex = 4;
+            // 
+            // uC_CustomerRes1
+            // 
+            this.uC_CustomerRes1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.uC_CustomerRes1.Location = new System.Drawing.Point(3, 1);
+            this.uC_CustomerRes1.Name = "uC_CustomerRes1";
+            this.uC_CustomerRes1.Size = new System.Drawing.Size(1650, 961);
+            this.uC_CustomerRes1.TabIndex = 12;
             // 
             // uC_Room1
             // 
             this.uC_Room1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.uC_Room1.Location = new System.Drawing.Point(3, 2);
             this.uC_Room1.Name = "uC_Room1";
-            this.uC_Room1.Size = new System.Drawing.Size(1653, 960);
+            this.uC_Room1.Size = new System.Drawing.Size(1655, 962);
             this.uC_Room1.TabIndex = 11;
             // 
             // uC_Account1
@@ -500,22 +508,6 @@
             this.uC_DichVu1.Size = new System.Drawing.Size(1650, 992);
             this.uC_DichVu1.TabIndex = 3;
             // 
-            // uC_Booking1
-            // 
-            this.uC_Booking1.BackColor = System.Drawing.Color.White;
-            this.uC_Booking1.Location = new System.Drawing.Point(3, 3);
-            this.uC_Booking1.Name = "uC_Booking1";
-            this.uC_Booking1.Size = new System.Drawing.Size(1653, 991);
-            this.uC_Booking1.TabIndex = 2;
-            // 
-            // uC_CustomerRes1
-            // 
-            this.uC_CustomerRes1.BackColor = System.Drawing.Color.White;
-            this.uC_CustomerRes1.Location = new System.Drawing.Point(3, 3);
-            this.uC_CustomerRes1.Name = "uC_CustomerRes1";
-            this.uC_CustomerRes1.Size = new System.Drawing.Size(1653, 991);
-            this.uC_CustomerRes1.TabIndex = 1;
-            // 
             // guna2Elipse1
             // 
             this.guna2Elipse1.TargetControl = this;
@@ -524,7 +516,7 @@
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 3);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(3, 0);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(47, 51);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -546,8 +538,9 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Silver;
+            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.guna2PictureBox1);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.btn_Minisize);
             this.panel3.Controls.Add(this.label2);
@@ -556,9 +549,9 @@
             this.panel3.Controls.Add(this.txt_Time);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.txt_Name);
-            this.panel3.Location = new System.Drawing.Point(267, 3);
+            this.panel3.Location = new System.Drawing.Point(13, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1658, 54);
+            this.panel3.Size = new System.Drawing.Size(1917, 54);
             this.panel3.TabIndex = 7;
             // 
             // label3
@@ -566,7 +559,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(786, 9);
+            this.label3.Location = new System.Drawing.Point(1034, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 28);
             this.label3.TabIndex = 23;
@@ -577,7 +570,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(457, 9);
+            this.label2.Location = new System.Drawing.Point(705, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 28);
             this.label2.TabIndex = 22;
@@ -596,7 +589,7 @@
             this.txt_Authority.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txt_Authority.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.txt_Authority.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Authority.Location = new System.Drawing.Point(522, 5);
+            this.txt_Authority.Location = new System.Drawing.Point(770, 11);
             this.txt_Authority.Name = "txt_Authority";
             this.txt_Authority.PasswordChar = '\0';
             this.txt_Authority.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -619,7 +612,7 @@
             this.txt_Time.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txt_Time.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_Time.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Time.Location = new System.Drawing.Point(856, 5);
+            this.txt_Time.Location = new System.Drawing.Point(1104, 11);
             this.txt_Time.Name = "txt_Time";
             this.txt_Time.PasswordChar = '\0';
             this.txt_Time.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -634,7 +627,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(22, 9);
+            this.label1.Location = new System.Drawing.Point(270, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 28);
             this.label1.TabIndex = 21;
@@ -653,7 +646,7 @@
             this.txt_Name.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txt_Name.ForeColor = System.Drawing.Color.Blue;
             this.txt_Name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Name.Location = new System.Drawing.Point(89, 7);
+            this.txt_Name.Location = new System.Drawing.Point(337, 11);
             this.txt_Name.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txt_Name.Name = "txt_Name";
             this.txt_Name.PasswordChar = '\0';
@@ -662,6 +655,13 @@
             this.txt_Name.SelectedText = "";
             this.txt_Name.Size = new System.Drawing.Size(340, 36);
             this.txt_Name.TabIndex = 19;
+            // 
+            // uC_Booking1
+            // 
+            this.uC_Booking1.Location = new System.Drawing.Point(-1, 1);
+            this.uC_Booking1.Name = "uC_Booking1";
+            this.uC_Booking1.Size = new System.Drawing.Size(1659, 961);
+            this.uC_Booking1.TabIndex = 13;
             // 
             // frm_Dashboard
             // 
@@ -672,7 +672,6 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.guna2PictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -704,8 +703,6 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Button btn_Dashboard;
         private Guna.UI2.WinForms.Guna2Button btn_Category;
-        private UserControls.UC_CustomerRes uC_CustomerRes1;
-        private UserControls.UC_Booking uC_Booking1;
         private Guna.UI2.WinForms.Guna2Button btn_BookingDetail;
         private Guna.UI2.WinForms.Guna2Button btn_Service;
         private Guna.UI2.WinForms.Guna2Button btn_System;
@@ -729,5 +726,7 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txt_Name;
         private UserControls.UC_Room uC_Room1;
+        private UserControls.UC_CustomerRes uC_CustomerRes1;
+        private UserControls.UC_Booking uC_Booking1;
     }
 }
