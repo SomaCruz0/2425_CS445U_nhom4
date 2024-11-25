@@ -3,14 +3,24 @@
   "WorkspaceRootPath": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|d:\\study\\doanchuyennganh\\project\\quanlykhachsan\\quanlykhachsan\\frm_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|solutionrelative:quanlykhachsan\\frm_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|d:\\study\\doanchuyennganh\\project\\quanlykhachsan\\quanlykhachsan\\frm_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|solutionrelative:quanlykhachsan\\frm_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|d:\\study\\doanchuyennganh\\project\\quanlykhachsan\\quanlykhachsan\\usercontrols\\uc_booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|solutionrelative:quanlykhachsan\\usercontrols\\uc_booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/D__STUDY_DOANCHUYENNGANH_PROJECT_QUANLYKHACHSAN_QUANLYKHACHSAN_QLKS.MDF/True/SqlTable/dbo.DatPhong.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|d:\\study\\doanchuyennganh\\project\\quanlykhachsan\\quanlykhachsan\\usercontrols\\uc_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|solutionrelative:quanlykhachsan\\usercontrols\\uc_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/D__STUDY_DOANCHUYENNGANH_PROJECT_QUANLYKHACHSAN_QUANLYKHACHSAN_QLKS.MDF/True/SqlTable/dbo.CTDP.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|d:\\study\\doanchuyennganh\\project\\quanlykhachsan\\quanlykhachsan\\usercontrols\\uc_booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|solutionrelative:quanlykhachsan\\usercontrols\\uc_booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -20,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -52,33 +62,63 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "dbo.CTDP [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/D__STUDY_DOANCHUYENNGANH_PROJECT_QUANLYKHACHSAN_QUANLYKHACHSAN_QLKS.MDF/True/SqlTable/dbo.CTDP.sql",
-              "ToolTip": "dbo.CTDP [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-11-24T09:33:23.51Z",
+              "DocumentIndex": 1,
+              "Title": "frm_Dashboard.cs",
+              "DocumentMoniker": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\frm_Dashboard.cs",
+              "RelativeDocumentMoniker": "QuanLyKhachSan\\frm_Dashboard.cs",
+              "ToolTip": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\frm_Dashboard.cs",
+              "RelativeToolTip": "QuanLyKhachSan\\frm_Dashboard.cs",
+              "ViewState": "AQIAAGwAAAAAAAAAAAAiwB8AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T06:10:08.092Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "dbo.DatPhong [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/D__STUDY_DOANCHUYENNGANH_PROJECT_QUANLYKHACHSAN_QUANLYKHACHSAN_QLKS.MDF/True/SqlTable/dbo.DatPhong.sql",
-              "ToolTip": "dbo.DatPhong [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-11-24T09:33:05.773Z",
+              "DocumentIndex": 3,
+              "Title": "UC_Service.cs",
+              "DocumentMoniker": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\UserControls\\UC_Service.cs",
+              "RelativeDocumentMoniker": "QuanLyKhachSan\\UserControls\\UC_Service.cs",
+              "ToolTip": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\UserControls\\UC_Service.cs",
+              "RelativeToolTip": "QuanLyKhachSan\\UserControls\\UC_Service.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAuwBwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T05:56:44.657Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UC_Booking.cs [Design]",
+              "DocumentMoniker": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\UserControls\\UC_Booking.cs",
+              "RelativeDocumentMoniker": "QuanLyKhachSan\\UserControls\\UC_Booking.cs",
+              "ToolTip": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\UserControls\\UC_Booking.cs [Design]",
+              "RelativeToolTip": "QuanLyKhachSan\\UserControls\\UC_Booking.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T05:56:36.827Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "frm_Dashboard.cs [Design]",
+              "DocumentMoniker": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\frm_Dashboard.cs",
+              "RelativeDocumentMoniker": "QuanLyKhachSan\\frm_Dashboard.cs",
+              "ToolTip": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\frm_Dashboard.cs [Design]",
+              "RelativeToolTip": "QuanLyKhachSan\\frm_Dashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T05:54:28.95Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "UC_Booking.cs",
               "DocumentMoniker": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\UserControls\\UC_Booking.cs",
               "RelativeDocumentMoniker": "QuanLyKhachSan\\UserControls\\UC_Booking.cs",
               "ToolTip": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\UserControls\\UC_Booking.cs",
               "RelativeToolTip": "QuanLyKhachSan\\UserControls\\UC_Booking.cs",
-              "ViewState": "AQIAAKEAAAAAAAAAAAAAAKgAAAAnAAAA",
+              "ViewState": "AQIAAIkAAAAAAAAAAAAiwJUAAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-24T07:58:39.108Z",
               "EditorCaption": ""
