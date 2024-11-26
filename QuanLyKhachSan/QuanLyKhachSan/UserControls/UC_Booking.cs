@@ -175,13 +175,19 @@ namespace QuanLyKhachSan.UserControls
             {
                 query = "insert into DatPhong " +
                     "values ('" + cb_KhachHang.SelectedValue + "','" + txt_RoomNo.Text + "',Convert(datetime,'" + dtp_CheckIn.Text + "',103),Convert(Datetime,'" + dtp_Checkout.Text + "',103),'" + Const.ID + "','NO')";
-                fn.setData(query, "Đã thêm hóa đơn");
+                fn.setData(query, "Đặt phòng thành công");
 
                 query = "DECLARE @MaxMHD INT; " +
                     "SELECT @MaxMHD = MAX(IDDatPhong) FROM DatPhong; " +
                     "INSERT INTO CTDP VALUES (@MaxMHD, '"+SoNgay+"', '"+((int)nb_Customer.Value)+"', '"+float.Parse(txt_Price.Text)+"')";
-                fn.setData(query, "Đã thêm chi tiết hóa đơn");
+                fn.setData(query, "");
 
+                query = "Update Phong Set " +
+                    "TinhTrang = N'Đã đặt' " +
+                    "Where SoPhong = '" + txt_RoomNo.Text + "'";
+                fn.setData(query, "");
+
+                LoadRoom();
                 LoadRoom();
             }
             else

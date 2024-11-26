@@ -25,7 +25,7 @@ namespace QuanLyKhachSan
             KiemTraQuyen();
             uC_Room1.Visible = false;
             uC_CustomerRes1.Visible = false;
-            uC_DichVu1.Visible = false;
+            uC_Service1.Visible = false;
             uC_Booking1.Visible = false;
             uC_BookingDetail1.Visible = false;
             uC_Category1.Visible = false;
@@ -82,8 +82,8 @@ namespace QuanLyKhachSan
 
         private void btn_Service_Click(object sender, EventArgs e)
         {
-            uC_DichVu1.Visible = true;
-            uC_DichVu1.BringToFront();
+            uC_Service1.Visible = true;
+            uC_Service1.BringToFront();
         }
 
         private void btn_Category_Click(object sender, EventArgs e)
@@ -120,8 +120,8 @@ namespace QuanLyKhachSan
 
         private void btn_Dashboard_Click(object sender, EventArgs e)
         {
-            uC_Dashboard1.Visible = true;
-            uC_Dashboard1.BringToFront();
+            uC_Chart1.Visible = true;
+            uC_Chart1.BringToFront();
         }
 
         private void btn_System_Click(object sender, EventArgs e)

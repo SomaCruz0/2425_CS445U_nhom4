@@ -34,7 +34,6 @@ namespace QuanLyKhachSan
         }
         public void setData(String query, String message)
         {
-
             SqlConnection con = getConnection();
             SqlCommand cmd = new SqlCommand();
 
@@ -46,7 +45,10 @@ namespace QuanLyKhachSan
 
             con.Close();
 
-            MessageBox.Show(message, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (message !="")
+            {
+                MessageBox.Show(message, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
         }
 

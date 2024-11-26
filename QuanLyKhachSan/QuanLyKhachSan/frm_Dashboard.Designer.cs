@@ -46,16 +46,6 @@
             this.btn_Customer = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Room = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.uC_CustomerRes1 = new QuanLyKhachSan.UserControls.UC_CustomerRes();
-            this.uC_Room1 = new QuanLyKhachSan.UserControls.UC_Room();
-            this.uC_Account1 = new QuanLyKhachSan.UserControls.UC_Account();
-            this.uC_System1 = new QuanLyKhachSan.UserControls.UC_System();
-            this.uC_Dashboard1 = new QuanLyKhachSan.UserControls.UC_Chart();
-            this.uC_User1 = new QuanLyKhachSan.UserControls.UC_User();
-            this.uC_BookingDetail1 = new QuanLyKhachSan.UserControls.UC_BookingDetail();
-            this.uC_Checkout1 = new QuanLyKhachSan.UserControls.UC_Checkout();
-            this.uC_Category1 = new QuanLyKhachSan.UserControls.UC_Category();
-            this.uC_DichVu1 = new QuanLyKhachSan.UserControls.UC_Service();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -68,7 +58,17 @@
             this.txt_Time = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_Name = new Guna.UI2.WinForms.Guna2TextBox();
+            this.uC_Room1 = new QuanLyKhachSan.UserControls.UC_Room();
+            this.uC_CustomerRes1 = new QuanLyKhachSan.UserControls.UC_CustomerRes();
             this.uC_Booking1 = new QuanLyKhachSan.UserControls.UC_Booking();
+            this.uC_Service1 = new QuanLyKhachSan.UserControls.UC_Service();
+            this.uC_Category1 = new QuanLyKhachSan.UserControls.UC_Category();
+            this.uC_Checkout1 = new QuanLyKhachSan.UserControls.UC_Checkout();
+            this.uC_BookingDetail1 = new QuanLyKhachSan.UserControls.UC_BookingDetail();
+            this.uC_User1 = new QuanLyKhachSan.UserControls.UC_User();
+            this.uC_Chart1 = new QuanLyKhachSan.UserControls.UC_Chart();
+            this.uC_System1 = new QuanLyKhachSan.UserControls.UC_System();
+            this.uC_Account1 = new QuanLyKhachSan.UserControls.UC_Account();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -412,101 +412,21 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.uC_Booking1);
-            this.panel2.Controls.Add(this.uC_CustomerRes1);
-            this.panel2.Controls.Add(this.uC_Room1);
             this.panel2.Controls.Add(this.uC_Account1);
             this.panel2.Controls.Add(this.uC_System1);
-            this.panel2.Controls.Add(this.uC_Dashboard1);
+            this.panel2.Controls.Add(this.uC_Chart1);
             this.panel2.Controls.Add(this.uC_User1);
             this.panel2.Controls.Add(this.uC_BookingDetail1);
             this.panel2.Controls.Add(this.uC_Checkout1);
             this.panel2.Controls.Add(this.uC_Category1);
-            this.panel2.Controls.Add(this.uC_DichVu1);
+            this.panel2.Controls.Add(this.uC_Service1);
+            this.panel2.Controls.Add(this.uC_Booking1);
+            this.panel2.Controls.Add(this.uC_CustomerRes1);
+            this.panel2.Controls.Add(this.uC_Room1);
             this.panel2.Location = new System.Drawing.Point(267, 60);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1663, 969);
             this.panel2.TabIndex = 4;
-            // 
-            // uC_CustomerRes1
-            // 
-            this.uC_CustomerRes1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.uC_CustomerRes1.Location = new System.Drawing.Point(3, 1);
-            this.uC_CustomerRes1.Name = "uC_CustomerRes1";
-            this.uC_CustomerRes1.Size = new System.Drawing.Size(1650, 961);
-            this.uC_CustomerRes1.TabIndex = 12;
-            // 
-            // uC_Room1
-            // 
-            this.uC_Room1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.uC_Room1.Location = new System.Drawing.Point(3, 2);
-            this.uC_Room1.Name = "uC_Room1";
-            this.uC_Room1.Size = new System.Drawing.Size(1655, 962);
-            this.uC_Room1.TabIndex = 11;
-            // 
-            // uC_Account1
-            // 
-            this.uC_Account1.BackColor = System.Drawing.Color.White;
-            this.uC_Account1.Location = new System.Drawing.Point(3, 2);
-            this.uC_Account1.Name = "uC_Account1";
-            this.uC_Account1.Size = new System.Drawing.Size(1650, 962);
-            this.uC_Account1.TabIndex = 10;
-            // 
-            // uC_System1
-            // 
-            this.uC_System1.BackColor = System.Drawing.Color.White;
-            this.uC_System1.Location = new System.Drawing.Point(3, 2);
-            this.uC_System1.Name = "uC_System1";
-            this.uC_System1.Size = new System.Drawing.Size(1650, 966);
-            this.uC_System1.TabIndex = 9;
-            // 
-            // uC_Dashboard1
-            // 
-            this.uC_Dashboard1.BackColor = System.Drawing.Color.White;
-            this.uC_Dashboard1.Location = new System.Drawing.Point(3, 2);
-            this.uC_Dashboard1.Name = "uC_Dashboard1";
-            this.uC_Dashboard1.Size = new System.Drawing.Size(1650, 971);
-            this.uC_Dashboard1.TabIndex = 8;
-            // 
-            // uC_User1
-            // 
-            this.uC_User1.BackColor = System.Drawing.Color.White;
-            this.uC_User1.Location = new System.Drawing.Point(3, 2);
-            this.uC_User1.Name = "uC_User1";
-            this.uC_User1.Size = new System.Drawing.Size(1650, 964);
-            this.uC_User1.TabIndex = 7;
-            // 
-            // uC_BookingDetail1
-            // 
-            this.uC_BookingDetail1.BackColor = System.Drawing.Color.White;
-            this.uC_BookingDetail1.Location = new System.Drawing.Point(3, 2);
-            this.uC_BookingDetail1.Name = "uC_BookingDetail1";
-            this.uC_BookingDetail1.Size = new System.Drawing.Size(1650, 962);
-            this.uC_BookingDetail1.TabIndex = 6;
-            // 
-            // uC_Checkout1
-            // 
-            this.uC_Checkout1.BackColor = System.Drawing.Color.White;
-            this.uC_Checkout1.Location = new System.Drawing.Point(3, 3);
-            this.uC_Checkout1.Name = "uC_Checkout1";
-            this.uC_Checkout1.Size = new System.Drawing.Size(1650, 991);
-            this.uC_Checkout1.TabIndex = 5;
-            // 
-            // uC_Category1
-            // 
-            this.uC_Category1.BackColor = System.Drawing.Color.White;
-            this.uC_Category1.Location = new System.Drawing.Point(3, 3);
-            this.uC_Category1.Name = "uC_Category1";
-            this.uC_Category1.Size = new System.Drawing.Size(1650, 991);
-            this.uC_Category1.TabIndex = 4;
-            // 
-            // uC_DichVu1
-            // 
-            this.uC_DichVu1.BackColor = System.Drawing.Color.White;
-            this.uC_DichVu1.Location = new System.Drawing.Point(3, 2);
-            this.uC_DichVu1.Name = "uC_DichVu1";
-            this.uC_DichVu1.Size = new System.Drawing.Size(1650, 992);
-            this.uC_DichVu1.TabIndex = 3;
             // 
             // guna2Elipse1
             // 
@@ -656,12 +576,84 @@
             this.txt_Name.Size = new System.Drawing.Size(340, 36);
             this.txt_Name.TabIndex = 19;
             // 
+            // uC_Room1
+            // 
+            this.uC_Room1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.uC_Room1.Location = new System.Drawing.Point(-1, 1);
+            this.uC_Room1.Name = "uC_Room1";
+            this.uC_Room1.Size = new System.Drawing.Size(1663, 981);
+            this.uC_Room1.TabIndex = 0;
+            // 
+            // uC_CustomerRes1
+            // 
+            this.uC_CustomerRes1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.uC_CustomerRes1.Location = new System.Drawing.Point(-1, 1);
+            this.uC_CustomerRes1.Name = "uC_CustomerRes1";
+            this.uC_CustomerRes1.Size = new System.Drawing.Size(1663, 981);
+            this.uC_CustomerRes1.TabIndex = 1;
+            // 
             // uC_Booking1
             // 
             this.uC_Booking1.Location = new System.Drawing.Point(-1, 1);
             this.uC_Booking1.Name = "uC_Booking1";
-            this.uC_Booking1.Size = new System.Drawing.Size(1659, 961);
-            this.uC_Booking1.TabIndex = 13;
+            this.uC_Booking1.Size = new System.Drawing.Size(1663, 981);
+            this.uC_Booking1.TabIndex = 2;
+            // 
+            // uC_Service1
+            // 
+            this.uC_Service1.Location = new System.Drawing.Point(-1, 1);
+            this.uC_Service1.Name = "uC_Service1";
+            this.uC_Service1.Size = new System.Drawing.Size(1663, 981);
+            this.uC_Service1.TabIndex = 3;
+            // 
+            // uC_Category1
+            // 
+            this.uC_Category1.Location = new System.Drawing.Point(-1, 1);
+            this.uC_Category1.Name = "uC_Category1";
+            this.uC_Category1.Size = new System.Drawing.Size(1663, 981);
+            this.uC_Category1.TabIndex = 4;
+            // 
+            // uC_Checkout1
+            // 
+            this.uC_Checkout1.Location = new System.Drawing.Point(-1, 1);
+            this.uC_Checkout1.Name = "uC_Checkout1";
+            this.uC_Checkout1.Size = new System.Drawing.Size(1663, 981);
+            this.uC_Checkout1.TabIndex = 5;
+            // 
+            // uC_BookingDetail1
+            // 
+            this.uC_BookingDetail1.Location = new System.Drawing.Point(-1, 1);
+            this.uC_BookingDetail1.Name = "uC_BookingDetail1";
+            this.uC_BookingDetail1.Size = new System.Drawing.Size(1663, 981);
+            this.uC_BookingDetail1.TabIndex = 6;
+            // 
+            // uC_User1
+            // 
+            this.uC_User1.Location = new System.Drawing.Point(-1, 1);
+            this.uC_User1.Name = "uC_User1";
+            this.uC_User1.Size = new System.Drawing.Size(1663, 981);
+            this.uC_User1.TabIndex = 7;
+            // 
+            // uC_Chart1
+            // 
+            this.uC_Chart1.Location = new System.Drawing.Point(-1, 1);
+            this.uC_Chart1.Name = "uC_Chart1";
+            this.uC_Chart1.Size = new System.Drawing.Size(1663, 981);
+            this.uC_Chart1.TabIndex = 8;
+            // 
+            // uC_System1
+            // 
+            this.uC_System1.Location = new System.Drawing.Point(-1, 1);
+            this.uC_System1.Name = "uC_System1";
+            this.uC_System1.Size = new System.Drawing.Size(1663, 981);
+            this.uC_System1.TabIndex = 9;
+            // 
+            // uC_Account1
+            // 
+            this.uC_Account1.Location = new System.Drawing.Point(-1, 1);
+            this.uC_Account1.Name = "uC_Account1";
+            this.uC_Account1.Size = new System.Drawing.Size(1663, 981);
+            this.uC_Account1.TabIndex = 10;
             // 
             // frm_Dashboard
             // 
@@ -708,16 +700,8 @@
         private Guna.UI2.WinForms.Guna2Button btn_System;
         private Guna.UI2.WinForms.Guna2Button btn_Account;
         private Guna.UI2.WinForms.Guna2Button btn_Logout;
-        private UserControls.UC_Service uC_DichVu1;
-        private UserControls.UC_Category uC_Category1;
-        private UserControls.UC_BookingDetail uC_BookingDetail1;
-        private UserControls.UC_Checkout uC_Checkout1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
-        private UserControls.UC_User uC_User1;
         private System.Windows.Forms.Timer timer1;
-        private UserControls.UC_Chart uC_Dashboard1;
-        private UserControls.UC_System uC_System1;
-        private UserControls.UC_Account uC_Account1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -725,8 +709,16 @@
         private Guna.UI2.WinForms.Guna2TextBox txt_Time;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txt_Name;
-        private UserControls.UC_Room uC_Room1;
         private UserControls.UC_CustomerRes uC_CustomerRes1;
+        private UserControls.UC_Room uC_Room1;
+        private UserControls.UC_Account uC_Account1;
+        private UserControls.UC_System uC_System1;
+        private UserControls.UC_Chart uC_Chart1;
+        private UserControls.UC_User uC_User1;
+        private UserControls.UC_BookingDetail uC_BookingDetail1;
+        private UserControls.UC_Checkout uC_Checkout1;
+        private UserControls.UC_Category uC_Category1;
+        private UserControls.UC_Service uC_Service1;
         private UserControls.UC_Booking uC_Booking1;
     }
 }
