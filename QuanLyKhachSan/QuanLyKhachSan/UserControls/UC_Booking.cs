@@ -188,7 +188,6 @@ namespace QuanLyKhachSan.UserControls
                 fn.setData(query, "");
 
                 LoadRoom();
-                LoadRoom();
             }
             else
             {

@@ -1,20 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|d:\\study\\doanchuyennganh\\project\\quanlykhachsan\\quanlykhachsan\\usercontrols\\uc_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|solutionrelative:quanlykhachsan\\usercontrols\\uc_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\quanlykhachsan\\usercontrols\\uc_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|solutionrelative:quanlykhachsan\\usercontrols\\uc_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\quanlykhachsan\\function.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCA2B0A8-0AD2-419E-B684-E8EEDBCACF39}|QuanLyKhachSan\\QuanLyKhachSan.csproj|solutionrelative:quanlykhachsan\\function.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -51,44 +38,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "function.cs",
-              "DocumentMoniker": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\function.cs",
-              "RelativeDocumentMoniker": "QuanLyKhachSan\\function.cs",
-              "ToolTip": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\function.cs",
-              "RelativeToolTip": "QuanLyKhachSan\\function.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAYwB0AAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T09:41:22.108Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UC_Service.cs",
-              "DocumentMoniker": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\UserControls\\UC_Service.cs",
-              "RelativeDocumentMoniker": "QuanLyKhachSan\\UserControls\\UC_Service.cs",
-              "ToolTip": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\UserControls\\UC_Service.cs",
-              "RelativeToolTip": "QuanLyKhachSan\\UserControls\\UC_Service.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T05:56:44.657Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UC_Service.cs [Design]",
-              "DocumentMoniker": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\UserControls\\UC_Service.cs",
-              "RelativeDocumentMoniker": "QuanLyKhachSan\\UserControls\\UC_Service.cs",
-              "ToolTip": "D:\\study\\DoAnChuyenNganh\\Project\\QuanLyKhachSan\\QuanLyKhachSan\\UserControls\\UC_Service.cs [Design]",
-              "RelativeToolTip": "QuanLyKhachSan\\UserControls\\UC_Service.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T06:30:24.632Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }
