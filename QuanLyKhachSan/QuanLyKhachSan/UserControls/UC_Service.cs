@@ -114,13 +114,7 @@ namespace QuanLyKhachSan.UserControls
         private void btn_ShowAllCus_Click(object sender, EventArgs e)
         {
             LoadBooking();
-            for (int i = 0; i < 2; i++)
-            {
-                cb_SoPhong.SelectedIndex = -1;
-                cb_KhachHang.SelectedIndex = -1;
-                cb_IDBooking.SelectedIndex = -1;
-            }
-
+            LoadComboBox();
         }
 
         private void txt_SearchService_TextChanged(object sender, EventArgs e)
@@ -149,14 +143,16 @@ namespace QuanLyKhachSan.UserControls
 
         private void nb_Quantity_ValueChanged(object sender, EventArgs e)
         {
-            TinhTongTien();
+            if (nb_Quantity.Value > 0 && cb_Service.SelectedIndex != -1)
+            {
+                TinhTongTien();
+            }
         }
 
         private void btn_AllService_Click(object sender, EventArgs e)
         {
             LoadService();
-            for (int i = 0; i < 2; i++)
-                cb_Service.SelectedIndex = -1;
+            LoadComboBox();
             txt_Price.Text = "";
             txt_Total.Text = "";
             nb_Quantity.Value = 0;

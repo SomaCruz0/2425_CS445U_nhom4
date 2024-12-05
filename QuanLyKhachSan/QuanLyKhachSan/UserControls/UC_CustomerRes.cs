@@ -127,7 +127,6 @@ namespace QuanLyKhachSan.UserControls
             query = "select * from KhachHang where LOWER(HoTen) like Lower(N'%"+txt_Search.Text+"%')";
             DataSet ds = fn.getData(query);
             dgv_Customer.DataSource = ds.Tables[0];
-
         }
     }
 }

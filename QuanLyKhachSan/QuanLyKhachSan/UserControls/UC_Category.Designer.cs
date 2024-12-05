@@ -44,6 +44,7 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             this.tab_RoomType = new System.Windows.Forms.TabPage();
+            this.dgv_RoomType = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btn_EditRoom = new Guna.UI2.WinForms.Guna2Button();
             this.btn_DeleteRoom = new Guna.UI2.WinForms.Guna2Button();
             this.btn_AddRoom = new Guna.UI2.WinForms.Guna2Button();
@@ -52,6 +53,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txt_IDRoomType = new Guna.UI2.WinForms.Guna2TextBox();
             this.tab_BebType = new System.Windows.Forms.TabPage();
+            this.dgv_BedType = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btn_EditBed = new Guna.UI2.WinForms.Guna2Button();
             this.btn_DeleteBed = new Guna.UI2.WinForms.Guna2Button();
             this.btn_AddBed = new Guna.UI2.WinForms.Guna2Button();
@@ -60,7 +62,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txt_IDBedType = new Guna.UI2.WinForms.Guna2TextBox();
             this.tab_Service = new System.Windows.Forms.TabPage();
-            this.nb_Quantity = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.dgv_Service = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.nb_Stock = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_Price = new Guna.UI2.WinForms.Guna2TextBox();
@@ -73,18 +76,15 @@
             this.txt_IDService = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgv_RoomType = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.dgv_BedType = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.dgv_Service = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2TabControl1.SuspendLayout();
             this.tab_RoomType.SuspendLayout();
-            this.tab_BebType.SuspendLayout();
-            this.tab_Service.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nb_Quantity)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_RoomType)).BeginInit();
+            this.tab_BebType.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_BedType)).BeginInit();
+            this.tab_Service.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Service)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nb_Stock)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -101,7 +101,7 @@
             this.guna2TabControl1.Location = new System.Drawing.Point(3, 94);
             this.guna2TabControl1.Name = "guna2TabControl1";
             this.guna2TabControl1.SelectedIndex = 0;
-            this.guna2TabControl1.Size = new System.Drawing.Size(1644, 800);
+            this.guna2TabControl1.Size = new System.Drawing.Size(1644, 844);
             this.guna2TabControl1.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
             this.guna2TabControl1.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.guna2TabControl1.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -135,480 +135,10 @@
             this.tab_RoomType.Location = new System.Drawing.Point(184, 4);
             this.tab_RoomType.Name = "tab_RoomType";
             this.tab_RoomType.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_RoomType.Size = new System.Drawing.Size(1456, 792);
+            this.tab_RoomType.Size = new System.Drawing.Size(1456, 836);
             this.tab_RoomType.TabIndex = 0;
             this.tab_RoomType.Text = "Loại Phòng";
             this.tab_RoomType.UseVisualStyleBackColor = true;
-            // 
-            // btn_EditRoom
-            // 
-            this.btn_EditRoom.BorderRadius = 5;
-            this.btn_EditRoom.BorderThickness = 1;
-            this.btn_EditRoom.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_EditRoom.CheckedState.ForeColor = System.Drawing.Color.White;
-            this.btn_EditRoom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_EditRoom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_EditRoom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_EditRoom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_EditRoom.FillColor = System.Drawing.Color.White;
-            this.btn_EditRoom.Font = new System.Drawing.Font("000 Frank Bellamy iCiel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_EditRoom.ForeColor = System.Drawing.Color.Black;
-            this.btn_EditRoom.Location = new System.Drawing.Point(1075, 505);
-            this.btn_EditRoom.Name = "btn_EditRoom";
-            this.btn_EditRoom.Size = new System.Drawing.Size(104, 62);
-            this.btn_EditRoom.TabIndex = 22;
-            this.btn_EditRoom.Text = "Sửa";
-            // 
-            // btn_DeleteRoom
-            // 
-            this.btn_DeleteRoom.BorderRadius = 5;
-            this.btn_DeleteRoom.BorderThickness = 1;
-            this.btn_DeleteRoom.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_DeleteRoom.CheckedState.ForeColor = System.Drawing.Color.White;
-            this.btn_DeleteRoom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_DeleteRoom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_DeleteRoom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_DeleteRoom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_DeleteRoom.FillColor = System.Drawing.Color.White;
-            this.btn_DeleteRoom.Font = new System.Drawing.Font("000 Frank Bellamy iCiel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DeleteRoom.ForeColor = System.Drawing.Color.Black;
-            this.btn_DeleteRoom.Location = new System.Drawing.Point(1211, 505);
-            this.btn_DeleteRoom.Name = "btn_DeleteRoom";
-            this.btn_DeleteRoom.Size = new System.Drawing.Size(104, 62);
-            this.btn_DeleteRoom.TabIndex = 21;
-            this.btn_DeleteRoom.Text = "Xóa";
-            // 
-            // btn_AddRoom
-            // 
-            this.btn_AddRoom.BorderRadius = 5;
-            this.btn_AddRoom.BorderThickness = 1;
-            this.btn_AddRoom.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_AddRoom.CheckedState.ForeColor = System.Drawing.Color.White;
-            this.btn_AddRoom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_AddRoom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_AddRoom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_AddRoom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_AddRoom.FillColor = System.Drawing.Color.White;
-            this.btn_AddRoom.Font = new System.Drawing.Font("000 Frank Bellamy iCiel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AddRoom.ForeColor = System.Drawing.Color.Black;
-            this.btn_AddRoom.Location = new System.Drawing.Point(940, 505);
-            this.btn_AddRoom.Name = "btn_AddRoom";
-            this.btn_AddRoom.Size = new System.Drawing.Size(104, 62);
-            this.btn_AddRoom.TabIndex = 20;
-            this.btn_AddRoom.Text = "Thêm";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(933, 316);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 28);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "Loại phòng";
-            // 
-            // txt_RoomType
-            // 
-            this.txt_RoomType.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_RoomType.DefaultText = "";
-            this.txt_RoomType.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_RoomType.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_RoomType.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_RoomType.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_RoomType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_RoomType.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_RoomType.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_RoomType.Location = new System.Drawing.Point(938, 381);
-            this.txt_RoomType.Name = "txt_RoomType";
-            this.txt_RoomType.PasswordChar = '\0';
-            this.txt_RoomType.PlaceholderText = "";
-            this.txt_RoomType.SelectedText = "";
-            this.txt_RoomType.Size = new System.Drawing.Size(377, 57);
-            this.txt_RoomType.TabIndex = 18;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(933, 162);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 28);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "ID";
-            // 
-            // txt_IDRoomType
-            // 
-            this.txt_IDRoomType.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_IDRoomType.DefaultText = "";
-            this.txt_IDRoomType.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_IDRoomType.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_IDRoomType.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_IDRoomType.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_IDRoomType.Enabled = false;
-            this.txt_IDRoomType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_IDRoomType.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_IDRoomType.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_IDRoomType.Location = new System.Drawing.Point(938, 227);
-            this.txt_IDRoomType.Name = "txt_IDRoomType";
-            this.txt_IDRoomType.PasswordChar = '\0';
-            this.txt_IDRoomType.PlaceholderText = "";
-            this.txt_IDRoomType.ReadOnly = true;
-            this.txt_IDRoomType.SelectedText = "";
-            this.txt_IDRoomType.Size = new System.Drawing.Size(377, 57);
-            this.txt_IDRoomType.TabIndex = 16;
-            // 
-            // tab_BebType
-            // 
-            this.tab_BebType.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tab_BebType.Controls.Add(this.dgv_BedType);
-            this.tab_BebType.Controls.Add(this.btn_EditBed);
-            this.tab_BebType.Controls.Add(this.btn_DeleteBed);
-            this.tab_BebType.Controls.Add(this.btn_AddBed);
-            this.tab_BebType.Controls.Add(this.label4);
-            this.tab_BebType.Controls.Add(this.txt_BedType);
-            this.tab_BebType.Controls.Add(this.label5);
-            this.tab_BebType.Controls.Add(this.txt_IDBedType);
-            this.tab_BebType.Location = new System.Drawing.Point(184, 4);
-            this.tab_BebType.Name = "tab_BebType";
-            this.tab_BebType.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_BebType.Size = new System.Drawing.Size(1456, 792);
-            this.tab_BebType.TabIndex = 1;
-            this.tab_BebType.Text = "Loại Giường";
-            this.tab_BebType.UseVisualStyleBackColor = true;
-            // 
-            // btn_EditBed
-            // 
-            this.btn_EditBed.BorderRadius = 5;
-            this.btn_EditBed.BorderThickness = 1;
-            this.btn_EditBed.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_EditBed.CheckedState.ForeColor = System.Drawing.Color.White;
-            this.btn_EditBed.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_EditBed.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_EditBed.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_EditBed.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_EditBed.FillColor = System.Drawing.Color.White;
-            this.btn_EditBed.Font = new System.Drawing.Font("000 Frank Bellamy iCiel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_EditBed.ForeColor = System.Drawing.Color.Black;
-            this.btn_EditBed.Location = new System.Drawing.Point(1081, 520);
-            this.btn_EditBed.Name = "btn_EditBed";
-            this.btn_EditBed.Size = new System.Drawing.Size(104, 62);
-            this.btn_EditBed.TabIndex = 30;
-            this.btn_EditBed.Text = "Sửa";
-            // 
-            // btn_DeleteBed
-            // 
-            this.btn_DeleteBed.BorderRadius = 5;
-            this.btn_DeleteBed.BorderThickness = 1;
-            this.btn_DeleteBed.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_DeleteBed.CheckedState.ForeColor = System.Drawing.Color.White;
-            this.btn_DeleteBed.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_DeleteBed.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_DeleteBed.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_DeleteBed.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_DeleteBed.FillColor = System.Drawing.Color.White;
-            this.btn_DeleteBed.Font = new System.Drawing.Font("000 Frank Bellamy iCiel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DeleteBed.ForeColor = System.Drawing.Color.Black;
-            this.btn_DeleteBed.Location = new System.Drawing.Point(1218, 520);
-            this.btn_DeleteBed.Name = "btn_DeleteBed";
-            this.btn_DeleteBed.Size = new System.Drawing.Size(104, 62);
-            this.btn_DeleteBed.TabIndex = 29;
-            this.btn_DeleteBed.Text = "Xóa";
-            // 
-            // btn_AddBed
-            // 
-            this.btn_AddBed.BorderRadius = 5;
-            this.btn_AddBed.BorderThickness = 1;
-            this.btn_AddBed.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_AddBed.CheckedState.ForeColor = System.Drawing.Color.White;
-            this.btn_AddBed.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_AddBed.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_AddBed.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_AddBed.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_AddBed.FillColor = System.Drawing.Color.White;
-            this.btn_AddBed.Font = new System.Drawing.Font("000 Frank Bellamy iCiel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AddBed.ForeColor = System.Drawing.Color.Black;
-            this.btn_AddBed.Location = new System.Drawing.Point(940, 520);
-            this.btn_AddBed.Name = "btn_AddBed";
-            this.btn_AddBed.Size = new System.Drawing.Size(104, 62);
-            this.btn_AddBed.TabIndex = 28;
-            this.btn_AddBed.Text = "Thêm";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(935, 329);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 28);
-            this.label4.TabIndex = 27;
-            this.label4.Text = "Loại giường";
-            // 
-            // txt_BedType
-            // 
-            this.txt_BedType.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_BedType.DefaultText = "";
-            this.txt_BedType.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_BedType.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_BedType.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_BedType.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_BedType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_BedType.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_BedType.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_BedType.Location = new System.Drawing.Point(940, 394);
-            this.txt_BedType.Name = "txt_BedType";
-            this.txt_BedType.PasswordChar = '\0';
-            this.txt_BedType.PlaceholderText = "";
-            this.txt_BedType.SelectedText = "";
-            this.txt_BedType.Size = new System.Drawing.Size(382, 54);
-            this.txt_BedType.TabIndex = 26;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(935, 175);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 28);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "ID";
-            // 
-            // txt_IDBedType
-            // 
-            this.txt_IDBedType.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_IDBedType.DefaultText = "";
-            this.txt_IDBedType.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_IDBedType.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_IDBedType.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_IDBedType.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_IDBedType.Enabled = false;
-            this.txt_IDBedType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_IDBedType.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_IDBedType.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_IDBedType.Location = new System.Drawing.Point(940, 234);
-            this.txt_IDBedType.Name = "txt_IDBedType";
-            this.txt_IDBedType.PasswordChar = '\0';
-            this.txt_IDBedType.PlaceholderText = "";
-            this.txt_IDBedType.ReadOnly = true;
-            this.txt_IDBedType.SelectedText = "";
-            this.txt_IDBedType.Size = new System.Drawing.Size(382, 54);
-            this.txt_IDBedType.TabIndex = 24;
-            // 
-            // tab_Service
-            // 
-            this.tab_Service.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tab_Service.Controls.Add(this.dgv_Service);
-            this.tab_Service.Controls.Add(this.nb_Quantity);
-            this.tab_Service.Controls.Add(this.label9);
-            this.tab_Service.Controls.Add(this.label8);
-            this.tab_Service.Controls.Add(this.txt_Price);
-            this.tab_Service.Controls.Add(this.btn_EditService);
-            this.tab_Service.Controls.Add(this.btn_DeleteService);
-            this.tab_Service.Controls.Add(this.btn_AddService);
-            this.tab_Service.Controls.Add(this.label6);
-            this.tab_Service.Controls.Add(this.txt_NameService);
-            this.tab_Service.Controls.Add(this.label7);
-            this.tab_Service.Controls.Add(this.txt_IDService);
-            this.tab_Service.Location = new System.Drawing.Point(184, 4);
-            this.tab_Service.Name = "tab_Service";
-            this.tab_Service.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_Service.Size = new System.Drawing.Size(1456, 792);
-            this.tab_Service.TabIndex = 2;
-            this.tab_Service.Text = "Dịch Vụ";
-            this.tab_Service.UseVisualStyleBackColor = true;
-            // 
-            // nb_Quantity
-            // 
-            this.nb_Quantity.BackColor = System.Drawing.Color.Transparent;
-            this.nb_Quantity.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nb_Quantity.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.nb_Quantity.Location = new System.Drawing.Point(940, 551);
-            this.nb_Quantity.Name = "nb_Quantity";
-            this.nb_Quantity.Size = new System.Drawing.Size(376, 40);
-            this.nb_Quantity.TabIndex = 35;
-            this.nb_Quantity.UpDownButtonFillColor = System.Drawing.Color.Silver;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(935, 489);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(123, 28);
-            this.label9.TabIndex = 34;
-            this.label9.Text = "Số lượng tồn";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(935, 346);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 28);
-            this.label8.TabIndex = 32;
-            this.label8.Text = "Giá";
-            // 
-            // txt_Price
-            // 
-            this.txt_Price.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Price.DefaultText = "";
-            this.txt_Price.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_Price.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_Price.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Price.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Price.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Price.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_Price.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_Price.Location = new System.Drawing.Point(940, 406);
-            this.txt_Price.Name = "txt_Price";
-            this.txt_Price.PasswordChar = '\0';
-            this.txt_Price.PlaceholderText = "";
-            this.txt_Price.SelectedText = "";
-            this.txt_Price.Size = new System.Drawing.Size(376, 53);
-            this.txt_Price.TabIndex = 31;
-            // 
-            // btn_EditService
-            // 
-            this.btn_EditService.BorderRadius = 5;
-            this.btn_EditService.BorderThickness = 1;
-            this.btn_EditService.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_EditService.CheckedState.ForeColor = System.Drawing.Color.White;
-            this.btn_EditService.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_EditService.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_EditService.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_EditService.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_EditService.FillColor = System.Drawing.Color.White;
-            this.btn_EditService.Font = new System.Drawing.Font("000 Frank Bellamy iCiel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_EditService.ForeColor = System.Drawing.Color.Black;
-            this.btn_EditService.Location = new System.Drawing.Point(1079, 632);
-            this.btn_EditService.Name = "btn_EditService";
-            this.btn_EditService.Size = new System.Drawing.Size(104, 62);
-            this.btn_EditService.TabIndex = 30;
-            this.btn_EditService.Text = "Sửa";
-            // 
-            // btn_DeleteService
-            // 
-            this.btn_DeleteService.BorderRadius = 5;
-            this.btn_DeleteService.BorderThickness = 1;
-            this.btn_DeleteService.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_DeleteService.CheckedState.ForeColor = System.Drawing.Color.White;
-            this.btn_DeleteService.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_DeleteService.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_DeleteService.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_DeleteService.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_DeleteService.FillColor = System.Drawing.Color.White;
-            this.btn_DeleteService.Font = new System.Drawing.Font("000 Frank Bellamy iCiel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DeleteService.ForeColor = System.Drawing.Color.Black;
-            this.btn_DeleteService.Location = new System.Drawing.Point(1212, 632);
-            this.btn_DeleteService.Name = "btn_DeleteService";
-            this.btn_DeleteService.Size = new System.Drawing.Size(104, 62);
-            this.btn_DeleteService.TabIndex = 29;
-            this.btn_DeleteService.Text = "Xóa";
-            // 
-            // btn_AddService
-            // 
-            this.btn_AddService.BorderRadius = 5;
-            this.btn_AddService.BorderThickness = 1;
-            this.btn_AddService.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_AddService.CheckedState.ForeColor = System.Drawing.Color.White;
-            this.btn_AddService.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_AddService.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_AddService.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_AddService.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_AddService.FillColor = System.Drawing.Color.White;
-            this.btn_AddService.Font = new System.Drawing.Font("000 Frank Bellamy iCiel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AddService.ForeColor = System.Drawing.Color.Black;
-            this.btn_AddService.Location = new System.Drawing.Point(940, 632);
-            this.btn_AddService.Name = "btn_AddService";
-            this.btn_AddService.Size = new System.Drawing.Size(104, 62);
-            this.btn_AddService.TabIndex = 28;
-            this.btn_AddService.Text = "Thêm";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(935, 203);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(136, 28);
-            this.label6.TabIndex = 27;
-            this.label6.Text = "Tên sản phẩm";
-            // 
-            // txt_NameService
-            // 
-            this.txt_NameService.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_NameService.DefaultText = "";
-            this.txt_NameService.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_NameService.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_NameService.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_NameService.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_NameService.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_NameService.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_NameService.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_NameService.Location = new System.Drawing.Point(940, 264);
-            this.txt_NameService.Name = "txt_NameService";
-            this.txt_NameService.PasswordChar = '\0';
-            this.txt_NameService.PlaceholderText = "";
-            this.txt_NameService.SelectedText = "";
-            this.txt_NameService.Size = new System.Drawing.Size(376, 53);
-            this.txt_NameService.TabIndex = 26;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(935, 60);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(31, 28);
-            this.label7.TabIndex = 25;
-            this.label7.Text = "ID";
-            // 
-            // txt_IDService
-            // 
-            this.txt_IDService.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_IDService.DefaultText = "";
-            this.txt_IDService.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_IDService.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_IDService.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_IDService.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_IDService.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_IDService.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_IDService.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_IDService.Location = new System.Drawing.Point(940, 119);
-            this.txt_IDService.Name = "txt_IDService";
-            this.txt_IDService.PasswordChar = '\0';
-            this.txt_IDService.PlaceholderText = "";
-            this.txt_IDService.ReadOnly = true;
-            this.txt_IDService.SelectedText = "";
-            this.txt_IDService.Size = new System.Drawing.Size(376, 53);
-            this.txt_IDService.TabIndex = 24;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1644, 85);
-            this.panel1.TabIndex = 86;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(36, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 39);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "DANH MỤC";
             // 
             // dgv_RoomType
             // 
@@ -680,6 +210,149 @@
             this.dgv_RoomType.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             this.dgv_RoomType.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_RoomType_CellClick);
             // 
+            // btn_EditRoom
+            // 
+            this.btn_EditRoom.BorderRadius = 5;
+            this.btn_EditRoom.BorderThickness = 1;
+            this.btn_EditRoom.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_EditRoom.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.btn_EditRoom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_EditRoom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_EditRoom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_EditRoom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_EditRoom.FillColor = System.Drawing.Color.White;
+            this.btn_EditRoom.Font = new System.Drawing.Font("000 Frank Bellamy iCiel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_EditRoom.ForeColor = System.Drawing.Color.Black;
+            this.btn_EditRoom.Location = new System.Drawing.Point(1075, 505);
+            this.btn_EditRoom.Name = "btn_EditRoom";
+            this.btn_EditRoom.Size = new System.Drawing.Size(104, 62);
+            this.btn_EditRoom.TabIndex = 22;
+            this.btn_EditRoom.Text = "Sửa";
+            this.btn_EditRoom.Click += new System.EventHandler(this.btn_EditRoom_Click);
+            // 
+            // btn_DeleteRoom
+            // 
+            this.btn_DeleteRoom.BorderRadius = 5;
+            this.btn_DeleteRoom.BorderThickness = 1;
+            this.btn_DeleteRoom.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_DeleteRoom.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.btn_DeleteRoom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_DeleteRoom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_DeleteRoom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_DeleteRoom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_DeleteRoom.FillColor = System.Drawing.Color.White;
+            this.btn_DeleteRoom.Font = new System.Drawing.Font("000 Frank Bellamy iCiel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DeleteRoom.ForeColor = System.Drawing.Color.Black;
+            this.btn_DeleteRoom.Location = new System.Drawing.Point(1211, 505);
+            this.btn_DeleteRoom.Name = "btn_DeleteRoom";
+            this.btn_DeleteRoom.Size = new System.Drawing.Size(104, 62);
+            this.btn_DeleteRoom.TabIndex = 21;
+            this.btn_DeleteRoom.Text = "Xóa";
+            this.btn_DeleteRoom.Click += new System.EventHandler(this.btn_DeleteRoom_Click);
+            // 
+            // btn_AddRoom
+            // 
+            this.btn_AddRoom.BorderRadius = 5;
+            this.btn_AddRoom.BorderThickness = 1;
+            this.btn_AddRoom.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_AddRoom.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.btn_AddRoom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_AddRoom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_AddRoom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_AddRoom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_AddRoom.FillColor = System.Drawing.Color.White;
+            this.btn_AddRoom.Font = new System.Drawing.Font("000 Frank Bellamy iCiel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AddRoom.ForeColor = System.Drawing.Color.Black;
+            this.btn_AddRoom.Location = new System.Drawing.Point(940, 505);
+            this.btn_AddRoom.Name = "btn_AddRoom";
+            this.btn_AddRoom.Size = new System.Drawing.Size(104, 62);
+            this.btn_AddRoom.TabIndex = 20;
+            this.btn_AddRoom.Text = "Thêm";
+            this.btn_AddRoom.Click += new System.EventHandler(this.btn_AddRoom_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(933, 316);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(109, 28);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Loại phòng";
+            // 
+            // txt_RoomType
+            // 
+            this.txt_RoomType.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_RoomType.DefaultText = "";
+            this.txt_RoomType.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_RoomType.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_RoomType.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_RoomType.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_RoomType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_RoomType.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_RoomType.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_RoomType.Location = new System.Drawing.Point(938, 381);
+            this.txt_RoomType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_RoomType.Name = "txt_RoomType";
+            this.txt_RoomType.PasswordChar = '\0';
+            this.txt_RoomType.PlaceholderText = "";
+            this.txt_RoomType.SelectedText = "";
+            this.txt_RoomType.Size = new System.Drawing.Size(377, 57);
+            this.txt_RoomType.TabIndex = 18;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(933, 162);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 28);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "ID";
+            // 
+            // txt_IDRoomType
+            // 
+            this.txt_IDRoomType.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_IDRoomType.DefaultText = "";
+            this.txt_IDRoomType.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_IDRoomType.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_IDRoomType.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_IDRoomType.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_IDRoomType.Enabled = false;
+            this.txt_IDRoomType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_IDRoomType.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_IDRoomType.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_IDRoomType.Location = new System.Drawing.Point(938, 227);
+            this.txt_IDRoomType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_IDRoomType.Name = "txt_IDRoomType";
+            this.txt_IDRoomType.PasswordChar = '\0';
+            this.txt_IDRoomType.PlaceholderText = "";
+            this.txt_IDRoomType.ReadOnly = true;
+            this.txt_IDRoomType.SelectedText = "";
+            this.txt_IDRoomType.Size = new System.Drawing.Size(377, 57);
+            this.txt_IDRoomType.TabIndex = 16;
+            // 
+            // tab_BebType
+            // 
+            this.tab_BebType.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tab_BebType.Controls.Add(this.dgv_BedType);
+            this.tab_BebType.Controls.Add(this.btn_EditBed);
+            this.tab_BebType.Controls.Add(this.btn_DeleteBed);
+            this.tab_BebType.Controls.Add(this.btn_AddBed);
+            this.tab_BebType.Controls.Add(this.label4);
+            this.tab_BebType.Controls.Add(this.txt_BedType);
+            this.tab_BebType.Controls.Add(this.label5);
+            this.tab_BebType.Controls.Add(this.txt_IDBedType);
+            this.tab_BebType.Location = new System.Drawing.Point(184, 4);
+            this.tab_BebType.Name = "tab_BebType";
+            this.tab_BebType.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_BebType.Size = new System.Drawing.Size(1456, 792);
+            this.tab_BebType.TabIndex = 1;
+            this.tab_BebType.Text = "Loại Giường";
+            this.tab_BebType.UseVisualStyleBackColor = true;
+            // 
             // dgv_BedType
             // 
             this.dgv_BedType.AllowUserToAddRows = false;
@@ -749,6 +422,153 @@
             this.dgv_BedType.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
             this.dgv_BedType.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             this.dgv_BedType.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_BedType_CellClick);
+            // 
+            // btn_EditBed
+            // 
+            this.btn_EditBed.BorderRadius = 5;
+            this.btn_EditBed.BorderThickness = 1;
+            this.btn_EditBed.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_EditBed.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.btn_EditBed.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_EditBed.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_EditBed.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_EditBed.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_EditBed.FillColor = System.Drawing.Color.White;
+            this.btn_EditBed.Font = new System.Drawing.Font("000 Frank Bellamy iCiel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_EditBed.ForeColor = System.Drawing.Color.Black;
+            this.btn_EditBed.Location = new System.Drawing.Point(1081, 520);
+            this.btn_EditBed.Name = "btn_EditBed";
+            this.btn_EditBed.Size = new System.Drawing.Size(104, 62);
+            this.btn_EditBed.TabIndex = 30;
+            this.btn_EditBed.Text = "Sửa";
+            this.btn_EditBed.Click += new System.EventHandler(this.btn_EditBed_Click);
+            // 
+            // btn_DeleteBed
+            // 
+            this.btn_DeleteBed.BorderRadius = 5;
+            this.btn_DeleteBed.BorderThickness = 1;
+            this.btn_DeleteBed.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_DeleteBed.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.btn_DeleteBed.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_DeleteBed.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_DeleteBed.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_DeleteBed.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_DeleteBed.FillColor = System.Drawing.Color.White;
+            this.btn_DeleteBed.Font = new System.Drawing.Font("000 Frank Bellamy iCiel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DeleteBed.ForeColor = System.Drawing.Color.Black;
+            this.btn_DeleteBed.Location = new System.Drawing.Point(1218, 520);
+            this.btn_DeleteBed.Name = "btn_DeleteBed";
+            this.btn_DeleteBed.Size = new System.Drawing.Size(104, 62);
+            this.btn_DeleteBed.TabIndex = 29;
+            this.btn_DeleteBed.Text = "Xóa";
+            this.btn_DeleteBed.Click += new System.EventHandler(this.btn_DeleteBed_Click);
+            // 
+            // btn_AddBed
+            // 
+            this.btn_AddBed.BorderRadius = 5;
+            this.btn_AddBed.BorderThickness = 1;
+            this.btn_AddBed.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_AddBed.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.btn_AddBed.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_AddBed.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_AddBed.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_AddBed.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_AddBed.FillColor = System.Drawing.Color.White;
+            this.btn_AddBed.Font = new System.Drawing.Font("000 Frank Bellamy iCiel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AddBed.ForeColor = System.Drawing.Color.Black;
+            this.btn_AddBed.Location = new System.Drawing.Point(940, 520);
+            this.btn_AddBed.Name = "btn_AddBed";
+            this.btn_AddBed.Size = new System.Drawing.Size(104, 62);
+            this.btn_AddBed.TabIndex = 28;
+            this.btn_AddBed.Text = "Thêm";
+            this.btn_AddBed.Click += new System.EventHandler(this.btn_AddBed_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(935, 329);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(115, 28);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Loại giường";
+            // 
+            // txt_BedType
+            // 
+            this.txt_BedType.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_BedType.DefaultText = "";
+            this.txt_BedType.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_BedType.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_BedType.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_BedType.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_BedType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_BedType.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_BedType.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_BedType.Location = new System.Drawing.Point(940, 394);
+            this.txt_BedType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_BedType.Name = "txt_BedType";
+            this.txt_BedType.PasswordChar = '\0';
+            this.txt_BedType.PlaceholderText = "";
+            this.txt_BedType.SelectedText = "";
+            this.txt_BedType.Size = new System.Drawing.Size(382, 54);
+            this.txt_BedType.TabIndex = 26;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(935, 175);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(31, 28);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "ID";
+            // 
+            // txt_IDBedType
+            // 
+            this.txt_IDBedType.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_IDBedType.DefaultText = "";
+            this.txt_IDBedType.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_IDBedType.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_IDBedType.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_IDBedType.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_IDBedType.Enabled = false;
+            this.txt_IDBedType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_IDBedType.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_IDBedType.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_IDBedType.Location = new System.Drawing.Point(940, 234);
+            this.txt_IDBedType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_IDBedType.Name = "txt_IDBedType";
+            this.txt_IDBedType.PasswordChar = '\0';
+            this.txt_IDBedType.PlaceholderText = "";
+            this.txt_IDBedType.ReadOnly = true;
+            this.txt_IDBedType.SelectedText = "";
+            this.txt_IDBedType.Size = new System.Drawing.Size(382, 54);
+            this.txt_IDBedType.TabIndex = 24;
+            // 
+            // tab_Service
+            // 
+            this.tab_Service.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tab_Service.Controls.Add(this.dgv_Service);
+            this.tab_Service.Controls.Add(this.nb_Stock);
+            this.tab_Service.Controls.Add(this.label9);
+            this.tab_Service.Controls.Add(this.label8);
+            this.tab_Service.Controls.Add(this.txt_Price);
+            this.tab_Service.Controls.Add(this.btn_EditService);
+            this.tab_Service.Controls.Add(this.btn_DeleteService);
+            this.tab_Service.Controls.Add(this.btn_AddService);
+            this.tab_Service.Controls.Add(this.label6);
+            this.tab_Service.Controls.Add(this.txt_NameService);
+            this.tab_Service.Controls.Add(this.label7);
+            this.tab_Service.Controls.Add(this.txt_IDService);
+            this.tab_Service.Location = new System.Drawing.Point(184, 4);
+            this.tab_Service.Name = "tab_Service";
+            this.tab_Service.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_Service.Size = new System.Drawing.Size(1456, 792);
+            this.tab_Service.TabIndex = 2;
+            this.tab_Service.Text = "Dịch Vụ";
+            this.tab_Service.UseVisualStyleBackColor = true;
             // 
             // dgv_Service
             // 
@@ -820,6 +640,204 @@
             this.dgv_Service.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             this.dgv_Service.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Service_CellClick);
             // 
+            // nb_Stock
+            // 
+            this.nb_Stock.BackColor = System.Drawing.Color.Transparent;
+            this.nb_Stock.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nb_Stock.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.nb_Stock.Location = new System.Drawing.Point(940, 551);
+            this.nb_Stock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nb_Stock.Name = "nb_Stock";
+            this.nb_Stock.Size = new System.Drawing.Size(376, 40);
+            this.nb_Stock.TabIndex = 35;
+            this.nb_Stock.UpDownButtonFillColor = System.Drawing.Color.Silver;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(935, 489);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(123, 28);
+            this.label9.TabIndex = 34;
+            this.label9.Text = "Số lượng tồn";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(935, 346);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(42, 28);
+            this.label8.TabIndex = 32;
+            this.label8.Text = "Giá";
+            // 
+            // txt_Price
+            // 
+            this.txt_Price.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Price.DefaultText = "";
+            this.txt_Price.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_Price.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_Price.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Price.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_Price.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Price.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_Price.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_Price.Location = new System.Drawing.Point(940, 406);
+            this.txt_Price.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Price.Name = "txt_Price";
+            this.txt_Price.PasswordChar = '\0';
+            this.txt_Price.PlaceholderText = "";
+            this.txt_Price.SelectedText = "";
+            this.txt_Price.Size = new System.Drawing.Size(376, 53);
+            this.txt_Price.TabIndex = 31;
+            // 
+            // btn_EditService
+            // 
+            this.btn_EditService.BorderRadius = 5;
+            this.btn_EditService.BorderThickness = 1;
+            this.btn_EditService.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_EditService.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.btn_EditService.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_EditService.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_EditService.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_EditService.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_EditService.FillColor = System.Drawing.Color.White;
+            this.btn_EditService.Font = new System.Drawing.Font("000 Frank Bellamy iCiel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_EditService.ForeColor = System.Drawing.Color.Black;
+            this.btn_EditService.Location = new System.Drawing.Point(1079, 632);
+            this.btn_EditService.Name = "btn_EditService";
+            this.btn_EditService.Size = new System.Drawing.Size(104, 62);
+            this.btn_EditService.TabIndex = 30;
+            this.btn_EditService.Text = "Sửa";
+            this.btn_EditService.Click += new System.EventHandler(this.btn_EditService_Click);
+            // 
+            // btn_DeleteService
+            // 
+            this.btn_DeleteService.BorderRadius = 5;
+            this.btn_DeleteService.BorderThickness = 1;
+            this.btn_DeleteService.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_DeleteService.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.btn_DeleteService.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_DeleteService.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_DeleteService.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_DeleteService.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_DeleteService.FillColor = System.Drawing.Color.White;
+            this.btn_DeleteService.Font = new System.Drawing.Font("000 Frank Bellamy iCiel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DeleteService.ForeColor = System.Drawing.Color.Black;
+            this.btn_DeleteService.Location = new System.Drawing.Point(1212, 632);
+            this.btn_DeleteService.Name = "btn_DeleteService";
+            this.btn_DeleteService.Size = new System.Drawing.Size(104, 62);
+            this.btn_DeleteService.TabIndex = 29;
+            this.btn_DeleteService.Text = "Xóa";
+            this.btn_DeleteService.Click += new System.EventHandler(this.btn_DeleteService_Click);
+            // 
+            // btn_AddService
+            // 
+            this.btn_AddService.BorderRadius = 5;
+            this.btn_AddService.BorderThickness = 1;
+            this.btn_AddService.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_AddService.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.btn_AddService.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_AddService.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_AddService.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_AddService.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_AddService.FillColor = System.Drawing.Color.White;
+            this.btn_AddService.Font = new System.Drawing.Font("000 Frank Bellamy iCiel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AddService.ForeColor = System.Drawing.Color.Black;
+            this.btn_AddService.Location = new System.Drawing.Point(940, 632);
+            this.btn_AddService.Name = "btn_AddService";
+            this.btn_AddService.Size = new System.Drawing.Size(104, 62);
+            this.btn_AddService.TabIndex = 28;
+            this.btn_AddService.Text = "Thêm";
+            this.btn_AddService.Click += new System.EventHandler(this.btn_AddService_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(935, 203);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(136, 28);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "Tên sản phẩm";
+            // 
+            // txt_NameService
+            // 
+            this.txt_NameService.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_NameService.DefaultText = "";
+            this.txt_NameService.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_NameService.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_NameService.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_NameService.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_NameService.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_NameService.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_NameService.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_NameService.Location = new System.Drawing.Point(940, 264);
+            this.txt_NameService.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_NameService.Name = "txt_NameService";
+            this.txt_NameService.PasswordChar = '\0';
+            this.txt_NameService.PlaceholderText = "";
+            this.txt_NameService.SelectedText = "";
+            this.txt_NameService.Size = new System.Drawing.Size(376, 53);
+            this.txt_NameService.TabIndex = 26;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(935, 60);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(31, 28);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "ID";
+            // 
+            // txt_IDService
+            // 
+            this.txt_IDService.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_IDService.DefaultText = "";
+            this.txt_IDService.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txt_IDService.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txt_IDService.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_IDService.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txt_IDService.Enabled = false;
+            this.txt_IDService.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_IDService.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_IDService.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txt_IDService.Location = new System.Drawing.Point(940, 119);
+            this.txt_IDService.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_IDService.Name = "txt_IDService";
+            this.txt_IDService.PasswordChar = '\0';
+            this.txt_IDService.PlaceholderText = "";
+            this.txt_IDService.ReadOnly = true;
+            this.txt_IDService.SelectedText = "";
+            this.txt_IDService.Size = new System.Drawing.Size(376, 53);
+            this.txt_IDService.TabIndex = 24;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1644, 85);
+            this.panel1.TabIndex = 86;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(36, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(200, 39);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "DANH MỤC";
+            // 
             // UC_Category
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -832,16 +850,16 @@
             this.guna2TabControl1.ResumeLayout(false);
             this.tab_RoomType.ResumeLayout(false);
             this.tab_RoomType.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_RoomType)).EndInit();
             this.tab_BebType.ResumeLayout(false);
             this.tab_BebType.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_BedType)).EndInit();
             this.tab_Service.ResumeLayout(false);
             this.tab_Service.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nb_Quantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Service)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nb_Stock)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_RoomType)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_BedType)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Service)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -874,7 +892,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txt_NameService;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2TextBox txt_IDService;
-        private Guna.UI2.WinForms.Guna2NumericUpDown nb_Quantity;
+        private Guna.UI2.WinForms.Guna2NumericUpDown nb_Stock;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2TextBox txt_Price;

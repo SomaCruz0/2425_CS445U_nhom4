@@ -132,8 +132,7 @@ namespace QuanLyKhachSan.UserControls
 
         private void btn_ShowAll_Click(object sender, EventArgs e)
         {
-            cb_BedType.SelectedIndex = -1;
-            cb_RoomType.SelectedIndex = -1;
+            LoadComboBox();
             txt_RoomNo.Text = "";
             txt_Price.Text = "";
             LoadRoom();
@@ -156,12 +155,12 @@ namespace QuanLyKhachSan.UserControls
             SoNgay = int.Parse(duration.Days.ToString());
             float DonGia = float.Parse(dgv_Room.CurrentRow.Cells[3].Value.ToString());
 
-            txt_Price.Text = (SoNgay * int.Parse(nb_Customer.Value.ToString()) * DonGia).ToString();
+            txt_Price.Text = (SoNgay * DonGia).ToString();
 
         }
         private void label13_MouseHover(object sender, EventArgs e)
         {
-            label13.Text = "Tổng tiền (Số ngày x Số người x Đơn giá)";
+            label13.Text = "Tổng tiền (Số ngày x Đơn giá)";
         }
 
         private void label13_MouseLeave(object sender, EventArgs e)
@@ -194,5 +193,6 @@ namespace QuanLyKhachSan.UserControls
                 MessageBox.Show("Hãy nhập đầy đủ thông tin", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
     }
 }

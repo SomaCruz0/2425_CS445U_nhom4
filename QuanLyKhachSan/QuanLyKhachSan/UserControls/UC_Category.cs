@@ -78,8 +78,150 @@ namespace QuanLyKhachSan.UserControls
             txt_IDService.Text = dgv_Service.CurrentRow.Cells[0].Value.ToString();
             txt_NameService.Text = dgv_Service.CurrentRow.Cells[1].Value.ToString();
             txt_Price.Text = dgv_Service.CurrentRow.Cells[2].Value.ToString();
-            nb_Quantity.Text = dgv_Service.CurrentRow.Cells[3].Value.ToString();
+            nb_Stock.Text = dgv_Service.CurrentRow.Cells[3].Value.ToString();
         }
 
+        private void btn_AddRoom_Click(object sender, EventArgs e)
+        {
+            if (txt_RoomType.Text.Length > 0)
+            {
+                query = "insert into LoaiPhong values (N'" + txt_RoomType.Text + "')";
+                fn.setData(query, "Thêm loại phòng thành công");
+                LoadRoomType();
+            }
+            else
+            {
+                MessageBox.Show("Hãy nhập tên loại phòng", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btn_AddBed_Click(object sender, EventArgs e)
+        {
+            if (txt_BedType.Text.Length > 0)
+            {
+                query = "insert into LoaiGiuong values (N'" + txt_BedType.Text + "')";
+                fn.setData(query, "Thêm loại giường thành công");
+                LoadBedType();
+            }
+            else
+            {
+                MessageBox.Show("Hãy nhập tên loại giường", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btn_AddService_Click(object sender, EventArgs e)
+        {
+            if (txt_NameService.Text.Length > 0 && txt_Price.Text.Length > 0 && nb_Stock.Value > 0)
+            {
+                query = "insert into SanPham values (N'" + txt_NameService.Text + "', '" + txt_Price.Text + "','" + nb_Stock.Text + "')";
+                fn.setData(query, "Thêm dịch vụ thành công");
+                LoadService();
+            }
+            else
+            {
+                MessageBox.Show("Hãy nhập đầy đủ thông tin", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btn_EditRoom_Click(object sender, EventArgs e)
+        {
+            if (txt_RoomType.Text.Length > 0)
+            {
+                query = "update LoaiPhong set Ten = N'" + txt_RoomType.Text + "' where IDLoaiPhong = '" + txt_IDRoomType.Text + "'";
+                fn.setData(query, "Sửa loại phòng thành công");
+                LoadRoomType();
+            }
+            else
+            {
+                MessageBox.Show("Hãy nhập tên loại phòng", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btn_EditBed_Click(object sender, EventArgs e)
+        {
+            if (txt_BedType.Text.Length > 0)
+            {
+                query = "update LoaiGiuong set Ten = N'" + txt_BedType.Text + "' where IDLoaiGiuong = '" + txt_IDBedType.Text + "'";
+                fn.setData(query, "Sửa loại phòng thành công");
+                LoadBedType();
+            }
+            else
+            {
+                MessageBox.Show("Hãy nhập tên loại giường", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btn_EditService_Click(object sender, EventArgs e)
+        {
+            if (txt_NameService.Text.Length > 0 && txt_Price.Text.Length > 0 && nb_Stock.Value > 0)
+            {
+                query = "update SanPham set " +
+                    "TenSanPham = N'" + txt_NameService.Text + "', " +
+                    "Gia = '"+txt_Price.Text+"', " +
+                    "SoLuongTon = '"+nb_Stock.Value +"' " +
+                    "where IDSanPham = '" + txt_IDService.Text + "'";
+                fn.setData(query, "Sửa dịch vụ thành công");
+                LoadService();
+            }
+            else
+            {
+                MessageBox.Show("Hãy nhập đầy đủ thông tin", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btn_DeleteRoom_Click(object sender, EventArgs e)
+        {
+            query = "Select * from Phong WHERE LoaiPhong = '" + txt_IDRoomType.Text + "'";
+            DataTable dt = new DataTable();
+            dt = fn.GetDataTable(query);
+
+            if (dt.Rows.Count == 0)
+            {
+                query = "delete LoaiPhong where IDLoaiPhong = '" + txt_IDRoomType.Text + "'";
+                fn.setData(query, "Xóa thành công");
+                LoadRoomType();
+            }
+            else
+            {
+                MessageBox.Show("Không thể xóa loại phòng đã được chọn trong bảng phòng", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+
+        private void btn_DeleteBed_Click(object sender, EventArgs e)
+        {
+            query = "Select * from Phong WHERE LoaiGiuong = '" + txt_IDBedType.Text + "'";
+            DataTable dt = new DataTable();
+            dt = fn.GetDataTable(query);
+
+            if (dt.Rows.Count == 0)
+            {
+                query = "delete LoaiGiuong where IDLoaiGiuong = '" + txt_IDBedType.Text + "'";
+                fn.setData(query, "Xóa thành công");
+                LoadBedType();
+            }
+            else
+            {
+                MessageBox.Show("Không thể xóa loại giường đã được chọn trong bảng phòng", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btn_DeleteService_Click(object sender, EventArgs e)
+        {
+            query = "Select * from CTDV WHERE IDSanPham = '" + txt_IDService.Text + "'";
+            DataTable dt = new DataTable();
+            dt = fn.GetDataTable(query);
+
+            if (dt.Rows.Count == 0)
+            {
+                query = "delete SanPham where IdSanPham = '" + txt_IDService.Text + "'";
+                fn.setData(query, "Xóa thành công");
+                LoadService();
+            }
+            else
+            {
+                MessageBox.Show("Không thể xóa dịch vụ đã được lưu trong hóa đơn", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

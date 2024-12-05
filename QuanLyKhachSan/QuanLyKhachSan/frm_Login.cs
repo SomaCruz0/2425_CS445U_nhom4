@@ -30,8 +30,7 @@ namespace QuanLyKhachSan
         private void btn_Login_Click_1(object sender, EventArgs e)
         {
             string sql = "Select * from TAIKHOAN WHERE UserName = '" + txt_UserName.Text + "'and Password ='" + txt_Password.Text + "'";
-            DataTable dt = new DataTable();
-            dt = fn.GetDataTable(sql);
+            DataTable dt = fn.GetDataTable(sql);
             if (dt.Rows.Count > 0)
             {
                 Const.ID = int.Parse(dt.Rows[0][0].ToString());

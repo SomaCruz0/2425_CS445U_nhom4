@@ -9,5 +9,6 @@ namespace QuanLyKhachSan
     public class Const
     {
         public static int ID=1;
+        public static int BookingID=1;
     }
 }

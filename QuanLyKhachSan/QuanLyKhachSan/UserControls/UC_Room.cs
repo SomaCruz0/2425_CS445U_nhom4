@@ -180,8 +180,7 @@ namespace QuanLyKhachSan.UserControls
         {
             txt_RoomNo.Text = "";
             txt_Price.Text = "";
-            cb_BedType.SelectedIndex = -1;
-            cb_RoomType.SelectedIndex = -1;
+            LoadDanhMuc();
         }
     }
 }
