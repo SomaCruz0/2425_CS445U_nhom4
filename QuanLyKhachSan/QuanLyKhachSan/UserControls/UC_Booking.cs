@@ -153,7 +153,7 @@ namespace QuanLyKhachSan.UserControls
             TimeSpan duration = endTime - startTime;
 
             SoNgay = int.Parse(duration.Days.ToString());
-            float DonGia = float.Parse(dgv_Room.CurrentRow.Cells[3].Value.ToString());
+            decimal DonGia = decimal.Parse(dgv_Room.CurrentRow.Cells[3].Value.ToString());
 
             txt_Price.Text = (SoNgay * DonGia).ToString();
 
@@ -173,12 +173,12 @@ namespace QuanLyKhachSan.UserControls
             if (txt_RoomNo.Text != "" && cb_KhachHang.SelectedIndex != -1 && txt_Price.Text != "0" && txt_Price.Text != "")
             {
                 query = "insert into DatPhong " +
-                    "values ('" + cb_KhachHang.SelectedValue + "','" + txt_RoomNo.Text + "',Convert(datetime,'" + dtp_CheckIn.Text + "',103),Convert(Datetime,'" + dtp_Checkout.Text + "',103),'" + Const.ID + "','NO')";
+                    "values ('" + cb_KhachHang.SelectedValue + "',Convert(Datetime,'"+DateTime.Now.Date+"',103),'" + Const.ID + "','NO')";
                 fn.setData(query, "Đặt phòng thành công");
 
                 query = "DECLARE @MaxMHD INT; " +
                     "SELECT @MaxMHD = MAX(IDDatPhong) FROM DatPhong; " +
-                    "INSERT INTO CTDP VALUES (@MaxMHD, '"+SoNgay+"', '"+((int)nb_Customer.Value)+"', '"+float.Parse(txt_Price.Text)+"')";
+                    "INSERT INTO CTDP VALUES (@MaxMHD,'" + txt_RoomNo.Text + "',Convert(datetime,' " + dtp_CheckIn.Text + "',103),Convert(Datetime,'" + dtp_Checkout.Text + "',103), '" + ((int)nb_Customer.Value) + "')";
                 fn.setData(query, "");
 
                 query = "Update Phong Set " +

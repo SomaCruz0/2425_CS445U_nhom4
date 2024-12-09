@@ -23,7 +23,7 @@ namespace QuanLyKhachSan.UserControls
 
         void LoadBooking()
         {
-            query = "Select IDDatPhong as N'Mã HĐ', HoTen, SoPhong, NgayDat, NgayTra, Name as N'Nhân viên' " +
+            query = "Select IDDatPhong as N'Mã hóa đơn', HoTen as N'Khách hàng', NgayDat as N'Ngày đặt phòng', Name as N'Nhân viên' " +
                 "from DatPhong dp, KhachHang, TaiKhoan tk " +
                 "where KhachHang.IDKH = dp.IDKH and tk.Uid = dp.Uid and dp.Trangthai = 'No'";
             DataSet ds = fn.getData(query);
@@ -54,13 +54,6 @@ namespace QuanLyKhachSan.UserControls
             cb_KhachHang.DisplayMember = "HoTen";
             cb_KhachHang.SelectedIndex = -1;
 
-            query = "select * from DatPhong where Trangthai = 'No'";
-            DataSet bt = fn.getData(query);
-            cb_SoPhong.DataSource = bt.Tables[0];
-            cb_SoPhong.ValueMember = "SoPhong";
-            cb_SoPhong.DisplayMember = "SoPhong";
-            cb_SoPhong.SelectedIndex = -1;
-
 
             query = "select * from DatPhong where Trangthai = 'NO'";
             DataSet hd = fn.getData(query);
@@ -88,7 +81,8 @@ namespace QuanLyKhachSan.UserControls
 
         private void txt_SearchCustomer_TextChanged(object sender, EventArgs e)
         {
-            query = "Select IDDatPhong as N'Mã HĐ', HoTen, SoPhong, NgayDat, NgayTra, Name as N'Nhân viên' " +
+
+            query = "Select IDDatPhong as N'Mã hóa đơn', HoTen as N'Khách hàng', NgayDat as N'Ngày đặt phòng', Name as N'Nhân viên' " +
                 "from DatPhong dp, KhachHang, TaiKhoan tk " +
                 "where KhachHang.IDKH = dp.IDKH and tk.Uid = dp.Uid and dp.Trangthai = 'No' and LOWER(HoTen) like Lower(N'%" + txt_SearchCustomer.Text + "%')";
             DataSet ds = fn.getData(query);
@@ -99,14 +93,13 @@ namespace QuanLyKhachSan.UserControls
         {
             cb_IDBooking.Text = dgv_Booking.CurrentRow.Cells[0].Value.ToString();
             cb_KhachHang.Text = dgv_Booking.CurrentRow.Cells[1].Value.ToString();
-            cb_SoPhong.Text = dgv_Booking.CurrentRow.Cells[2].Value.ToString();
         }
 
         private void dtp_Checkin_ValueChanged(object sender, EventArgs e)
         {
-            query = "Select IDDatPhong as N'Mã HĐ', HoTen, SoPhong, NgayDat, NgayTra, Name as N'Nhân viên' " +
+            query = "Select IDDatPhong as N'Mã hóa đơn', HoTen as N'Khách hàng', NgayDat as N'Ngày đặt phòng', Name as N'Nhân viên' " +
                 "from DatPhong dp, KhachHang, TaiKhoan tk " +
-                "where KhachHang.IDKH = dp.IDKH and tk.Uid = dp.Uid and dp.Trangthai = 'No' and NgayDat = Convert(Datetime,'" + dtp_Checkin.Text + "',103)";
+                "where KhachHang.IDKH = dp.IDKH and tk.Uid = dp.Uid and dp.Trangthai = 'No' and NgayDat = '" + dtp_Checkin.Text + "'";
             DataSet ds = fn.getData(query);
             dgv_Booking.DataSource = ds.Tables[0];
         }
@@ -163,7 +156,7 @@ namespace QuanLyKhachSan.UserControls
             if (cb_IDBooking.SelectedIndex != -1 && cb_Service.SelectedIndex != -1 && nb_Quantity.Value > 0)
             {
                 query = "insert into CTDV " +
-                    "values ('" + cb_IDBooking.SelectedValue + "','" + cb_Service.SelectedValue + "','" + nb_Quantity.Text + "','" + txt_Total.Text + "')";
+                    "values ('" + cb_IDBooking.SelectedValue + "','" + cb_Service.SelectedValue + "','" + nb_Quantity.Text + "')";
                 fn.setData(query, "Thêm dịch vụ thành công");
 
                 query = "Update SanPham Set " +

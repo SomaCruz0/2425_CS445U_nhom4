@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static log4net.Appender.RollingFileAppender;
 
 namespace QuanLyKhachSan.UserControls
 {
@@ -21,7 +22,7 @@ namespace QuanLyKhachSan.UserControls
 
         void LoadBill()
         {
-            query = "select IDDatPhong as N'Mã HĐ', Hoten as N'Khách hàng', SoPhong, NgayDat, Name as N'Nhân viên' " +
+            query = "select IDDatPhong as N'Mã HĐ', Hoten as N'Khách hàng', NgayDat, Name as N'Nhân viên' " +
                 "from DatPhong, KhachHang, TaiKhoan " +
                 "where Taikhoan.Uid = DatPhong.Uid and KhachHang.IDKH = DatPhong.IDKH and DatPhong.TrangThai='NO'";
             DataSet ds = fn.getData(query);
@@ -29,13 +30,13 @@ namespace QuanLyKhachSan.UserControls
         }
         void LoadBookingDetail()
         {
-            query = "select * from CTDP where IDDatPhong = '" + dgv_Booking.CurrentRow.Cells[0].Value.ToString() +"'";
+            query = "select * from CTDP where IDDatPhong = '" + dgv_Booking.CurrentRow.Cells[0].Value.ToString() + "'";
             DataSet ds = fn.getData(query);
             dgv_BookingDetail.DataSource = ds.Tables[0];
         }
         void LoadServiceDetail()
         {
-            query = "select * from CTDV where IDDatPhong = '" + dgv_Booking.CurrentRow.Cells[0].Value.ToString() +"'";
+            query = "select * from CTDV where IDDatPhong = '" + dgv_Booking.CurrentRow.Cells[0].Value.ToString() + "'";
             DataSet ds = fn.getData(query);
             dgv_ServiceDetail.DataSource = ds.Tables[0];
         }
@@ -63,53 +64,48 @@ namespace QuanLyKhachSan.UserControls
         {
             LoadBookingDetail();
             LoadServiceDetail();
-            string RoomCost = dgv_BookingDetail.CurrentRow.Cells[4].Value.ToString();
-            string ServiceCost = "0";
+            query = "Select * from Phong where SoPhong = '" + dgv_BookingDetail.CurrentRow.Cells[2].Value.ToString() + "'";
+            DataTable dt = fn.GetDataTable(query);
+            double Sr = 0;
+            for (int i = 0; i < dgv_BookingDetail.RowCount; i++)
+            {
+                DateTime startTime = DateTime.Parse(dgv_BookingDetail.Rows[i].Cells[3].Value.ToString());
+                DateTime endTime = DateTime.Parse(dgv_BookingDetail.Rows[i].Cells[4].Value.ToString());
+                TimeSpan duration = endTime - startTime;
+                int SoNgay = int.Parse(duration.Days.ToString());
+                double UnitCost = SoNgay * double.Parse(dt.Rows[i][3].ToString());
+                Sr += UnitCost;
+            }
+            txt_RoomCost.Text = Sr.ToString();
+
+            double Sc = 0;
             if (dgv_ServiceDetail.RowCount > 0)
             {
-                double S = 0;
-                for(int i = 0; i < dgv_ServiceDetail.RowCount; i++)
+                for (int i = 0; i < dgv_ServiceDetail.RowCount; i++)
                 {
-                    S += int.Parse(dgv_ServiceDetail.Rows[i].Cells[4].Value.ToString());
+                    query = "Select * from SanPham where IDSanPham = '" + dgv_ServiceDetail.Rows[i].Cells[2].Value.ToString() + "'";
+                    DataTable dt2 = fn.GetDataTable(query);
+                    int Quantity = int.Parse(dgv_ServiceDetail.Rows[i].Cells[3].Value.ToString());
+                    double UnitCost = Quantity * double.Parse(dt2.Rows[0][2].ToString());
+                    Sc += UnitCost;
                 }
-                ServiceCost =  S.ToString();
             }
-            txt_RoomCost.Text = RoomCost;
-            txt_ServiceCost.Text = ServiceCost;
-            txt_TongTien.Text = (int.Parse(RoomCost) + int.Parse(ServiceCost)).ToString();
+            txt_ServiceCost.Text = Sc.ToString();
+            txt_TongTien.Text = (Sr + Sc).ToString();
         }
 
         private void btn_Checkout_Click(object sender, EventArgs e)
         {
             query = "update datphong set TrangThai = 'YES' where IDDatPhong = '" + dgv_Booking.CurrentRow.Cells[0].Value.ToString() + "' " +
-                "update Phong set TinhTrang = N'Trống' where SoPhong = '" + dgv_Booking.CurrentRow.Cells[2].Value.ToString() +"' ";
-            fn.setData(query,"Thanh toán thành công");
+                "update Phong set TinhTrang = N'Trống' where SoPhong = '" + dgv_BookingDetail.CurrentRow.Cells[2].Value.ToString() + "' ";
+            fn.setData(query, "Thanh toán thành công");
             LoadBill();
         }
 
         private void btn_Load_Click(object sender, EventArgs e)
         {
-            txt_SearchCus.Text = "";
-            txt_SearchRoom.Text = "";
             LoadBill();
         }
 
-        private void txt_SearchCus_TextChanged(object sender, EventArgs e)
-        {
-            query = "select IDDatPhong as N'Mã HĐ', Hoten as N'Khách hàng', SoPhong, NgayDat, Name as N'Nhân viên' " +
-                "from DatPhong, KhachHang, TaiKhoan " +
-                "where Taikhoan.Uid = DatPhong.Uid and KhachHang.IDKH = DatPhong.IDKH and DatPhong.TrangThai='NO' and LOWER(HoTen) like Lower(N'%"+txt_SearchCus.Text+"%')";
-            DataSet ds = fn.getData(query);
-            dgv_Booking.DataSource = ds.Tables[0];
-        }
-
-        private void txt_SearchRoom_TextChanged(object sender, EventArgs e)
-        {
-            query = "select IDDatPhong as N'Mã HĐ', Hoten as N'Khách hàng', SoPhong, NgayDat, Name as N'Nhân viên' " +
-                "from DatPhong, KhachHang, TaiKhoan " +
-                "where Taikhoan.Uid = DatPhong.Uid and KhachHang.IDKH = DatPhong.IDKH and DatPhong.TrangThai='NO' and  SoPhong like '%" + txt_SearchRoom.Text.Trim() + "%'";
-            DataSet ds = fn.getData(query);
-            dgv_Booking.DataSource = ds.Tables[0];
-        }
     }
 }

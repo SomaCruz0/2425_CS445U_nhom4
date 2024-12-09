@@ -41,8 +41,6 @@
             this.txt_SearchCustomer = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cb_KhachHang = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cb_SoPhong = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cb_IDBooking = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -121,31 +119,6 @@
             this.cb_KhachHang.Size = new System.Drawing.Size(351, 36);
             this.cb_KhachHang.TabIndex = 84;
             // 
-            // cb_SoPhong
-            // 
-            this.cb_SoPhong.BackColor = System.Drawing.Color.Transparent;
-            this.cb_SoPhong.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cb_SoPhong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_SoPhong.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cb_SoPhong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cb_SoPhong.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cb_SoPhong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cb_SoPhong.ItemHeight = 30;
-            this.cb_SoPhong.Location = new System.Drawing.Point(45, 172);
-            this.cb_SoPhong.Name = "cb_SoPhong";
-            this.cb_SoPhong.Size = new System.Drawing.Size(351, 36);
-            this.cb_SoPhong.TabIndex = 86;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(43, 126);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 23);
-            this.label3.TabIndex = 85;
-            this.label3.Text = "Số phòng";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -166,8 +139,6 @@
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.txt_SearchService);
             this.panel2.Controls.Add(this.btn_Order);
-            this.panel2.Controls.Add(this.cb_SoPhong);
-            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.cb_KhachHang);
             this.panel2.Controls.Add(this.txt_SearchCustomer);
             this.panel2.Controls.Add(this.label2);
@@ -186,7 +157,7 @@
             this.cb_IDBooking.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cb_IDBooking.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cb_IDBooking.ItemHeight = 30;
-            this.cb_IDBooking.Location = new System.Drawing.Point(461, 172);
+            this.cb_IDBooking.Location = new System.Drawing.Point(47, 172);
             this.cb_IDBooking.Name = "cb_IDBooking";
             this.cb_IDBooking.Size = new System.Drawing.Size(351, 36);
             this.cb_IDBooking.TabIndex = 114;
@@ -195,7 +166,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label9.Location = new System.Drawing.Point(459, 126);
+            this.label9.Location = new System.Drawing.Point(45, 126);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(98, 23);
             this.label9.TabIndex = 113;
@@ -558,7 +529,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1644, 85);
+            this.panel1.Size = new System.Drawing.Size(1669, 85);
             this.panel1.TabIndex = 97;
             // 
             // label1
@@ -599,8 +570,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txt_SearchCustomer;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2ComboBox cb_KhachHang;
-        private Guna.UI2.WinForms.Guna2ComboBox cb_SoPhong;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2TextBox txt_Total;
         private Guna.UI2.WinForms.Guna2TextBox txt_Price;

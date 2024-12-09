@@ -60,24 +60,24 @@ CREATE TABLE [dbo].[KhachHang] (
 CREATE TABLE [dbo].[DatPhong] (
     [IDDatPhong] INT           IDENTITY (1, 1) NOT NULL,
     [IDKH]       INT           NULL,
-    [SoPhong]    INT           NULL,
     [NgayDat]    DATETIME      NULL,
-    [NgayTra]    DATETIME      NULL,
     [Uid]        INT           NULL,
     [TrangThai]  NVARCHAR (50) DEFAULT (N'No') NULL,
     PRIMARY KEY CLUSTERED ([IDDatPhong] ASC),
     CONSTRAINT [FK_DatPhong_ToTable_2] FOREIGN KEY ([Uid]) REFERENCES [dbo].[TaiKhoan] ([Uid]),
-    CONSTRAINT [FK_DatPhong_ToTable_1] FOREIGN KEY ([SoPhong]) REFERENCES [dbo].[Phong] ([SoPhong]),
     CONSTRAINT [FK_DatPhong_ToTable] FOREIGN KEY ([IDKH]) REFERENCES [dbo].[KhachHang] ([IDKH])
 );
 
 CREATE TABLE [dbo].[CTDP] (
     [IDCTDP]     INT        IDENTITY (1, 1) NOT NULL,
     [IDDatPhong] INT        NULL,
-    [SoNgay]     INT        NULL,
+    [SoPhong]    INT           NULL,
+    [Checkin]    DATETIME      NULL,
+    [Checkout]    DATETIME      NULL,
     [SoNguoi]    INT        NULL,
     [TongTien]   FLOAT (53) NULL,
     PRIMARY KEY CLUSTERED ([IDCTDP] ASC),
+    CONSTRAINT [FK_CTDP_ToTable_1] FOREIGN KEY ([SoPhong]) REFERENCES [dbo].[Phong] ([SoPhong]),
     CONSTRAINT [FK_CTDP_ToTable] FOREIGN KEY ([IDDatPhong]) REFERENCES [dbo].[DatPhong] ([IDDatPhong])
 );
 

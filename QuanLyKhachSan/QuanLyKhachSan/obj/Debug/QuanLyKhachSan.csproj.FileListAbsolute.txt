@@ -45,7 +45,6 @@ D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\log4net
 D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\Microsoft.ReportViewer.Common.dll
 D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
 D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
-D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.frm_Print.resources
 D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\SqlServerTypes\x86\msvcr120.dll
@@ -55,16 +54,6 @@ D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\Microso
 D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\Microsoft.SqlServer.Types.dll
 D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\EnvDTE.dll
 D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\stdole.dll
-D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
-D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
-D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
-D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
-D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
-D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
-D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
-D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
-D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
-D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
 D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
 D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
 D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
@@ -110,6 +99,7 @@ D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\pt\Micr
 D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\ru\Microsoft.ReportViewer.WebDesign.resources.dll
 D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
 D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.frm_Print.resources
 D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\de\Microsoft.ReportViewer.WebForms.resources.dll
 D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\es\Microsoft.ReportViewer.WebForms.resources.dll
 D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\fr\Microsoft.ReportViewer.WebForms.resources.dll
@@ -120,3 +110,13 @@ D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\pt\Micr
 D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\ru\Microsoft.ReportViewer.WebForms.resources.dll
 D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
 D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\study\DoAnChuyenNganh\Project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll

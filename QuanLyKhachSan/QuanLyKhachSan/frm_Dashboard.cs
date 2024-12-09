@@ -25,11 +25,11 @@ namespace QuanLyKhachSan
             KiemTraQuyen();
             uC_Room1.Visible = false;
             uC_CustomerRes1.Visible = false;
-            uC_Service1.Visible = false;
             uC_Booking1.Visible = false;
-            uC_BookingDetail1.Visible = false;
+            uC_Service1.Visible = false;
             uC_Category1.Visible = false;
             uC_Checkout1.Visible = false;
+            uC_BookingDetail1.Visible = false;
             btn_Room.PerformClick();
         }
 
@@ -106,8 +106,8 @@ namespace QuanLyKhachSan
 
         private void btn_User_Click(object sender, EventArgs e)
         {
-            uC_User1.Visible = true;
-            uC_User1.BringToFront();
+            //uC_User1.Visible = true;
+            //uC_User1.BringToFront();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -120,22 +120,22 @@ namespace QuanLyKhachSan
 
         private void btn_Dashboard_Click(object sender, EventArgs e)
         {
-            uC_Chart1.Visible = true;
-            uC_Chart1.BringToFront();
+            //uC_Chart1.Visible = true;
+            //uC_Chart1.BringToFront();
         }
 
         private void btn_System_Click(object sender, EventArgs e)
         {
 
-            uC_System1.Visible = true;
-            uC_System1.BringToFront();
+            //uC_System1.Visible = true;
+            //uC_System1.BringToFront();
         }
 
         private void btn_Account_Click(object sender, EventArgs e)
         {
 
-            uC_Account1.Visible = true;
-            uC_Account1.BringToFront();
+            //uC_Account1.Visible = true;
+            //uC_Account1.BringToFront();
         }
 
         private void btn_Minisize_Click(object sender, EventArgs e)

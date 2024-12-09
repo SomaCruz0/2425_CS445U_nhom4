@@ -42,7 +42,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.txt_SearchCus = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_TongTien = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_Checkout = new Guna.UI2.WinForms.Guna2Button();
@@ -52,7 +51,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_SearchRoom = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgv_Booking = new Guna.UI2.WinForms.Guna2DataGridView();
             this.dgv_BookingDetail = new Guna.UI2.WinForms.Guna2DataGridView();
             this.dgv_ServiceDetail = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -66,26 +64,6 @@
             // guna2Elipse1
             // 
             this.guna2Elipse1.TargetControl = this;
-            // 
-            // txt_SearchCus
-            // 
-            this.txt_SearchCus.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_SearchCus.DefaultText = "";
-            this.txt_SearchCus.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_SearchCus.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_SearchCus.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_SearchCus.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_SearchCus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_SearchCus.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_SearchCus.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_SearchCus.Location = new System.Drawing.Point(57, 110);
-            this.txt_SearchCus.Name = "txt_SearchCus";
-            this.txt_SearchCus.PasswordChar = '\0';
-            this.txt_SearchCus.PlaceholderText = "Enter Customer Name";
-            this.txt_SearchCus.SelectedText = "";
-            this.txt_SearchCus.Size = new System.Drawing.Size(349, 36);
-            this.txt_SearchCus.TabIndex = 83;
-            this.txt_SearchCus.TextChanged += new System.EventHandler(this.txt_SearchCus_TextChanged);
             // 
             // label2
             // 
@@ -208,7 +186,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1644, 85);
+            this.panel1.Size = new System.Drawing.Size(1674, 85);
             this.panel1.TabIndex = 94;
             // 
             // label1
@@ -220,26 +198,6 @@
             this.label1.Size = new System.Drawing.Size(222, 39);
             this.label1.TabIndex = 1;
             this.label1.Text = "THANH TOÁN";
-            // 
-            // txt_SearchRoom
-            // 
-            this.txt_SearchRoom.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_SearchRoom.DefaultText = "";
-            this.txt_SearchRoom.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_SearchRoom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_SearchRoom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_SearchRoom.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_SearchRoom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_SearchRoom.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.txt_SearchRoom.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_SearchRoom.Location = new System.Drawing.Point(424, 110);
-            this.txt_SearchRoom.Name = "txt_SearchRoom";
-            this.txt_SearchRoom.PasswordChar = '\0';
-            this.txt_SearchRoom.PlaceholderText = "Enter Room ID";
-            this.txt_SearchRoom.SelectedText = "";
-            this.txt_SearchRoom.Size = new System.Drawing.Size(349, 36);
-            this.txt_SearchRoom.TabIndex = 95;
-            this.txt_SearchRoom.TextChanged += new System.EventHandler(this.txt_SearchRoom_TextChanged);
             // 
             // dgv_Booking
             // 
@@ -475,7 +433,6 @@
             this.Controls.Add(this.dgv_ServiceDetail);
             this.Controls.Add(this.dgv_BookingDetail);
             this.Controls.Add(this.dgv_Booking);
-            this.Controls.Add(this.txt_SearchRoom);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txt_RoomCost);
             this.Controls.Add(this.label4);
@@ -484,7 +441,6 @@
             this.Controls.Add(this.btn_Checkout);
             this.Controls.Add(this.txt_TongTien);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txt_SearchCus);
             this.Name = "UC_Checkout";
             this.Size = new System.Drawing.Size(1650, 1010);
             this.Load += new System.EventHandler(this.UC_Checkout_Load);
@@ -502,7 +458,6 @@
 
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox txt_SearchCus;
         private Guna.UI2.WinForms.Guna2Button btn_Checkout;
         private Guna.UI2.WinForms.Guna2TextBox txt_TongTien;
         private Guna.UI2.WinForms.Guna2TextBox txt_RoomCost;
@@ -511,7 +466,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2TextBox txt_SearchRoom;
         private Guna.UI2.WinForms.Guna2DataGridView dgv_ServiceDetail;
         private Guna.UI2.WinForms.Guna2DataGridView dgv_BookingDetail;
         private Guna.UI2.WinForms.Guna2DataGridView dgv_Booking;
