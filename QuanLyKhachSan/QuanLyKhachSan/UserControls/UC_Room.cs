@@ -115,13 +115,13 @@ namespace QuanLyKhachSan.UserControls
         {
             if (txt_RoomNo.Text != "")
             {
-                query = "Select * from DatPhong WHERE SoPhong = '" + txt_RoomNo.Text + "'";
+                query = "Select * from CTDP WHERE SoPhong = '" + txt_RoomNo.Text + "'";
                 DataTable dt = new DataTable();
                 dt = fn.GetDataTable(query);
 
                 if (dt.Rows.Count == 0)
                 {
-                    query = "delete phong where IDPhong = '" + txt_RoomNo.Text + "'";
+                    query = "delete phong where SoPhong = '" + txt_RoomNo.Text + "'";
                     fn.setData(query, "Xóa thành công");
                     LoadRoom();
                 }

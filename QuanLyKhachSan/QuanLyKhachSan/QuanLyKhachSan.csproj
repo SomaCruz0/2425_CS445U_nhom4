@@ -94,9 +94,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bill.cs" />
-    <Compile Include="BillDetailRoom.cs" />
-    <Compile Include="Const.cs" />
+    <Compile Include="DataSetQLKS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetQLKS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Bill.cs" />
+    <Compile Include="Data\BillDetailRoom.cs" />
+    <Compile Include="Data\Const.cs" />
     <Compile Include="frm_Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,9 +120,10 @@
     <Compile Include="frm_Print.Designer.cs">
       <DependentUpon>frm_Print.cs</DependentUpon>
     </Compile>
-    <Compile Include="function.cs" />
+    <Compile Include="Data\function.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Data\ServiceDetail.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="UserControls\UC_Account.cs">
       <SubType>UserControl</SubType>
@@ -204,6 +210,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="rpvBill.rdlc" />
+    <EmbeddedResource Include="Test.rdlc" />
     <EmbeddedResource Include="UserControls\UC_Account.resx">
       <DependentUpon>UC_Account.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,8 +244,20 @@
     <EmbeddedResource Include="UserControls\UC_User.resx">
       <DependentUpon>UC_User.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DataSetQLKS.xsc">
+      <DependentUpon>DataSetQLKS.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetQLKS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetQLKS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetQLKS.xss">
+      <DependentUpon>DataSetQLKS.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\BillDetailRoom.datasource" />
+    <None Include="Properties\DataSources\ServiceDetail.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

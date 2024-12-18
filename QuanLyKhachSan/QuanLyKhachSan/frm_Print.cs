@@ -1,4 +1,5 @@
 ﻿using Microsoft.AnalysisServices;
+using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,16 +16,18 @@ namespace QuanLyKhachSan
     {
         Bill _bill;
         List<BillDetailRoom> _list;
-        public frm_Print(Bill bill, List<BillDetailRoom> list)
+        List<ServiceDetail> _listS;
+        public frm_Print(Bill bill, List<BillDetailRoom> list, List<ServiceDetail> listS)
         {
             InitializeComponent();
             _bill = bill;
             _list = list;
+            _listS = listS;
         }
-
         private void frm_Print_Load(object sender, EventArgs e)
         {
-            billDetailRoomBindingSource.DataSource = _list;
+            billDetailRoomBindingSource1.DataSource = _list;
+            serviceDetailBindingSource.DataSource = _listS;
             Microsoft.Reporting.WinForms.ReportParameter[] p = new Microsoft.Reporting.WinForms.ReportParameter[]
             {
                 new Microsoft.Reporting.WinForms.ReportParameter("pIDDatPhong",_bill.IDDatPhong.ToString()),
@@ -34,8 +37,8 @@ namespace QuanLyKhachSan
                 new Microsoft.Reporting.WinForms.ReportParameter("pPhone",_bill.Phone.ToString()),
                 new Microsoft.Reporting.WinForms.ReportParameter("pName",_bill.Name.ToString()),
             };
-            this.reportViewer.LocalReport.SetParameters(p);
-            this.reportViewer.RefreshReport();
+            this.reportViewer1.LocalReport.SetParameters(p);
+            this.reportViewer1.RefreshReport();
         }
     }
 }

@@ -132,7 +132,20 @@ namespace QuanLyKhachSan.UserControls
 
         private void btn_ShowAll_Click(object sender, EventArgs e)
         {
-            LoadComboBox();
+            query = "select * from LoaiGiuong";
+            DataSet bt = fn.getData(query);
+            cb_BedType.DataSource = bt.Tables[0];
+            cb_BedType.ValueMember = "IDLoaiGiuong";
+            cb_BedType.DisplayMember = "Ten";
+            cb_BedType.SelectedIndex = -1;
+
+            query = "select * from LoaiPhong";
+            DataSet rt = fn.getData(query);
+            cb_RoomType.DataSource = rt.Tables[0];
+            cb_RoomType.ValueMember = "IDLoaiPhong";
+            cb_RoomType.DisplayMember = "Ten";
+            cb_RoomType.SelectedIndex = -1;
+
             txt_RoomNo.Text = "";
             txt_Price.Text = "";
             LoadRoom();

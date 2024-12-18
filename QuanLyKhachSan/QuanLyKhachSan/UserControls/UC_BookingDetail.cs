@@ -27,22 +27,9 @@ namespace QuanLyKhachSan.UserControls
             dgv_Booking.ColumnHeadersDefaultCellStyle.ForeColor = Color.MintCream;
             dgv_Booking.RowTemplate.Height = 50;
         }
-        void LoadBill()
-        {
-            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["QuanLyKhachSan.Properties.Settings.QLKSConnectionString"].ConnectionString))
-            {
-                if (db.State == ConnectionState.Closed)
-                    db.Open();
-                query = "select dp.IDDatPhong, HoTen, Name, Phone, DiaChi, NgayDat " +
-                    " from DatPhong dp, KhachHang kh, TaiKhoan tk " +
-                    $"where kh.IDKH = dp.IDKH and tk.uid = dp.uid and dp.TrangThai = 'YES'";
-                billBindingSource.DataSource = db.Query<Bill>(query, commandType: CommandType.Text);
-            }
-        }
         private void UC_BookingDetail_Load(object sender, EventArgs e)
         {
             Config();
-            LoadBill();
         }
 
         private void btn_Load_Click(object sender, EventArgs e)
@@ -57,7 +44,6 @@ namespace QuanLyKhachSan.UserControls
                 billBindingSource.DataSource = db.Query<Bill>(query, commandType: CommandType.Text);
             }
         }
-
         private void btn_Print_Click(object sender, EventArgs e)
         {
             Bill obj = billBindingSource.Current as Bill;
@@ -72,7 +58,13 @@ namespace QuanLyKhachSan.UserControls
                         " from CTDP ct, Phong p, DatPhong dp " +
                         " where ct.IDDatPhong = dp.IDDatPhong and p.SoPhong = ct.SoPhong and ct.IDDatPhong = '" + obj.IDDatPhong + "'";
                     List<BillDetailRoom> list = db.Query<BillDetailRoom>(query, commandType: CommandType.Text).ToList();
-                    using (frm_Print frm = new frm_Print(obj, list))
+
+                    query = "select TenSanPham, Gia, SoLuong " +
+                        " from  DatPhong d, CTDV c, SanPham p" +
+                        " where d.IDDatPhong = c.IDDatPhong and p.IdSanPham = c.IdSanPham and d.IDDatPhong = '" + obj.IDDatPhong + "'";
+                    List<ServiceDetail> listS = db.Query<ServiceDetail>(query, commandType: CommandType.Text).ToList();
+
+                    using (frm_Print frm = new frm_Print(obj, list, listS))
                     {
                         frm.ShowDialog();
                     }

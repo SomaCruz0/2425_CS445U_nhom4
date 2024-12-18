@@ -29,48 +29,59 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.billDetailRoomBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.billDetailRoomBindingSource)).BeginInit();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.billDetailRoomBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.serviceDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.billDetailRoomBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceDetailBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // reportViewer
+            // reportViewer1
             // 
-            this.reportViewer.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource2.Name = "BillDetailRoom";
-            reportDataSource2.Value = this.billDetailRoomBindingSource;
-            this.reportViewer.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer.LocalReport.ReportEmbeddedResource = "QuanLyKhachSan.rpvBill.rdlc";
-            this.reportViewer.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer.Name = "reportViewer";
-            this.reportViewer.ServerReport.BearerToken = null;
-            this.reportViewer.Size = new System.Drawing.Size(800, 450);
-            this.reportViewer.TabIndex = 0;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.billDetailRoomBindingSource1;
+            reportDataSource2.Name = "DataSet2";
+            reportDataSource2.Value = this.serviceDetailBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "QuanLyKhachSan.Test.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(800, 450);
+            this.reportViewer1.TabIndex = 0;
             // 
-            // billDetailRoomBindingSource
+            // billDetailRoomBindingSource1
             // 
-            this.billDetailRoomBindingSource.DataSource = typeof(QuanLyKhachSan.BillDetailRoom);
+            this.billDetailRoomBindingSource1.DataSource = typeof(QuanLyKhachSan.BillDetailRoom);
+            // 
+            // serviceDetailBindingSource
+            // 
+            this.serviceDetailBindingSource.DataSource = typeof(QuanLyKhachSan.ServiceDetail);
             // 
             // frm_Print
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.reportViewer);
+            this.Controls.Add(this.reportViewer1);
             this.Name = "frm_Print";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Hóa đơn";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_Print_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.billDetailRoomBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.billDetailRoomBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceDetailBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer;
-        private System.Windows.Forms.BindingSource billDetailRoomBindingSource;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource billDetailRoomBindingSource1;
+        private System.Windows.Forms.BindingSource serviceDetailBindingSource;
     }
 }

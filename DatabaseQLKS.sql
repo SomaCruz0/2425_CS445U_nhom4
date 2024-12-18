@@ -92,3 +92,5 @@ CREATE TABLE [dbo].[CTDV] (
     CONSTRAINT [FK_CTDV_ToTable_1] FOREIGN KEY ([IDSanPham]) REFERENCES [dbo].[SanPham] ([IdSanPham])
 );
 
+insert into quyen values ('1','Admin'), ('2',N'Nhân viên')
+insert into TaiKhoan values (N'Lê Đình Quang','quang','123','1','1')
